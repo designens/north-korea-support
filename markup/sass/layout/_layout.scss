@@ -1,0 +1,379 @@
+/* Layout 기본구조 */
+body {
+    min-width: 1200px;
+    .wrap {
+      width: 1248px;
+      padding: 0 24px;
+      margin: 0 auto;
+    }
+}
+
+/* Top menu */
+.header {
+    .top-menu {
+        height: 28px;
+        line-height: 28px;
+        border-bottom: 1px solid #ebebeb;
+        .wrap {
+            text-align: right;
+            a {
+                color: #757575;
+                &:after {
+                    display: inline-block;
+                    content: "/";
+                    padding: 0 6px 0 10px;
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 로고 및 네비게이션 */
+.gnb-area {
+    @extend %clearfix;
+    .logo {
+        float: left;
+        margin-top: 10px;
+    }
+    .gnb {
+        float: right;
+        height: 72px;
+        ul.menu {
+            text-align: right;
+            @extend %clearfix;
+            li {
+                display: inline-block;
+                line-height: 72px;
+                a {
+                    display: block;
+                    font-size: 16px;
+                    color: #4c4c4c;
+                    padding: 0 26px;
+                    @extend %clearfix;
+                }
+                &:last-child {
+                    a {
+                        padding: 0;
+                        img {
+                            width: 24px;
+                            height: 19px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gnb-panel {
+        width: 100%;
+        .panel {
+            float: left;
+        }
+    }
+}
+
+
+/* Footer : 사이트 정보 */
+#footer {
+    font-size: 12px;
+    color: #8f8f8f;
+    p {
+        text-align: center;
+        line-height: 1.8em;
+    }
+}
+
+
+.inner li a {
+    background: url("/assets/images/common/topmenu_bar.gif") no-repeat right center;
+}
+
+.gnb {
+    .gnb-list {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 106px;
+        left: 0;
+        border-top: 50px solid #0f2433;
+        background-color: #fff;
+        box-shadow: 0 20px 24px rgba(0, 0, 0, 0.2);
+        > div {
+            width: 1200px;
+            margin: 0 auto;
+
+            > div {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+/* subvisual */
+.subVisual {
+  height: 140px;
+  .banner1 {
+    text-indent: -9999px;
+    background: url("/assets/images/common/sub_banner.jpg") no-repeat;
+    background-position: center;
+    height: 140px;
+  }
+}
+
+/* lnb */
+
+.contain {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#lnb {
+  width: 226px;
+  height: 524px;
+  float: left;
+  h2 {
+    margin-top: 50px;
+    background: url("/assets/images/common/lnb_bg.jpg") no-repeat;
+    height: 100px;
+    span {
+      color: white;
+      font-size: 24px;
+      padding: 34px 64px;
+      display: block;
+    }
+  }
+  > ul {
+    border: 1px solid #cad7e0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  ul li span {
+    display: block;
+    padding: 14px 10px 14px 36px;
+    font-weight: bold;
+    color: #003761;
+    background: #cee4f5 url("/assets/images/common/lnb_blue_rec.gif") no-repeat 10% 64%;
+    border-top: 1px solid #cad7e0;
+  }
+  > ul > li {
+    > ul {
+      height: 136px;
+      padding: 8px 40px 32px;
+      background-color: #f0f8ff;
+      border-top: 1px solid #fff;
+      display: none;
+      > li {
+        padding: 0 10px;
+      }
+    }
+    li {
+      &:first-child {
+        margin-top: 4px;
+      }
+      &:last-child {
+        margin-bottom: 4px;
+      }
+      li {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 6px;
+        width: 140px;
+        &:first-child, &:last-child {
+          background: url("/assets/images/common/lnb_rec.gif") no-repeat 0 55%;
+        }
+        a {
+          padding-left: 6px;
+        }
+        &:nth-child(2) a {
+          color: #003761;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+    > ul > li {
+      &:nth-child(1) {
+        background: url("/assets/images/common/lnb_bg.jpg") no-repeat 0% 10%;
+      }
+      &:nth-child(2) {
+        background: url("/assets/images/common/lnb_dot.gif") no-repeat 0% 55%;
+      }
+    }
+    &:nth-child(2) {
+      border-top: 1px solid #cad7e0;
+      border-bottom: 1px solid #cad7e0;
+      padding: 14px 10px 14px 24px;
+      color: #333;
+      font-weight: bold;
+    }
+    &:nth-child(3) {
+      padding: 14px 10px 14px 24px;
+      color: #333;
+      font-weight: bold;
+      border: 0;
+    }
+    &:nth-child(5) {
+      padding: 14px 10px 14px 24px;
+      color: #333;
+      font-weight: bold;
+    }
+  }
+  li a {
+    font-size: 16px;
+  }
+  span {
+    display: block;
+  }
+}
+
+/* 회원가입안내 */
+
+/* 법인단체 ~ 담당자 */
+
+/* 법인단체 ~ 담당자 간격 */
+
+/* 사업자 가입안내 간격 */
+
+/* 지원접수현황 간격 */
+
+/* 법인단체 앞에 들어갈 이미지 */
+
+/* 담당자 앞에 들어갈 이미지 */
+
+/* 사업자 가입안내,사업자 신청,지원접수현황 */
+
+/* 글자 lnb_rec.gif와 간격 */
+
+/* lnb 클릭하면 하위 메뉴 나오기 */
+
+/* application process */
+
+.application {
+  float: left;
+  margin-left: 24px;
+  margin-top: 66px;
+  margin-bottom: 30px;
+  width: 920px;
+  h2 {
+    font-size: 28px;
+    background: url("/assets/images/common/sub_arrow.jpg") no-repeat 0 50%;
+    padding-left: 26px;
+    float: left;
+  }
+  ul {
+    float: right;
+    padding-top: 14px;
+    li {
+      float: left;
+      a {
+        margin-left: 16px;
+        color: #666666;
+        padding-bottom: 4px;
+        &:last-child {
+          margin-left: 16px;
+          color: #333;
+          padding-bottom: 4px;
+        }
+      }
+      &.loc1 img {
+        padding-bottom: 4px;
+      }
+      &.loc2 {
+        background: url("/assets/images/common/loc_gray_arrow.gif") no-repeat 8% 50%;
+      }
+      &.loc3 {
+        background: url("/assets/images/common/loc_black_arrow.gif") no-repeat 10% 50%;
+      }
+      &.loc4 {
+        background: url("/assets/images/common/loc_gray_arrow.gif") no-repeat 8% 50%;
+      }
+      &.loc5 {
+        background: url("/assets/images/common/loc_black_arrow.gif") no-repeat 8% 50%;
+      }
+    }
+  }
+  .loc3 a {
+    color: #333;
+  }
+  .titLine {
+    text-indent: -9999px;
+    background: url("/assets/images/common/tit_bar.gif") repeat-x bottom;
+    padding-top: 40px;
+  }
+}
+
+.subSearch {
+  > div {
+    display: inline-block;
+    width: 720px;
+    padding-left: 112px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 112px;
+  }
+  span {
+    font-size: 14px;
+    float: left;
+  }
+}
+
+/* footer */
+
+#footer {
+  min-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  .footer_banner {
+    width: 100%;
+    background-color: #f5f8fa;
+    border-top: 1px solid #d9dee2;
+    p {
+      margin-left: 400px;
+      font-size: 14px;
+      color: #333333;
+      font-weight: bold;
+      width: 74px;
+      position: absolute;
+      top: 42px;
+    }
+  }
+}
+
+.footer_info {
+  height: 171px;
+  background-color: #0f2433;
+}
+
+.footer_gnb {
+  width: 100%;
+  text-align: center;
+  li {
+    margin-top: 49px;
+    margin-bottom: 30px;
+    display: inline-block;
+    background: url("/assets/images/common/footer_bar.gif") no-repeat right center;
+    padding: 0 20px;
+    font-size: 12px;
+    &:nth-child(3) {
+      background: none;
+    }
+    a {
+      color: #8f8f8f;
+    }
+  }
+}
+
+.address p {
+  font-size: 12px;
+  text-align: center;
+  color: #8f8f8f;
+  line-height: 1.8em;
+}
