@@ -1,0 +1,59 @@
+/* 팝업 컨테이너 */
+.popup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* 팝업 딤 (Dim) */
+    .popup-dim {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 팝업 영역 */
+.popup {
+    width: 870px;
+    min-height: 500px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 10000;
+    &.is-center {
+        @include wh-center($position: absolute);
+    }
+    /* 팝업 헤드라인 */
+    .popup-headline {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 30px;
+        background: url("../../assets/images/bg/popup-title.png") center no-repeat;
+        @extend %clearfix;
+        h4 {
+            float: left;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: -0.04em;
+        }
+        .popup-close {
+            float: right;
+            width: 21px;
+            height: 21px;
+            margin-top: 15px;
+            @extend %text-hidden;
+            background: url("/assets/images/common/btn-gnb-close.svg") center no-repeat;
+        }
+    }
+    /* 팝업 콘텐츠 */
+    .popup-content {
+        padding: 20px 30px 30px 30px;
+        .popup-btn-set {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            .popup-close {
+                @include btn($dp: inline-block, $bg: $skyblue);
+            }
+        }
+    }
+}

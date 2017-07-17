@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19" viewBox="0 0 24 19">
   <defs>
     <style>
-      .all-gnb {
+      .btn-gnb-panel {
         fill: #4d4d4d;
         fill-rule: evenodd;
       }
     </style>
   </defs>
-  <path id="all-gnb.svg" class="all-gnb" d="M1576,54h24v3h-24V54Zm0,8h24v3h-24V62Zm0,8h24v3h-24V70Z" transform="translate(-1576 -54)"/>
+  <path id="btn-gnb-panel.svg" class="btn-gnb-panel" d="M1576,54h24v3h-24V54Zm0,8h24v3h-24V62Zm0,8h24v3h-24V70Z" transform="translate(-1576 -54)"/>
 </svg>

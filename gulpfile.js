@@ -43,16 +43,21 @@ var compress = {
 // 디렉토리 설정
 var dir = {
     'css': SRC + '/css',
-    'js' : SRC + '/js',
+    'js' : SRC + '/assets/js',
 };
 
 // 자바스크립트 프래임워크(framework) 병합
 var js_order = [
-    dir.js + '/**/*.js',
+    dir.js + '/svg-injector.min.js',
+    dir.js + '/jquery.popupLayer.js',
+    dir.js + '/jquery.a11y.popup.js',
+    dir.js + '/smooth-scroll.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동
 var moveJS = [
+    dir.js + '/jquery-ui.min.js', // jQuery 1.12.0
+    dir.js + '/jquery-1.11.3.min.js', // jQuery 1.11.3
     dir.js + '/common.js', // 공통 작업 자바스크립트
 ];
 
@@ -86,7 +91,7 @@ gulp.task('watch', function() {
     gulp.watch( SRC + '/**/*.html', ['htmlSSI'] );
     gulp.watch( SRC + '/sass/**/*', ['sass']);
     gulp.watch( SRC + '/guide/**/*', ['sass:guide']);
-    gulp.watch( SRC + '/js/**/*', ['js']);
+    gulp.watch( SRC + '/assets/js/**/*', ['js']);
     gulp.watch(SRC + '/assets/images/**/*', ['imagemin']);
     gulp.watch( SRC + '/**/*.html' ).on('change', reload);
     gulp.watch( 'gulpfile.js' ).on('change', reload);
@@ -178,9 +183,9 @@ gulp.task('js:moveJS', function() {
 // 공통 JS 파일 병합 후 이동
 gulp.task('js:concat', ['js:moveJS'], function() {
     gulp.src( js_order )
-        .pipe( concat('bundle.js') )
+        .pipe( concat('lib-js.js') )
         .pipe( g_if(compress.js, uglify()) )
-        .pipe( g_if(compress.js, rename( 'bundle.min.js' )) )
+        .pipe( g_if(compress.js, rename( 'lib-js.min.js' )) )
         .pipe( gulp.dest( BUILD + '/assets/js' ) );
  });
 

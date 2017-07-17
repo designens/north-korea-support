@@ -1,14 +1,19 @@
-// 버튼 기본 디자인 설정 (PSD 기준사이즈)
-@mixin btn($fz:20px, $color:#fff, $width:110px, $height:40px, $bg:null, $bd:null, $radius:20px) {
-    font-size: rem($fz);
-    font-weight: bold;
+// 버튼 기본 디자인 설정
+@mixin btn($dp: block, $w: 104px, $h: 30px, $fz: null, $color: null, $p: 0 10px, $bdsize: null, $bd: null, $radius: 3px, $bg: null) {
+    display: $dp;
+    font-size: $fz;
     color: $color;
-    width: $width;
-    height: $height;
-    line-height: $height;
+    width: $w - 20px;
+    height: $h;
+    line-height: $h;
     text-align: center;
-    text-shadow: 0 0 1px hsla(0, 0%, 0%, 0.6);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+    padding: $p;
     border-radius: $radius;
-    border: 1px solid $bd;
+    border: $bd;
     background: $bg;
+    &:hover, &:focus, &:active {
+        background: rgba($bg, .9);
+        transition: background .3s ease;
+    }
 }

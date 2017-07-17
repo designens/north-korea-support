@@ -4,13 +4,18 @@
 
 // link 설정
 a {
-    color: $link-base;
+    cursor: pointer;
     &:visited {
-        color: $link-base;
+        color: inherit;
     }
     &:hover, &:focus, &:active {
-        color: $link-over;
+        color: inherit;
     }
+}
+
+// 버튼 마우스 포인터
+a, button {
+    cursor: pointer;
 }
 
 // textarea 설정
@@ -55,29 +60,14 @@ input {
     }
 }
 
-// Skip Navigation 설정
-.skip a {
-    position: absolute;
-    left: 0;
-    top: -9999em;
-    z-index: 9999;
-    display: block;
-    width: 100%;
-    background-color: #039;
-    color: #eee;
-    text-transform: uppercase;
-    text-decoration: none;
-    line-height: 30px;
-    &:hover,
-    &:active,
-    &:focus {
-     top: 0;
-    }
-}
-
-// 버튼 마우스 포인터
-[class^="btn-"] {
-    cursor: pointer;
+// Sub Title 공통
+h2.sub-title {
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    background: url("/assets/images/icon/sub-title.svg") 0 50% no-repeat;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    float: left;
 }
 
 // 테이블 스타일 설정

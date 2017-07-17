@@ -13,7 +13,7 @@ fieldset { border: 0; }
 
 ul, ol, li { list-style: none; }
 
-hr { display: none; }
+hr { display: none; border: 0; }
 
 pre { white-space: pre-wrap; }
 
@@ -59,9 +59,9 @@ progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { di
 
 html { font-size: 10px; }
 
-html body { font-size: 12px; font-size: 1.2rem; color: #444; line-height: 1.5; }
+html body { font-family: "malgun gothic", "Noto Sans Korean", sans-serif, serif; font-size: 1.4rem; -webkit-font-smoothing: antialiased; color: #444; line-height: 1.5; }
 
-html body * { font-family: "malgun gothic", "Noto Sans Korean", sans-serif, serif; box-sizing: border-box; word-wrap: break-word; }
+html body * { box-sizing: border-box; word-wrap: break-word; }
 
 body { background: #ededed !important; font-size: 1.6rem !important; height: 100vh; }
 
