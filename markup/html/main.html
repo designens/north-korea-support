@@ -148,24 +148,50 @@
 
     <!-- [Start] Container Area -->
     <div id="container" class="wrap">
-        <nav id="lnb">
-            <h3>공지사항</h3>
-            <ul>
+        <nav class="lnb">
+            <h3>제목</h3>
+            <ul id="accordion" class="accordion">
                 <li>
-                    <a href="#" class="click"><span>뉴스레터</span></a>
+                    <a href="#" class="lnb-link" role="button">대분류 1<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <ul class="submenu">
+                        <!-- 선택된 중분류 a태그에 class="ative" 삽입 -->
+                        <li><a class="ative" href="#">중분류 1</a>
+                            <ul>
+                                <!-- 선택된 세분류 a태그에 class="ative" 삽입 -->
+                                 <li><a href="">세분류 1</a></li>
+                                 <li><a href="">세분류 2</a></li>
+                                 <li><a href="">세분류 3</a></li>
+                             </ul> 
+                        </li>
+                        <li><a href="#">중분류 2</a></li>
+                    </ul>
                 </li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Q&amp;A</a></li>
+                <li>
+                    <a href="#" class="lnb-link" role="button">대분류 2<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <ul class="submenu">
+                        <li><a href="#">중분류 1</a></li>
+                        <li><a href="#">중분류 2</a></li>
+                        <li><a href="#">중분류 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="lnb-link" role="button">대분류 3</a>
+                    <!-- 대분류만 있을 경우 ul요소 class="hidden" & aria-hidden="true" 삽입 -->
+                    <ul class="submenu hidden" aria-hidden="true">
+                        <li><a href="#">대분류 3</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <main class="content">
             <section>
                 <header>
-                    <h2 class="sub-title">뉴스레터</h2>
+                    <h2 class="sub-title">제목</h2>
                     <div class="site-location">
                         <a href="#"><img src="../assets/images/icon/icon-home.svg" alt="home" /></a>
-                        <a href="#">커뮤니티</a>
-                        <a href="#">뉴스레터</a>
+                        <a href="#">대분류</a>
+                        <a href="#">중분류</a>
+                        <a href="#">세분류</a>
                     </div>
                 </header>
                 <hr class="sub-title-bar">

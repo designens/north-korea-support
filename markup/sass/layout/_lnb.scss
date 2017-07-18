@@ -1,0 +1,119 @@
+/* LNB */
+.lnb {
+    h3 {
+        display: block;
+        height: 100px;
+        line-height: 100px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: -0.03em;
+        background: url("/assets/images/bg/lnb_title.png") no-repeat;
+    }
+    .accordion {
+        border: 1px solid #cad7e0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        .lnb-link {
+            position: relative;
+            display: block;
+            color: #4D4D4D;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-bottom: 1px solid #CCC;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            .fa-angle-down {
+                position: absolute;
+                display: block;
+                top: 18px;
+                right: 12px;
+                font-size: 16px;
+                color: #333;
+                transform: rotate(0deg);
+            }
+        }
+        > li {
+            border-bottom: 1px solid #cad7e0;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            &:last-child, .lnb-link {
+                border-bottom: 0;
+                ul {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+            }
+            &.open {
+                .lnb-link {
+                    color: #003761;
+                    background: #cee4f5;
+                    .fa-angle-down {
+                        color: #003761;
+                        transform: rotate(180deg);
+                        transition: transform 0.25s ease;
+                    }
+                }
+            }
+        }
+    }
+    .submenu {
+        display: none;
+        background: #f0f8ff;
+        padding: 9px 0;
+        &.hidden {
+            display: none !important;
+            visibility: hidden;
+        }
+        > li {
+            font-weight: normal;
+            padding: 9px 24px;
+            a {
+                position: relative;
+                display: block;
+                padding-left: 11px;
+                letter-spacing: -0.04em;
+                &:before {
+                    position: absolute;
+                    left: 0;
+                }
+                &:hover, &:focus, &.ative {
+                    font-weight: bold;
+                    color: #003761;
+                    text-decoration: underline;
+                }
+            }
+            > a {
+                &:before {
+                    top: 11px;
+                    display: block;
+                    width: 3px;
+                    height: 3px;
+                    background: #757575;
+                    content: "";
+                }
+                &:hover, &:focus, &.ative {
+                    &:before {
+                        background: #003761;
+                    }
+                }
+            }
+            > ul {
+                li {
+                    padding-top: 9px;
+                    padding-left: 10px;
+                    a {
+                        &:before {
+                            top: -3px;
+                            background: transparent;
+                            color: #757575;
+                            content: "-";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
