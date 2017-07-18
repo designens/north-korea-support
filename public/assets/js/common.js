@@ -59,31 +59,34 @@
     });
 
     $(function() {
-        var Accordion = function(el, multiple) {
+        var Accordion = function(el, active) {
             this.el = el || {};
-            this.multiple = multiple || false;
-
-            // Variables privadas
+            active = active || 0;
+            var that = this;
             var links = this.el.find('.lnb-link');
-            // Evento
-            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            links.each(function(i){
+                var link = links.eq(i);
+                if (link.next().length === 0) { link.find('.fa').hide(); }
+                link.on('click', { link: link }, that.dropdown);
+            });
+            if (active > 0) {
+               links.eq(active - 1).trigger('click');     
+            }
         }
 
         Accordion.prototype.dropdown = function(e) {
-            var $el = e.data.el;
-                $this = $(this),
-                $next = $this.next();
-
-            $next.slideToggle();
-            $this.parent().toggleClass('open');
-
-            if (!e.data.multiple) {
-                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-            }
-
+            e.preventDefault();
+            var $this = e.data.link;
+            $this.parent()
+                .siblings('.open').find('.submenu').slideUp()
+            .addBack().removeClass('open');
+            $this.parent()
+                .toggleClass('open')
+                .find('.submenu').stop().slideToggle();
         };
 
-        var accordion = new Accordion($('#accordion'), false);
+        // 첫번째 대분류 오픈 (1)
+        var accordion = new Accordion($('#accordion'), 1);
     });
 
 })(window, document, window.jQuery);

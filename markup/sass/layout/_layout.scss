@@ -23,8 +23,9 @@ body {
     .lnb {
         float: left;
         width: 226px;
-        height: 524px;
         margin-top: 50px;
+        margin-bottom: 50px;
+        @extend %clearfix;
     }
     .content {
         float: left;
@@ -32,6 +33,7 @@ body {
         margin-top: 66px;
         margin-bottom: 30px;
         width: 950px;
+        @extend %clearfix;
     }
 }
 
