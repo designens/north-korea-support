@@ -91,20 +91,18 @@ body {
 // GNB 전체 사이트 맵
 #gnb-all-menu {
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     right: 0;
-    height: 564px;
+    height: 0;
     background: linear-gradient(#475b6b 46px, #fff 46px);
     box-shadow: 0 8px 10px rgba(0,0,0,0.15);
-    @extend %box-hidden;
-    transform: translateY(-100%);
-    transition: transform 0.3s cubic-bezier(1,0.5,0,1);
-    &.active {
-        top: 100px;
-        display: block;
+    visibility: hidden;
+    overflow: hidden;
+    transition: visibility .3s, height .3s;
+    &.open {
         visibility: visible;
-        transform: translateY(0);
+        height: 564px;
     }
     .wrap {
         position: relative;

@@ -1584,8 +1584,6 @@ progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { di
 
 .popup .popup-headline:after, .gnb-area:after, .gnb-area .gnb #gnb-menu:after, .gnb-area .gnb #gnb-menu li a:after, #gnb-all-menu .wrap:after, #container:after { content: ''; display: block; clear: both; }
 
-#gnb-all-menu { display: none; visibility: hidden; }
-
 .popup .popup-headline .popup-close, .gnb-area .gnb .btn-gnb-all, #gnb-all-menu .wrap .btn-gnb-close { text-indent: -9999px; }
 
 html { font-size: 10px; }
@@ -1658,7 +1656,7 @@ h2.sub-title { font-weight: bold; letter-spacing: -0.03em; background: url("/ass
 .popup-container .popup-dim { height: 100%; background: rgba(0, 0, 0, 0.1); }
 
 /* 팝업 영역 */
-.popup { width: 870px; min-height: 500px; background: #fff; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); z-index: 10000; /* 팝업 헤드라인 */ /* 팝업 콘텐츠 */ }
+.popup { width: 870px; min-height: 500px; background: #fff; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); outline: 0; z-index: 10000; /* 팝업 헤드라인 */ /* 팝업 콘텐츠 */ }
 
 .popup.is-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
@@ -1710,9 +1708,9 @@ body .wrap { width: 1248px; padding: 0 24px; margin: 0 auto; }
 
 .gnb-area .gnb .btn-gnb-all { float: right; width: 24px; height: 19px; margin-top: 26px; background: url("/assets/images/common/btn-gnb-all.svg") no-repeat; }
 
-#gnb-all-menu { position: absolute; top: 0; left: 0; right: 0; height: 564px; background: linear-gradient(#475b6b 46px, #fff 46px); box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); transform: translateY(-100%); transition: transform 0.3s cubic-bezier(1, 0.5, 0, 1); }
+#gnb-all-menu { position: absolute; top: 100px; left: 0; right: 0; height: 0; background: linear-gradient(#475b6b 46px, #fff 46px); box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); visibility: hidden; overflow: hidden; transition: visibility .3s, height .3s; }
 
-#gnb-all-menu.active { top: 100px; display: block; visibility: visible; transform: translateY(0); }
+#gnb-all-menu.open { visibility: visible; height: 564px; }
 
 #gnb-all-menu .wrap { position: relative; }
 

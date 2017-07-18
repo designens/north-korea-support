@@ -18,6 +18,7 @@
     min-height: 500px;
     background: #fff;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    outline: 0;
     z-index: 10000;
     &.is-center {
         @include wh-center($position: absolute);

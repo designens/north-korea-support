@@ -49,14 +49,14 @@
     });
 
     // GNB 전체메뉴
-    var menu = doc.querySelector("#gnb-all-menu"),
-    toggle = doc.querySelector(".btn-gnb-all");
-
-    function toggleMenu() {
-      menu.classList.toggle("active");
-    };
-
-    toggle.addEventListener("click", toggleMenu, false);
+    // 상단 메뉴 버튼 클릭 시 전체메뉴 오픈
+    $('.btn-gnb-all').click(function() {
+       $('#gnb-all-menu').toggleClass('open');
+    });
+    // 전체메뉴 닫기 버튼 클릭 시 닫기
+    $('.btn-gnb-close').click(function() {
+       $('#gnb-all-menu').toggleClass('open');
+    });
 
 
 })(window, document, window.jQuery);
