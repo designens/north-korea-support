@@ -44,15 +44,17 @@ body {
     padding: rem(24px);
     article {
         .title {
-            font-size: rem(30px);
+            font-size: rem(28px);
             font-weight: bold;
             color: #1566c1;
+            letter-spacing: -0.03em;
             &:before {
                 content: "\f013";
                 font-family: FontAwesome;
-                font-size: rem(24px);
+                font-size: rem(20px);
                 color: #1566c1;
                 padding-right: rem(10px);
+                vertical-align: text-bottom;
             }
         }
     }
@@ -60,12 +62,13 @@ body {
         @include span(full);
         margin-top: $base-line-height;
         .location {
-            padding: rem(23px) $base-line-height;
+            padding: rem(20px) rem(20px) rem(14px) rem(20px);
             border: 1px solid #ddd;
             margin-bottom: $base-line-height;
             background: #fff;
-            p {
+            .link {
                 line-height: rem(24px);
+                letter-spacing: -0.03em;
                 &.check {
                     &:before {
                         content: "\f00c";
@@ -93,9 +96,10 @@ body {
                 span {
                     font-size: rem(12px);
                     color: #aaa;
+                    letter-spacing: 0.05em;
                     display: block;
                     margin-left: 20px;
-                    margin-bottom: 10px;
+                    margin-bottom: 6px;
                     &:before {
                         content: "(";
                     }

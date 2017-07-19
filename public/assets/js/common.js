@@ -85,8 +85,8 @@
                 .find('.submenu').stop().slideToggle();
         };
 
-        // 첫번째 대분류 오픈 (1)
         var accordion = new Accordion($('#accordion'), 1);
+        // 첫번째 메뉴오픈
     });
 
 })(window, document, window.jQuery);
