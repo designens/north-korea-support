@@ -147,7 +147,7 @@ a {
 
 // textarea 설정
 textarea {
-    color: $font-base;
+    color: inherit;
 }
 
 // input 설정 
@@ -171,18 +171,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 input {
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari*/
-        color: $placeholder;
+        color: inherit;
     }
     &::-moz-placeholder {
         /* Firefox 19+*/
-        color: $placeholder;
+        color: inherit;
     }
     &:-ms-input-placeholder {
         /* IE 10+*/
-        color: $placeholder !important;
+        color: inherit !important;
     }
     &:-moz-placeholder {
         /* Firefox 18-*/
-        color: $placeholder;
+        color: inherit;
     }
 }

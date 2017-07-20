@@ -1,3 +1,6 @@
+// Rem 단위 계산을 위한 기본 사이즈
+$html-fz: 10px;
+
 // 단위 제거
 @function de-unit($unit) {
   @return $unit / ($unit * 0 + 1);

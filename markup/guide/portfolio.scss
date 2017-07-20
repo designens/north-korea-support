@@ -1,0 +1,168 @@
+/*! portfolio.css © inyoung, 2017.07.20 */
+
+@charset "utf-8";
+
+// =======================================
+// Framework import
+// =======================================
+@import "../sass/lib/susy/susy";
+
+// =======================================
+// Base Design
+// =======================================
+@import "../sass/base/reset-css";
+@import "../sass/base/susy-settings";
+
+// =======================================
+// Function
+// =======================================
+@import "../sass/function/retina";
+@import "../sass/function/px-rem";
+
+// =======================================
+// Mixin
+// =======================================
+@import "../sass/mixin/align";
+@import "../sass/mixin/text-abb";
+@import "../sass/mixin/fa-icon";
+@import "../sass/mixin/psd-fz";
+@import "../sass/mixin/psd-lh";
+@import "../sass/mixin/psd-mb";
+@import "../sass/mixin/heading";
+@import "../sass/mixin/button";
+@import "../sass/mixin/retina-img";
+@import "../sass/mixin/tabs";
+@import "../sass/mixin/progress";
+
+// =======================================
+// Placeholder
+// =======================================
+@import "../sass/placeholder/clearfix";
+@import "../sass/placeholder/row";
+@import "../sass/placeholder/box-hidden";
+
+// =======================================
+// Typography
+// =======================================
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+$ff-kr : 'Noto Sans Korean', sans-serif, serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+$ff-en : 'Roboto', sans-serif, serif;
+
+// =======================================
+// Guide Style
+// =======================================
+body {
+    font-family: $ff-kr;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #999;
+    height: 100vh;
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    * {
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+}
+
+.portfolio-list {
+    @include container();
+    min-width: 480px;
+    max-width: 1000px;
+    padding: 20px;
+    @extend %clearfix;
+    .h1-title {
+        font-family: $ff-en;
+        font-size: 40px;
+        font-weight: 100;
+        color: #fff;
+        text-align: center;
+        margin: 50px 20px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+.project-area {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    .h2-title {
+        font-family: $ff-en;
+        font-size: 28px;
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 0 10px 10px;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    }
+    .project {
+        @extend %clearfix;
+        .item {
+            @include span(full);
+            height: 380px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+        }
+        @include susy-breakpoint($tablet, 2) {
+            .item {
+                @include gallery(1 of 2);
+            }
+        }
+        @include susy-breakpoint($desktop, 3) {
+            .item {
+                @include gallery(1 of 3);
+            }
+        }
+    }
+}
+.project-img {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+     img {
+        @include span(full);
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 1s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+.project-ex {
+    font-size: 14px;
+    padding: 0 20px 20px 20px;
+    letter-spacing: -0.03em;
+    .h3-title {
+        position: relative;
+        font-size: 20px;
+        height: 80px;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: #25b7c3;
+        border-bottom: 1px solid #25b7c3;
+        margin-bottom: 18px;
+        span {
+            @include wh-center ($position: absolute);
+            width: 100%;
+        }
+    }
+    > p {
+        span {
+            color: #25c482;
+        }
+    }
+    .link {
+
+    }
+    .period {
+
+    }
+    .work {
+
+    }
+}

@@ -1,4 +1,4 @@
-/*! style.css v1.0.0 © inyoung524@naver.com */
+/*! guide.css © inyoung, 2017.07.20 */
 
 @charset "utf-8";
 
@@ -10,7 +10,6 @@
 // =======================================
 // Base Design
 // =======================================
-@import "../sass/base/color-system";
 @import "../sass/base/reset-css";
 @import "../sass/base/susy-settings";
 
@@ -21,17 +20,48 @@
 @import "../sass/function/px-rem";
 
 // =======================================
+// Mixin
+// =======================================
+@import "../sass/mixin/align";
+@import "../sass/mixin/text-abb";
+@import "../sass/mixin/fa-icon";
+@import "../sass/mixin/psd-fz";
+@import "../sass/mixin/psd-lh";
+@import "../sass/mixin/psd-mb";
+@import "../sass/mixin/heading";
+@import "../sass/mixin/button";
+@import "../sass/mixin/retina-img";
+@import "../sass/mixin/tabs";
+@import "../sass/mixin/progress";
+
+// =======================================
+// Placeholder
+// =======================================
+@import "../sass/placeholder/clearfix";
+@import "../sass/placeholder/row";
+@import "../sass/placeholder/box-hidden";
+
+// =======================================
 // Typography
 // =======================================
-@import "../sass/fonts/font-settings";
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
 // =======================================
 // Guide Style
 // =======================================
+html {
+    font-size: 10px;
+}
 body {
-    background: #ededed !important;
-    font-size: rem(16px) !important;
+    font-family: 'Noto Sans Korean', sans-serif, serif;
+    font-size: rem(14px);
+    line-height: 1.5;
     height: 100vh;
+    background: #ededed;
+    * {
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
 }
 .guide {
     margin-bottom: 0;
@@ -40,7 +70,10 @@ body {
     }
 }
 .wrap {
-    @include container;
+    min-width: 480px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
     padding: rem(24px);
     article {
         .title {
@@ -60,11 +93,11 @@ body {
     }
     .all-link {
         @include span(full);
-        margin-top: $base-line-height;
+        margin-top: rem(20px);
         .location {
             padding: rem(20px) rem(20px) rem(14px) rem(20px);
             border: 1px solid #ddd;
-            margin-bottom: $base-line-height;
+            margin-bottom: rem(20px);
             background: #fff;
             .link {
                 line-height: rem(24px);

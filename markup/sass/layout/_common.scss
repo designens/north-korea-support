@@ -89,13 +89,6 @@ body {
  */
 #container {
     @extend %clearfix;
-    /* LNB 영역 */
-    .lnb {
-        float: left;
-        width: 226px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
     /* Content 영역 */
     .content-area {
         float: left;

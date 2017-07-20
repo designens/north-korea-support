@@ -9,4 +9,4 @@
 
  ## 프로젝트 관리
  - 일정관리 : https://goo.gl/JuVLNp
- - 사이트맵 : https://designens.github.io
+ - 사이트맵 : https://designens.github.io/north-korea-support/index.html
