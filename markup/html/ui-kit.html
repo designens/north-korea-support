@@ -1,54 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<!--#include file="../_inc/_doctype.html"-->
 <head>
-    <title>대북지원정보시스템</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<!-- 페이지 저자 정의 -->
-<meta name="author" content="inyoung"/>
-<!-- SEO : 검색엔진최적화 -->
-<meta name="description" content="대북지원정보시스템"/>
-<meta name="keywords" content="대북지원정보시스템"/>
-    <!-- MSIE 호환성 보기 (최신 브라우저) -->
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<!-- MOBILE : 모바일 최적화 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-    <!-- Styles : Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-<!-- Styles : CSS & SASS Sorcemap -->
-<link rel="stylesheet" href="../assets/css/style.css"/>
-    <!-- IE 9 버전 이하 지원 -->
-<!--[if lt IE 9]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
-<![endif]-->
-
-<!-- IE 9 버전 이상 지원 -->
-<!--[if gte IE 9]><!-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--<![endif]-->
-
-<!-- jQuery : jquery-ui -->
-<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+    <!--#include file="../_inc/_page-title.html"-->
+    <!--#include file="../_inc/_meta-information.html"-->
+    <!--#include file="../_inc/_meta-settings.html"-->
+    <!--#include file="../_inc/_css-settings.html"-->
+    <!--#include file="../_inc/_js-top-settings.html"-->
 </head>
 
 <body>
     <!-- [Start] skip navigation -->
-    <a class="skip-link" href="#gnb-menu" data-scroll data-target="#gnb-menu" role="button">즐겨찾는 메뉴 바로가기</a>
-    <a class="skip-link" href="#gnb-all-menu" data-scroll data-target="#gnb-all-menu" role="button">전체메뉴 바로가기</a>
-    <a class="skip-link" href="#container" data-scroll data-target="#container" role="button">컨텐츠 바로가기</a>
+    <!--#include file="../_inc/_skip-navigation.html"-->
     <!-- [End] skip navigation -->
     
     <!-- [Start] Header -->
     <header class="header">
         <!-- [Start] Top menu -->
-        <div class="top-menu">
-            <div class="wrap">
-                <a href="login.html">로그인</a>
-                <a href="apply-to-north-korea.html">대북지원사업자 신청</a>
-                <a href="support-application-status-list.html">사업자 지원접수현황</a>
-            </div>
-        </div>
+        <!--#include file="../_inc/_top-menu.html"-->
         <!-- [End] Top menu -->
         
         <!-- [Start] 로고 및 즐겨찾는 메뉴 -->
@@ -169,52 +136,51 @@
 
     <!-- [Start] Container Area -->
     <div id="container" class="login-bg">
-        <main class="login-area">
-            <h2 class="login-title">회원 로그인</h2>
-            <section class="login-content">
-                <div class="form-group">
-                    <div class="input-text-type">
-                        <input type="text" id="username" name="username" required="required" />
-                        <label for="username">아이디 입력</label>
-                        <br/>
-                        <input type="password" id="password" name="password" required="required" />
-                        <label for="password">비밀번호 입력</label>
-                    </div>
-                    <button class="btn-login">로그인</button>
-                </div>
-                <div class="checkbox-type">
-                    <input type="checkbox" id="rememberMe" name="rememberMe">
-                    <label for="rememberMe">아이디 저장</label>
-                </div>
-                <div class="btn-link-set">
-                    <a class="btn-main" href="/">메인화면으로 이동</a>
-                    <a class="btn-join" href="sign-up-write.html">회원가입</a>
-                </div>
-                <div class="information">아이디나 비밀번호를 잊어버리신 경우 <span>1577-1365 (야간 02-2100-5799)</span>로 문의주시기 바랍니다.</div>
-            </section>
-        </main>
+        
+        <!-- Input 공통 -->
+        <div class="form-group">
+            <div class="input-text-type">
+                <input type="text" id="username" name="username" required="required" />
+                <label for="username">아이디 입력</label>
+            </div>
+            <div class="input-text-type">
+                <input type="password" id="password" name="password" required="required" />
+                <label for="password">비밀번호 입력</label>
+            </div>
+            <button class="btn-login">로그인</button>
+        </div>
+
+        <!-- 체크박스 공통 -->
+        <div class="checkbox-type">
+            <input type="checkbox" id="checkbox-01" name="test-01">
+            <label for="checkbox-01">Checkbox Test 01</label>
+            <input type="checkbox" id="checkbox-02" name="test-02">
+            <label for="checkbox-02">Checkbox Test 02</label>
+            <input type="checkbox" id="checkbox-03" name="test-03">
+            <label for="checkbox-03">Checkbox Test 03</label>
+        </div>
+        
+        <!-- 라디오버튼 공통 -->
+        <div class="radio-type">
+            <input type="radio" id="radio1" name="test">
+            <label for="radio1">Radio Button Test 01</label>
+            <input type="radio" id="radio2" name="test">
+            <label for="radio2">Radio Button Test 02</label>
+        </div>
+
+        <div class="btn-link-set">
+            <a class="btn-test" href="">메인화면으로 이동</a>
+            <a class="btn-test" href="">회원가입</a>
+        </div>
+
     </div>
     <!-- [End] Container Area -->
 
     <!-- [Start] Footer Area -->
-    <footer class="footer">
-        <div class="site-info">
-            <a href="#"><span>이용약관</span></a>
-            <a href="#"><span>개인정보처리방법</span></a>
-            <a href="#"><span>이메일무단수집거부</span></a>
-            <a href="#"><span>저작권보호 및 이용정책</span></a>
-        </div>
-        <p>
-            03171 서울특별시 종로구 세종대로 209 (세종로) 정부서울청사 6,7층 TEL : 1577-1365 (야간 2100-5799)<br/>
-            <small class="copyright">COPYRIGHT&copy;MINISTRY OF UNIFICATION .ALL RIGHTS RESERVED.</small>
-        </p>
-    </footer>
+    <!--#include file="../_inc/_site-info.html"-->
     <!-- [End] Footer Area -->
 
-    <!-- javascript : 라이브러리 플러그인 -->
-<script type="text/javascript" src="../assets/js/lib-js.js"></script>
-<!-- javascript : 공통사용 -->
-<script type="text/javascript" src="../assets/js/common.js"></script>
+    <!--#include file="../_inc/_js-bottom-settings.html"-->
 </body>
 
 </html>

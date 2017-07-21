@@ -110,7 +110,7 @@ gulp.task('server', ['htmlSSI', 'sass', 'sass:guide', 'js', 'imagemin' ], functi
         // 알림 설정
         notify: !true,
         // 포트 설정
-        port: 9091,
+        port: 9090,
         // 서버 설정
         server: {
             // 기본 디렉토리 설정

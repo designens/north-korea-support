@@ -88,15 +88,15 @@ body {
  * --------------------------------
  */
 #container {
+    min-height: 730px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     @extend %clearfix;
     /* Content 영역 */
     .content-area {
         float: left;
         margin-left: 24px;
-        margin-top: 50px;
-        margin-bottom: 30px;
         width: 950px;
-        min-height: 940px;
         .headline {
             height: 58px;
             line-height: 58px;

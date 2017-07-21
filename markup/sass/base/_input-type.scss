@@ -1,0 +1,125 @@
+// =======================================
+// 폼 그룹 스타일
+// =======================================
+.input-text-type,
+.checkbox-type,
+.radio-type {
+    input {
+        // 기본 버튼 속성 무시
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    + label {
+        &:empty {
+            &:before {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// =======================================
+// 텍스트 타입
+// =======================================
+.input-text-type {
+    input {
+        min-width: 90px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        border: 1px solid #dbdbdb;
+    }
+}
+
+// =======================================
+// 체크박스, 라디오 버튼 공통 타입
+// =======================================
+
+// Input Color 설정
+$input-checked: #002847;
+$input-focus: $input-checked;
+$input-border: $input-checked;
+$input-bg: #fff;
+
+.checkbox-type {
+    input {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        + label {
+            &:before {
+                display: inline-block;
+                content: '';
+                background: $input-bg;
+                border: 1px solid $input-border;
+                width: 14px;
+                height: 14px;
+                margin-right: 8px;
+                text-align: center;
+            }
+        }
+        &:focus {
+            + label {
+                &:before {
+                    outline: none;
+                    border-color: $input-focus;
+                }
+            }
+        }
+    }
+}
+.radio-type {
+    @extend .checkbox-type;
+}
+
+// =======================================
+// 체크박스 타입
+// =======================================
+.checkbox-type {
+    input[type="checkbox"] {
+        + label {
+            &:before {
+                font-size: 18px;
+                line-height: 1;
+                vertical-align: text-bottom;
+                transition: all 0.15s ease;
+            }
+        }
+        &:checked {
+            + label {
+                &:before {
+                    font-size: 14px;
+                    line-height: 1;
+                    font-family: 'FontAwesome';
+                    content: "\f00c";
+                    color: $input-checked;
+                }
+            }
+        }
+    }
+}
+
+// =======================================
+// 라디오버튼 타입
+// =======================================
+.radio-type {
+    input[type="radio"] {
+        + label {
+            &:before {
+                border-radius: 100%;
+                vertical-align: text-top;
+                transition: all 0.3s ease;
+            }
+        }
+        &:checked {
+            + label {
+                &:before {
+                    background-color: $input-checked;
+                    box-shadow: inset 0 0 0 4px $input-bg;
+                }
+            }
+        }
+    }
+}

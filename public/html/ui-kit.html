@@ -169,30 +169,43 @@
 
     <!-- [Start] Container Area -->
     <div id="container" class="login-bg">
-        <main class="login-area">
-            <h2 class="login-title">회원 로그인</h2>
-            <section class="login-content">
-                <div class="form-group">
-                    <div class="input-text-type">
-                        <input type="text" id="username" name="username" required="required" />
-                        <label for="username">아이디 입력</label>
-                        <br/>
-                        <input type="password" id="password" name="password" required="required" />
-                        <label for="password">비밀번호 입력</label>
-                    </div>
-                    <button class="btn-login">로그인</button>
-                </div>
-                <div class="checkbox-type">
-                    <input type="checkbox" id="rememberMe" name="rememberMe">
-                    <label for="rememberMe">아이디 저장</label>
-                </div>
-                <div class="btn-link-set">
-                    <a class="btn-main" href="/">메인화면으로 이동</a>
-                    <a class="btn-join" href="sign-up-write.html">회원가입</a>
-                </div>
-                <div class="information">아이디나 비밀번호를 잊어버리신 경우 <span>1577-1365 (야간 02-2100-5799)</span>로 문의주시기 바랍니다.</div>
-            </section>
-        </main>
+        
+        <!-- Input 공통 -->
+        <div class="form-group">
+            <div class="input-text-type">
+                <input type="text" id="username" name="username" required="required" />
+                <label for="username">아이디 입력</label>
+            </div>
+            <div class="input-text-type">
+                <input type="password" id="password" name="password" required="required" />
+                <label for="password">비밀번호 입력</label>
+            </div>
+            <button class="btn-login">로그인</button>
+        </div>
+
+        <!-- 체크박스 공통 -->
+        <div class="checkbox-type">
+            <input type="checkbox" id="checkbox-01" name="test-01">
+            <label for="checkbox-01">Checkbox Test 01</label>
+            <input type="checkbox" id="checkbox-02" name="test-02">
+            <label for="checkbox-02">Checkbox Test 02</label>
+            <input type="checkbox" id="checkbox-03" name="test-03">
+            <label for="checkbox-03">Checkbox Test 03</label>
+        </div>
+        
+        <!-- 라디오버튼 공통 -->
+        <div class="radio-type">
+            <input type="radio" id="radio1" name="test">
+            <label for="radio1">Radio Button Test 01</label>
+            <input type="radio" id="radio2" name="test">
+            <label for="radio2">Radio Button Test 02</label>
+        </div>
+
+        <div class="btn-link-set">
+            <a class="btn-test" href="">메인화면으로 이동</a>
+            <a class="btn-test" href="">회원가입</a>
+        </div>
+
     </div>
     <!-- [End] Container Area -->
 
