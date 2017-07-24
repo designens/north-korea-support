@@ -112,17 +112,18 @@ body {
             .site-location {
                 float: right;
                 a {
-                    letter-spacing: -0.03em;
+                    font-size: 12px;
                     color: #666;
+                    letter-spacing: -0.03em;
                     img {
-                        vertical-align: baseline;
+                        vertical-align: text-top;
                     }
                     &:before {
                         display: inline-block;
                         font-family: 'FontAwesome';
-                        font-size: 18px;
+                        font-size: 16px;
                         content: "\f105";
-                        padding: 0 6px 0 4px;
+                        padding: 0 4px 0 2px;
                     }
                     &:first-child {
                         &:before {

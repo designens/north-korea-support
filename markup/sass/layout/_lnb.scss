@@ -51,8 +51,19 @@
             }
             &.open {
                 .lnb-link {
+                    position: relative;
                     color: #003761;
+                    padding-left: 33px;
                     background: #cee4f5;
+                    &:before {
+                        position: absolute;
+                        left: 20px;
+                        bottom: 16px;
+                        width: 6px;
+                        height: 2px;
+                        background: #003761;
+                        content: "";
+                    }
                     .fa-angle-down {
                         color: #003761;
                         transform: rotate(180deg);
@@ -66,10 +77,6 @@
         display: none;
         background: #f0f8ff;
         padding: 9px 0;
-        &.hidden {
-            display: none !important;
-            visibility: hidden;
-        }
         > li {
             font-weight: normal;
             padding: 9px 24px;
