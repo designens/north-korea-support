@@ -101,7 +101,7 @@ gulp.task('watch', function() {
 // =======================================
 // 폴더 제거 업무
 // =======================================
-gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/style.css'));
+gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/jiy-style.css'));
 
 // =======================================
 // 서버 업무
@@ -164,9 +164,9 @@ gulp.task('sass:guide', function() {
  });
 
 gulp.task('css:min', function() {
-    gulp.src(BUILD + '/assets/css/style.css')
+    gulp.src(BUILD + '/assets/css/jiy-style.css')
         .pipe( csso() )
-        .pipe( rename('style.min.css') )
+        .pipe( rename('jiy-style.min.css') )
         .pipe( gulp.dest(BUILD + '/assets/css') );
  });
 
