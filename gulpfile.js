@@ -59,7 +59,7 @@ var js_order = [
 var moveJS = [
     dir.js + '/jquery-ui.min.js', // jQuery 1.12.0
     dir.js + '/jquery-1.11.3.min.js', // jQuery 1.11.3
-    dir.js + '/common.js', // 공통 작업 자바스크립트
+    dir.js + '/jiy-common.js', // 공통 작업 자바스크립트
 ];
 
 // =======================================
