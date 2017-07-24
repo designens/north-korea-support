@@ -14,7 +14,7 @@
             height: 50px;
             margin-bottom: 40px;
             @extend %text-hidden;
-            background: url("../../assets/images/sub/member-login.png") center no-repeat;
+            background: url($login-title) center no-repeat;
         }
     }
 }

@@ -79,7 +79,7 @@ body {
     min-width: 1248px;
     height: 140px;
     text-indent: -9999px;
-    background: url("/assets/images/bg/sub-banner.png") center;
+    background: url($sub-banner) center;
 }
 
 /* 
@@ -104,7 +104,7 @@ body {
             .sub-title {
                 font-weight: bold;
                 letter-spacing: -0.03em;
-                background: url("/assets/images/icon/sub-title.svg") 0 50% no-repeat;
+                background: url($sub-title) 0 50% no-repeat;
                 padding-left: 25px;
                 float: left;
             }
@@ -145,7 +145,7 @@ hr.sub-title-bar {
     height: 6px;
     margin-top: 0;
     margin-bottom: 30px;
-    background: url("/assets/images/bg/sub-title-bar.png") repeat-x;
+    background: url($sub-title-bar) repeat-x;
 }
 
 /* Footer : 사이트 정보 */

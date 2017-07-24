@@ -29,7 +29,7 @@
             height: 19px;
             margin-top: 26px;
             @extend %text-hidden;
-            background: url("/assets/images/common/btn-gnb-all.svg") no-repeat;
+            background: url($btn-gnb-all) no-repeat;
         }
     }
 }
@@ -189,7 +189,7 @@
             width: 54px;
             height: 54px;
             @extend %text-hidden;
-            background: #003761 url("/assets/images/common/btn-gnb-close.svg") center no-repeat;
+            background: #003761 url($btn-gnb-close) center no-repeat;
         }
     }
 }
