@@ -53,7 +53,8 @@
             text-align: center;
             margin-top: 30px;
             .popup-close {
-                @include btn($dp: inline-block, $bg: $skyblue);
+                @include btn-size ($dp: inline-block, $w: 66px);
+                @include btn-type-01 ($bg: $skyblue);
             }
         }
     }

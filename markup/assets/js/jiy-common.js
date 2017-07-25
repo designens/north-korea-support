@@ -43,6 +43,20 @@
       $.popupId($popups, 'login-area').open();
     });
 
+    // 공지사항 상세 팝업
+    $('.btn-popup-notices').on('click', function(e) {
+      e.preventDefault();
+      // 팝업 찾아 열기 (id)
+      $.popupId($popups, 'popup-notices').open();
+    });
+
+    // 자료실 상세 팝업
+    $('.btn-popup-resources').on('click', function(e) {
+      e.preventDefault();
+      // 팝업 찾아 열기 (id)
+      $.popupId($popups, 'popup-resources').open();
+    });
+
     // 팝업 컨트롤 범위 지정
     $('.popup').draggable({
         containment: "body" //지정된 영역안에서만 이동
@@ -62,6 +76,11 @@
     var accordion = new $.Accordion($('.accordion-lnb')), // LNB 메뉴
         accordion_faq = new $.Accordion($('.accordion-faq'), 1); // QnA 메뉴
 
-
+    // SelectBox Option 선택 설정
+    var selectbox = $("select");
+    selectbox.change(function(){
+        var select_name = $(this).children("option:selected").text();
+        $(this).siblings("label").text(select_name);
+    });
 
 })(window, document, window.jQuery);
