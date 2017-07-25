@@ -1,0 +1,32 @@
+@mixin select-box ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff) {
+    position: relative;
+    width: $w;
+    height: $h;
+    vertical-align: -1px;
+    border: 1px solid $bdc;
+    background: $bg;
+    &:before {
+        position: absolute;
+        top: -2px;
+        right: 10px;
+        font-family: 'FontAwesome';
+        content: "\f0dd";
+        font-size: 17px;
+        color: #343434;
+        pointer-events: none;
+    }
+    label {
+        position: absolute;
+        top: 4px;
+        left: 10px;
+    }
+    select {
+        width: 100%;
+        height: $h;
+        min-height: $h;
+        line-height: $h;
+        padding: $p;
+        opacity: 0;
+        filter: alpha(opacity = 0);
+    }
+}

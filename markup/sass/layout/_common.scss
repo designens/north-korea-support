@@ -1,12 +1,6 @@
 // =======================================
-// Common Style
+// Layout Common Style
 // =======================================
-
-/*
- * --------------------------------
- * Layout 기본구조
- * --------------------------------
- */
 body {
     min-width: 1200px;
     .wrap {
@@ -16,11 +10,9 @@ body {
     }
 }
 
-/* 
- * --------------------------------
- * Skip Navigation 설정
- * --------------------------------
- */
+// =======================================
+// Skip Navigation 설정
+// =======================================
 .skip-link {
     position: absolute;
     top: -33px;
@@ -37,11 +29,9 @@ body {
     }
 }
 
-/* 
- * --------------------------------
- * Header : Top menu
- * --------------------------------
- */
+// =======================================
+// Header : Top menu
+// =======================================
 .header {
     @extend %clearfix;
     .top-menu {
@@ -69,11 +59,9 @@ body {
     }
 }
 
-/* 
- * --------------------------------
- * Visual Banner : 상단 공통 배너
- * --------------------------------
- */
+ // =======================================
+ // Visual Banner : 상단 공통 배너
+ // =======================================
 .sub-visual {
     width: 100%;
     min-width: 1248px;
@@ -82,11 +70,9 @@ body {
     background: url($sub-banner) center;
 }
 
-/* 
- * --------------------------------
- * Container : 컨테이너 영역
- * --------------------------------
- */
+// =======================================
+// Container : 컨테이너 영역
+// =======================================
 #container {
     min-height: 730px;
     padding-top: 50px;
@@ -139,7 +125,9 @@ body {
     }
 }
 
-/* Sub Page : Title 구분선 */
+// =======================================
+// Sub Page : Title 구분선
+// =======================================
 hr.sub-title-bar {
     display: block;
     width: 100%;
@@ -149,7 +137,9 @@ hr.sub-title-bar {
     background: url($sub-title-bar) repeat-x;
 }
 
-/* Footer : 사이트 정보 */
+// =======================================
+// Footer : 사이트 정보
+// =======================================
 .footer {
     width: 100%;
     height: 170px;
@@ -186,7 +176,78 @@ hr.sub-title-bar {
     }
 }
 
-/* 테이블 스타일 설정 */
+// =======================================
+// 폼 그룹 스타일
+// =======================================
+.input-type,
+.checkbox-type,
+.radio-type {
+    input {
+        // 기본 버튼 속성 무시
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    + label {
+        &:empty {
+            &:before {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// =======================================
+// 검색 영역 스타일
+// =======================================
+.search-area {
+    width: 100%;
+    padding: 19px 0;
+    font-size: 0;
+    text-align: center;
+    border: 1px solid #c5d2db;
+    margin-bottom: 40px;
+    background: #f5f8fa;
+    li {
+        font-size: 14px;
+        display: inline-block;
+        margin-right: 6px;
+        &:first-child {
+            margin-right: 10px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .btn-lookup {
+            @include btn-size ($dp: inline-block, $w: 66px);
+            @include btn-type-01 ($fz: 14px, $color: #fff, $bd: 1px solid #394147, $bg: #394a57);
+               
+       }
+    }
+    .search-title {
+        font-weight: bold;
+        color: #2e3a42;
+    }
+    .select-box {
+        @include select-box ($w: 90px);
+    }
+    .input-type {
+        @include input-type ($w: 360px);
+        label {
+            span {
+                position:absolute;
+                height:1px;
+                overflow:hidden;
+            }
+        }
+    }
+}
+
+
+// =======================================
+// 테이블 스타일
+// =======================================
 .table-type {
     width: 100%;
     thead {

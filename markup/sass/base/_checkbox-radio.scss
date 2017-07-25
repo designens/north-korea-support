@@ -1,39 +1,4 @@
 // =======================================
-// 폼 그룹 스타일
-// =======================================
-.input-text-type,
-.checkbox-type,
-.radio-type {
-    input {
-        // 기본 버튼 속성 무시
-        -webkit-appearance: none;
-        -ms-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
-    + label {
-        &:empty {
-            &:before {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-// =======================================
-// 텍스트 타입
-// =======================================
-.input-text-type {
-    input {
-        min-width: 90px;
-        height: 30px;
-        line-height: 30px;
-        padding: 0 10px;
-        border: 1px solid #dbdbdb;
-    }
-}
-
-// =======================================
 // 체크박스, 라디오 버튼 공통 타입
 // =======================================
 
@@ -42,6 +7,7 @@ $input-checked: #002847;
 $input-focus: $input-checked;
 $input-border: $input-checked;
 $input-bg: #fff;
+$input-sz: 14px;
 
 .checkbox-type {
     input {
@@ -54,8 +20,8 @@ $input-bg: #fff;
                 content: '';
                 background: $input-bg;
                 border: 1px solid $input-border;
-                width: 14px;
-                height: 14px;
+                width: $input-sz;
+                height: $input-sz;
                 margin-right: 8px;
                 text-align: center;
             }

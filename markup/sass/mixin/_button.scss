@@ -1,16 +1,28 @@
 // 버튼 기본 디자인 설정
-@mixin btn($dp: block, $w: 104px, $h: 30px, $fz: null, $color: null, $p: 0 10px, $bdsize: null, $bd: null, $radius: 3px, $bg: null) {
+@mixin btn-size ($dp: block, $w: 104px, $h: 30px, $radius: 3px) {
     display: $dp;
-    font-size: $fz;
-    color: $color;
-    width: $w - 20px;
+    min-width: $w;
     height: $h;
-    line-height: $h;
+    line-height: $h - 2px;
     text-align: center;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
-    padding: $p;
+    padding: 0 10px;
     border-radius: $radius;
+}
+@mixin btn-type-01 ($fz: null, $color: null, $bd: null, $bg: null) {
+    font-size: $fz;
+    color: $color;
     border: $bd;
+    background: $bg;
+    &:hover, &:focus, &:active {
+        background: rgba($bg, .9);
+        transition: background .3s ease;
+    }
+}
+@mixin btn-type-02 ($fz: null, $color: null, $bdb: null, $bg: null) {
+    font-size: $fz;
+    color: $color;
+    border-bottom: 3px solid $bdb;
     background: $bg;
     &:hover, &:focus, &:active {
         background: rgba($bg, .9);

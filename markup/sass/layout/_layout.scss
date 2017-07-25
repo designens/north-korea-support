@@ -33,15 +33,12 @@
         top: 50px;
         width: 406px;
         @extend %clearfix;
-        .input-text-type {
+        .input-area {
             float: left;
             input {
                 float: right;
-                width: 220px;
-                height: 34px;
-                line-height: 34px;
-                border: 1px solid #e6e9eb;
                 margin-bottom: 8px;
+                @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
             }
             label {
                 float: left;
@@ -82,25 +79,16 @@
         top: 190px;
         width: 406px;
         [class*='btn-'] {
-            display: inline-block;
-            width: 200px;
-            height: 40px;
-            line-height: 40px;
+            @include btn-size ($dp: inline-block, $w: 200px, $h: 40px);
             letter-spacing: -0.01em;
-            text-align: center;
-            border-radius: 3px;
         }
         .btn-main {
             float: left;
-            color: #333;
-            background: #9fb3c2;
-            border-bottom: 3px solid #6f7d87;
+            @include btn-type-02 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
         }
         .btn-join {
             float: right;
-            color: #fff;
-            background: #394a57;
-            border-bottom: 3px solid #28343d;
+            @include btn-type-02 ($color: #fff, $bdb: #28343d, $bg: #394a57);
         }
     }
 }
@@ -123,4 +111,14 @@
             color: #0c314c;
         }
     }
+}
+
+/* 
+ * --------------------------------
+ * 메인 > 로그인 > 외부로그인
+ * (html/login.html)
+ * --------------------------------
+ */
+.search-area {
+
 }
