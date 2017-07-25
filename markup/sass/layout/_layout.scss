@@ -35,10 +35,10 @@
         @extend %clearfix;
         .input-area {
             float: left;
+            @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
             input {
                 float: right;
                 margin-bottom: 8px;
-                @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
             }
             label {
                 float: left;
