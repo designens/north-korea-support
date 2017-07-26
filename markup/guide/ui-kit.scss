@@ -1,7 +1,41 @@
 /*! style.css v1.0.0 © inyoung524@naver.com */
 
+// =======================================
+// UI Kit 플러그인
+// =======================================
 @charset "utf-8";
 @import "../sass/jiy-style";
+
+// =======================================
+// UI Kit 가이드 스타일
+// =======================================
+.ui-kit {
+    background: #f3f3f3;
+    overflow: hidden;
+    h1 {
+        font-size: 40px;
+        color: #002847;
+        letter-spacing: -0.03em;
+        padding: 20px 0 10px 0;
+        margin-bottom: 10px;
+        .fa {
+            font-size: 30px;
+            vertical-align: 4px;
+        }
+    }
+    article {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #e2e2e2;
+        h2 {
+            color: #002847;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+    }
+}
 
 // =======================================
 // 인풋 스타일 
@@ -19,14 +53,68 @@
     @include select-box;
 }
 
-.ui-kit {
-    background: #f3f3f3;
-    padding: 20px;
-    margin-bottom: 20px;
-    h2 {
-        color: #002847;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #e2e2e2;
+// =======================================
+// 버튼 스타일
+// =======================================
+.btn-type-sample {
+    p {
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
     }
+    button {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.btn-type-1-01 {
+    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
+    @include btn-type-1 ($fz: 14px, $color: #333, $bd: $skyblue, $bg: $skyblue);
+}
+.btn-type-1-02 {
+    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
+    @include btn-type-1 ($fz: 14px, $color: #fff, $bd: #394147, $bg: #394a57, $rgb: #000);
+}
+.btn-type-2-01 {
+    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
+    @include btn-type-2 ($color: #333, $bdb: #a9b4bc, $bg: #c5d2db);
+}
+.btn-type-2-02 {
+    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
+    @include btn-type-2 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
+}
+.btn-type-2-03 {
+    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
+    @include btn-type-2 ($color: #fff, $bdb: #28343d, $bg: #394a57, $rgb: #000);
+}
+.btn-type-2-04 {
+    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
+    @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761, $rgb: #000);
+}
+
+// =======================================
+// 화살표 스타일
+// =======================================
+.arrow-box {
+    [class^="arrow-"] {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+.arrow-top {
+    @include arrow($dir: top, $size: 8px, $color: #000);
+}
+.arrow-right {
+    @include arrow($dir: right, $size: 8px, $color: #000);
+}
+.arrow-bottom {
+    @include arrow($dir: bottom, $size: 8px, $color: #000);
+}
+.arrow-left {
+    @include arrow($dir: left, $size: 8px, $color: #000);
 }

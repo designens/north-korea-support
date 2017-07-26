@@ -4,7 +4,6 @@
  * (html/login.html)
  * --------------------------------
  */
-
  .login-bg {
     position: relative;
     background: #fafafa;
@@ -51,15 +50,11 @@
         }
         .btn-login {
             float: right;
-            width: 76px;
-            height: 76px;
-            line-height: 76px;
             letter-spacing: -0.01em;
-            color: #fff;
-            text-align: center;
-            border-radius: 3px;
             background: #003761;
             border-bottom: 3px solid #002644;
+            @include btn-size ($dp: inline-block, $w: 76px, $h: 76px);
+            @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761);
         }
     }
 }
@@ -84,14 +79,15 @@
         }
         .btn-main {
             float: left;
-            @include btn-type-02 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
+            @include btn-type-2 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
         }
         .btn-join {
             float: right;
-            @include btn-type-02 ($color: #fff, $bdb: #28343d, $bg: #394a57);
+            @include btn-type-2 ($color: #fff, $bdb: #28343d, $bg: #394a57);
         }
     }
 }
+
 .login-content {
     .information {
         position: absolute;

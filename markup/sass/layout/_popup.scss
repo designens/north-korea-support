@@ -54,7 +54,7 @@
             margin-top: 30px;
             .popup-close {
                 @include btn-size ($dp: inline-block, $w: 66px);
-                @include btn-type-01 ($bg: $skyblue);
+                @include btn-type-1 ($bg: $skyblue);
             }
         }
     }

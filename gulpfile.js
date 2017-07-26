@@ -53,6 +53,7 @@ var js_order = [
     dir.js + '/jquery.a11y.popup.js',
     dir.js + '/smooth-scroll.js',
     dir.js + '/jquery.accordion.js',
+    dir.js + '/jquery.tabs.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동

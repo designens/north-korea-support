@@ -20,9 +20,11 @@ pre { white-space: pre-wrap; }
 
 legend, caption { display: none; clear: both; }
 
+a { color: inherit; cursor: pointer; }
+
 a:link { text-decoration: none; }
 
-a:hover, a:active { text-decoration: none; }
+a:hover, a:focus, a:active { text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; word-break: keep-all; }
 
@@ -60,12 +62,6 @@ progress[value]::-webkit-progress-bar { display: table-cell; }
 
 progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { display: table; }
 
-a { color: inherit; cursor: pointer; }
-
-a:visited { color: inherit; }
-
-a:hover, a:focus, a:active { color: inherit; }
-
 textarea { color: inherit; }
 
 input[type="button"], input[type="text"], input[type="image"], input[type="submit"] { -webkit-appearance: none; -webkit-border-radius: 0; }
@@ -86,7 +82,9 @@ input:-moz-placeholder { /* Firefox 18-*/ color: inherit; }
 
 .portfolio-list, .project-area .project { *zoom: 1; }
 
-.portfolio-list:after, .project-area .project:after { content: ''; display: block; clear: both; }
+.portfolio-list:before, .project-area .project:before, .portfolio-list:after, .project-area .project:after { content: ""; display: table; }
+
+.portfolio-list:after, .project-area .project:after { clear: both; }
 
 body { font-family: "Noto Sans Korean", sans-serif, serif; font-size: 14px; line-height: 1.5; color: #999; height: 100vh; background: -webkit-linear-gradient(left, #25c481, #25b7c4); background: linear-gradient(to right, #25c481, #25b7c4); }
 

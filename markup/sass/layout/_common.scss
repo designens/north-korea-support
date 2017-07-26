@@ -221,7 +221,7 @@ hr.sub-title-bar {
         }
         .btn-lookup {
             @include btn-size ($dp: inline-block, $w: 66px);
-            @include btn-type-01 ($fz: 14px, $color: #fff, $bd: 1px solid #394147, $bg: #394a57);
+            @include btn-type-1 ($fz: 14px, $color: #fff, $bd: 1px solid #394147, $bg: #394a57);
                
        }
     }
@@ -244,6 +244,35 @@ hr.sub-title-bar {
     }
 }
 
+// =======================================
+// 탭 스타일
+// =======================================
+.tabs {
+    li {
+        float: left;
+        width: 20%;
+    }
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #888;
+        padding: 20px 0;
+        border-bottom: 2px solid #888;
+        background: #f7f7f7;
+
+        &:hover, &.active {
+            background: #ddd;
+        }
+    }
+}
+.tabgroup {
+    div {
+        padding: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .3);
+    }
+}
 
 // =======================================
 // 테이블 스타일

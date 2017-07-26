@@ -37,10 +37,12 @@ legend, caption {
     clear: both;
 }
 a {
+    color: inherit;
+    cursor: pointer;
     &:link {
         text-decoration: none;
     }
-    &:hover, &:active {
+    &:hover, &:focus, &:active {
         text-decoration: none;
     }
 }
@@ -126,18 +128,6 @@ progress[value] {
     &::-moz-progress-bar,
     &::-webkit-progress-value {
         display: table;
-    }
-}
-
-// link 설정
-a {
-    color: inherit;
-    cursor: pointer;
-    &:visited {
-        color: inherit;
-    }
-    &:hover, &:focus, &:active {
-        color: inherit;
     }
 }
 

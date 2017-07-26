@@ -5,23 +5,24 @@
     height: $h;
     line-height: $h - 2px;
     text-align: center;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
     padding: 0 10px;
     border-radius: $radius;
 }
-@mixin btn-type-01 ($fz: null, $color: null, $bd: null, $bg: null) {
+@mixin btn-type-1 ($fz: null, $color: null, $bd: null, $bg: null, $rgb: #fff) {
     font-size: $fz;
     color: $color;
-    border: $bd;
+    text-shadow: 0 0 1px rgba($rgb, 0.6);
+    border: 1px solid $bd;
     background: $bg;
     &:hover, &:focus, &:active {
         background: rgba($bg, .9);
         transition: background .3s ease;
     }
 }
-@mixin btn-type-02 ($fz: null, $color: null, $bdb: null, $bg: null) {
+@mixin btn-type-2 ($fz: null, $color: null, $bdb: null, $bg: null, $rgb: #fff) {
     font-size: $fz;
     color: $color;
+        text-shadow: 0 0 1px rgba($rgb, 0.6);
     border-bottom: 3px solid $bdb;
     background: $bg;
     &:hover, &:focus, &:active {
