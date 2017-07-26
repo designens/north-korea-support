@@ -1,14 +1,11 @@
 // 탭 제작 (탭 갯수)
 @mixin tabs($num-of-tabs) {
-    .slide {
-        width: calc(100% / #{$num-of-tabs});
-    }
+    @extend %clearfix;
     @for $i from 1 through $num-of-tabs {
-        &:nth-of-type(#{$i}) {
-            &:checked {
-                ~ .slide {
-                    left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
-                }
+        &.t#{$i} {
+            li {
+                float: left;
+                width: calc(100% / #{$i});
             }
         }
     }
