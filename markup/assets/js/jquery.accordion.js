@@ -4,7 +4,7 @@
         this.el = el || {};
         active = active || 0;
         var that = this;
-        var links = this.el.find('.lnb-link');
+        var links = this.el.find('[class*="link"]');
         links.each(function(i){
             var link = links.eq(i);
             if (link.next().length === 0) { link.find('.fa').hide(); }
@@ -19,11 +19,11 @@
         e.preventDefault();
         var $this = e.data.link;
         $this.parent()
-            .siblings('.open').find('.submenu').slideUp()
+            .siblings('.open').find('[class*="sub"]').slideUp()
         .addBack().removeClass('open');
         $this.parent()
             .toggleClass('open')
-            .find('.submenu').stop().slideToggle();
+            .find('[class*="sub"]').stop().slideToggle();
     };
     
 }(window.jQuery));

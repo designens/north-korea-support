@@ -3,7 +3,7 @@
     @extend %clearfix;
     @for $i from 1 through $num-of-tabs {
         &.t#{$i} {
-            a {
+            [role="tab"] {
                 float: left;
                 width: calc(100% / #{$i});
             }

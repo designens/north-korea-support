@@ -130,3 +130,25 @@
 .arrow-left {
     @include arrow($dir: left, $size: 8px, $color: #000);
 }
+
+// =======================================
+// 아코디언 스타일
+// =======================================
+.accordion-test {
+    h3 {
+        font-size: 20px;
+        color: #69c;
+        margin-bottom: 10px;
+        .fa {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: 2px;
+        }
+    }
+    .aco-base, .aco-open {
+        margin-bottom: 20px;
+        // class 추가 후 디자인에 맞춰 스타일 설정
+        // 아키디언 기본 구조 sass/layout/_common.scss파일 "아코디언 스타일" 참조
+        @extend .accordion-lnb;
+    }
+}
