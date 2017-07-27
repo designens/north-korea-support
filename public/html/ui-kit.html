@@ -278,13 +278,13 @@
                 <!-- 탭의 갯수 만큼 tab과 panel 마크업 작성
                      탭의 갯수에 따라 class="t(n)" 설정 (max:8)
                      ex) tab 갯수가 5개일 경우 class="t5" 설정 -->
-                <ul class="tablist t5" role="tablist">
-                    <li id="tab1" aria-controls="panel1" aria-selected="true" role="tab" tabindex="0"><span class="tab-item">tab1</span></li>
-                    <li id="tab2" aria-controls="panel2" aria-selected="false" role="tab" tabindex="0"><span class="tab-item">tab2</span></li>
-                    <li id="tab3" aria-controls="panel3" aria-selected="false" role="tab" tabindex="0"><span class="tab-item">tab3</span></li>
-                    <li id="tab4" aria-controls="panel4" aria-selected="false" role="tab" tabindex="0"><span class="tab-item">tab4</span></li>
-                    <li id="tab5" aria-controls="panel5" aria-selected="false" role="tab" tabindex="0"><span class="tab-item">tab5</span></li>
-                </ul>
+                <div class="tablist t5" role="tablist">
+                    <a href="#" id="tab1" aria-controls="panel1" aria-selected="true" tabindex="0" role="tab"><span class="tab-item">tab1</span></a>
+                    <a href="#" id="tab2" aria-controls="panel2" aria-selected="false" tabindex="-1" role="tab"><span class="tab-item">tab2</span></a>
+                    <a href="#" id="tab3" aria-controls="panel3" aria-selected="false" tabindex="-1" role="tab"><span class="tab-item">tab3</span></a>
+                    <a href="#" id="tab4" aria-controls="panel4" aria-selected="false" tabindex="-1" role="tab"><span class="tab-item">tab4</span></a>
+                    <a href="#" id="tab5" aria-controls="panel5" aria-selected="false" tabindex="-1" role="tab"><span class="tab-item">tab5</span></a>
+                </div>
                 <div class="panel-group">
                     <div id="panel1" class="tab-panel" aria-labelledby="tab1" aria-hidden="false" role="tabpanel" tabindex="0">
                         tab1 영역 입니다.

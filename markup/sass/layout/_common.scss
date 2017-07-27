@@ -250,7 +250,7 @@ hr.sub-title-bar {
 .tablist {
     // 탭의 갯수 t1~t8 까지 class 생성
     @include tabs(8);
-    li {
+    a {
         padding-right: 2px;
         &:first-child {
             span {
