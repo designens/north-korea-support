@@ -255,6 +255,7 @@ hr.sub-title-bar {
     }
     // 아코디언 메뉴
     [class*="link"] {
+        display: block;
         -webkit-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease;
