@@ -8,13 +8,29 @@
   @if $dir == top {
     border-bottom-color: $color;
   }
-  @else if $dir == right {
-    border-left-color: $color;
+  @else if $dir == top-left {
+    border-bottom-color: $color;
+    transform: rotate(-45deg);
+  }
+  @else if $dir == top-right {
+    border-bottom-color: $color;
+    transform: rotate(45deg);
   }
   @else if $dir == bottom {
     border-top-color: $color;
   }
+  @else if $dir == bottom-left {
+    border-top-color: $color;
+    transform: rotate(-135deg);
+  }
+  @else if $dir == bottom-right {
+    border-top-color: $color;
+    transform: rotate(135deg);
+  }
   @else if $dir == left {
     border-right-color: $color;
+  }
+  @else if $dir == right {
+    border-left-color: $color;
   }
 }

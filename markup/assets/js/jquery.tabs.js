@@ -4,7 +4,7 @@
         panel = $(".tab-panel[role='tabpanel']");
 
     tabs.click(function(ev) {
-        ev.preventDefault(); 
+        ev.preventDefault();
         tabs.attr("aria-selected", "false");
         $(this).attr("aria-selected", "true");
         var tabpanid = $(this).attr("aria-controls");
@@ -20,7 +20,7 @@
     });
 
     tabs.keydown(function(ev) {
-        ev.preventDefault(); 
+        ev.preventDefault();
         var _this, selected, index, length, tab, tabpanid, tabpan;
         var key = ev.keyCode;
         var dir = 0;

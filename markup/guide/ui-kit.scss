@@ -109,11 +109,23 @@
 .arrow-top {
     @include arrow($dir: top, $size: 8px, $color: #000);
 }
+.arrow-top-left {
+    @include arrow($dir: top-left, $size: 8px, $color: #000);
+}
+.arrow-top-right {
+    @include arrow($dir: top-right, $size: 8px, $color: #000);
+}
 .arrow-right {
     @include arrow($dir: right, $size: 8px, $color: #000);
 }
 .arrow-bottom {
     @include arrow($dir: bottom, $size: 8px, $color: #000);
+}
+.arrow-bottom-left {
+    @include arrow($dir: bottom-left, $size: 8px, $color: #000);
+}
+.arrow-bottom-right {
+    @include arrow($dir: bottom-right, $size: 8px, $color: #000);
 }
 .arrow-left {
     @include arrow($dir: left, $size: 8px, $color: #000);

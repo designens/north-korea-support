@@ -2139,9 +2139,17 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .arrow-top { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-bottom-color: #000; }
 
+.arrow-top-left { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-bottom-color: #000; transform: rotate(-45deg); }
+
+.arrow-top-right { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-bottom-color: #000; transform: rotate(45deg); }
+
 .arrow-right { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-left-color: #000; }
 
 .arrow-bottom { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-top-color: #000; }
+
+.arrow-bottom-left { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-top-color: #000; transform: rotate(-135deg); }
+
+.arrow-bottom-right { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-top-color: #000; transform: rotate(135deg); }
 
 .arrow-left { display: block; width: 0; height: 0; border-color: transparent; border-width: 8px; border-style: solid; border-right-color: #000; }
 
