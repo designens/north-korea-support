@@ -158,6 +158,16 @@
                 background: #333;
                 content: "";
             }
+            &:after {
+                position: absolute;
+                top: 22px;
+                right: 38px;
+                width: 1px;
+                height: 17px;
+                background: #333;
+                content: "";
+                transform: rotate(-90deg);
+            }
         }
         &.open {
             border-bottom: 0;
@@ -171,13 +181,8 @@
                     color: #003761;
                 }
                 &:after {
-                    position: absolute;
-                    top: 22px;
-                    right: 38px;
-                    width: 1px;
-                    height: 17px;
-                    background: #333;
-                    content: "";
+                    transform: rotate(0deg);
+                    transition: transform 0.25s ease;
                 }
             }
             [class*="sub"] {
