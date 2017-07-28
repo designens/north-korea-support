@@ -80,6 +80,14 @@
     @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
     @include btn-type-1 ($fz: 14px, $color: #fff, $bd: #394147, $bg: #394a57, $rgb: #000);
 }
+.btn-type-1-03 {
+    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
+    @include btn-type-1 ($fz: 14px, $color: #fff, $bg: #003761);
+}
+.btn-type-1-04 {
+    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
+    @include btn-type-1 ($fz: 14px, $color: #3c3e3f, $bg: #bcd1e0);
+}
 .btn-type-2-01 {
     @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
     @include btn-type-2 ($color: #333, $bdb: #a9b4bc, $bg: #c5d2db);
