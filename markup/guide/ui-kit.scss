@@ -145,10 +145,13 @@
             vertical-align: 2px;
         }
     }
-    .aco-base, .aco-open {
+    .aco-base {
         margin-bottom: 20px;
         // class 추가 후 디자인에 맞춰 스타일 설정
         // 아키디언 기본 구조 sass/layout/_common.scss파일 "아코디언 스타일" 참조
         @extend .accordion-lnb;
+    }
+    .aco-open {
+        @extend .accordion-faq;
     }
 }

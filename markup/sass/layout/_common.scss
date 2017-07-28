@@ -74,7 +74,8 @@ body {
 // Container : 컨테이너 영역
 // =======================================
 #container {
-    min-height: 730px;
+    display: block;
+    min-height: 670px;
     padding-top: 50px;
     padding-bottom: 30px;
     @extend %clearfix;
