@@ -232,6 +232,9 @@ hr.sub-title-bar {
     }
     .select-box {
         @include select-box ($w: 90px);
+        &:focus, &:hover {
+            border: 1px solid #000;
+        }
     }
     .input-type {
         @include input-type ($w: 360px);

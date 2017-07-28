@@ -5,7 +5,7 @@
 // Input Color 설정
 $input-checked: #002847;
 $input-focus: $input-checked;
-$input-border: $input-checked;
+$input-border: #dbdbdb;
 $input-bg: #fff;
 $input-sz: 14px;
 
@@ -38,6 +38,14 @@ $input-sz: 14px;
                 }
             }
         }
+        &:checked {
+            + label {
+                &:before {
+                    color: $input-checked;
+                    border-color: $input-focus;
+                }
+            }
+        }
     }
 }
 .radio-type {
@@ -63,7 +71,6 @@ $input-sz: 14px;
                     line-height: 1.2;
                     font-family: 'FontAwesome';
                     content: "\f00c";
-                    color: $input-checked;
                 }
             }
         }

@@ -18,5 +18,8 @@
         &:-moz-placeholder {
             color: $phc;
         }
+        &:focus {
+            border: 1px solid #002847;
+        }
     }
 }

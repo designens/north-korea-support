@@ -3,8 +3,6 @@
     width: $w;
     height: $h;
     vertical-align: -1px;
-    border: 1px solid $bdc;
-    background: $bg;
     &:before {
         position: absolute;
         top: -2px;
@@ -24,9 +22,16 @@
         width: 100%;
         height: $h;
         min-height: $h;
+        color: transparent;
         line-height: $h;
         padding: $p;
-        opacity: 0;
-        filter: alpha(opacity = 0);
+        border: 1px solid $bdc;
+        background: $bg;
+        option {
+            color: #4c4c4c;
+        }
+        &:focus {
+            border: 1px solid #002847;
+        }
     }
 }
