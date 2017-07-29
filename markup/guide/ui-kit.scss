@@ -72,38 +72,6 @@
         }
     }
 }
-.btn-type-1-01 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #333, $bd: $skyblue, $bg: $skyblue);
-}
-.btn-type-1-02 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #fff, $bd: #394147, $bg: #394a57, $rgb: #000);
-}
-.btn-type-1-03 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #fff, $bg: #003761);
-}
-.btn-type-1-04 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #3c3e3f, $bg: #bcd1e0);
-}
-.btn-type-2-01 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #333, $bdb: #a9b4bc, $bg: #c5d2db);
-}
-.btn-type-2-02 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
-}
-.btn-type-2-03 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #fff, $bdb: #28343d, $bg: #394a57, $rgb: #000);
-}
-.btn-type-2-04 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761, $rgb: #000);
-}
 
 // =======================================
 // 화살표 스타일
@@ -113,30 +81,6 @@
         display: inline-block;
         margin-right: 10px;
     }
-}
-.arrow-top {
-    @include arrow($dir: top, $size: 8px, $color: #000);
-}
-.arrow-top-left {
-    @include arrow($dir: top-left, $size: 8px, $color: #000);
-}
-.arrow-top-right {
-    @include arrow($dir: top-right, $size: 8px, $color: #000);
-}
-.arrow-right {
-    @include arrow($dir: right, $size: 8px, $color: #000);
-}
-.arrow-bottom {
-    @include arrow($dir: bottom, $size: 8px, $color: #000);
-}
-.arrow-bottom-left {
-    @include arrow($dir: bottom-left, $size: 8px, $color: #000);
-}
-.arrow-bottom-right {
-    @include arrow($dir: bottom-right, $size: 8px, $color: #000);
-}
-.arrow-left {
-    @include arrow($dir: left, $size: 8px, $color: #000);
 }
 
 // =======================================
@@ -161,5 +105,38 @@
     }
     .aco-open {
         @extend .accordion-faq;
+    }
+}
+
+// =======================================
+// 테이블 스타일
+// =======================================
+.ui-kit-table {
+    thead {
+        th {
+            &:first-child {
+                width: 70px;
+            }
+            &:nth-child(2) {
+                width: 200px;
+            }
+            &:nth-child(4), &:nth-child(5) {
+                width: 140px;
+            }
+            &:last-child {
+                width: 140px;
+            }
+        }
+    }
+    tbody {
+        td {
+            &:first-child {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:nth-child(3) {
+                text-align: left;
+            }
+        }
     }
 }
