@@ -329,11 +329,13 @@ hr.sub-title-bar {
     margin-bottom: 30px;
     background: #f5f8fa;
     li {
-        font-size: 14px;
         display: inline-block;
+        font-size: 14px;
         margin-right: 6px;
+        vertical-align: top;
         &:first-child {
             margin-right: 10px;
+            vertical-align: -1px;
         }
         &:last-child {
             margin-right: 0;
