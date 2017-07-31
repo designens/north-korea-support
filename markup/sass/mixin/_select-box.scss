@@ -17,21 +17,26 @@
         position: absolute;
         top: 4px;
         left: 10px;
+        color: transparent;
     }
     select {
         width: 100%;
         height: $h;
         min-height: $h;
-        color: transparent;
         line-height: $h;
         padding: $p;
         border: 1px solid $bdc;
         background: $bg;
-        option {
-            color: #4c4c4c;
-        }
+        /* 기본 버튼 속성 무시*/
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         &:focus {
             border: 1px solid #002847;
+        }
+        &::-ms-expand {
+            display: none;
         }
     }
 }

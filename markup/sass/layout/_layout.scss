@@ -324,11 +324,82 @@
                     }
                 }
             }
+            table {
+                td {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    .select-box {
+                        width: 420px;
+                    }
+                    .checkbox-type {
+                        li {
+                            float: left;
+                            width: -webkit-calc( 100% / 5 );
+                            width: -moz-calc( 100% / 5 );
+                            width: calc( 100% / 5 );
+                            &:nth-child(5n) {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    .input-type {
+                        display: block;
+                        &.w100p {
+                            width: 100%;
+                            label {
+                                span {
+                                    display: block;
+                                    height: 0;
+                                    text-indent: -9999px;
+                                    visibility: hidden;
+                                }
+                            }
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &.input-price {
+                        .input-type {
+                            margin-bottom: 6px;
+                            label {
+                                span {
+                                    display: inline-block;
+                                    &:first-child {
+                                        width: 100px;
+                                        letter-spacing: -0.04em;
+                                    }
+                                }
+                                input {
+                                    padding-right: 0;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
         [aria-labelledby="tab2"] {
+            colgroup {
+                col {
+                    &:nth-child(1), &:nth-child(3) {
+                        width: 200px;
+                    }
+                }
+            }
 
         }
         [aria-labelledby="tab3"] {
+            colgroup {
+                col {
+                    &:nth-child(1), &:nth-child(3) {
+                        width: 200px;
+                    }
+                }
+            }
 
         }
     }

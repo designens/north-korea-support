@@ -1,10 +1,13 @@
 // 탭 제작 (탭 갯수)
 @mixin tabs($num-of-tabs) {
+    width: 100%;
     @extend %clearfix;
     @for $i from 1 through $num-of-tabs {
         &.t#{$i} {
             [role="tab"] {
                 float: left;
+                width: -webkit-calc(100% / #{$i});
+                width: -moz-calc(100% / #{$i});
                 width: calc(100% / #{$i});
             }
         }

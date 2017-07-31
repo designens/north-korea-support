@@ -31,7 +31,7 @@ em, i, address, cite { font-style: normal; font-weight: normal; }
 
 input, textarea, select, button, table { font-size: inherit; font-family: inherit; *font-size: inherit; border: 0; background-color: transparent; }
 
-button, select { cursor: pointer; }
+button, select { cursor: pointer; vertical-align: bottom; }
 
 textarea, input, select { -webkit-border-radius: 0; -ms-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border: 0; outline-color: -moz-use-text-color; outline-style: none; outline-width: medium; }
 
