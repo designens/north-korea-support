@@ -19,14 +19,17 @@
         transition: background .3s ease;
     }
 }
+
+
 @mixin btn-type-2 ($fz: null, $color: null, $bdb: null, $bg: null, $rgb: #fff) {
     font-size: $fz;
     color: $color;
-        text-shadow: 0 0 1px rgba($rgb, 0.6);
+    text-shadow: 0 0 1px rgba($rgb, 0.6);
     border-bottom: 3px solid $bdb;
     background: $bg;
     &:hover, &:focus, &:active {
-        background: rgba($bg, .9);
+        background: darken($bg, 5%);
+        // background: rgba($bg, .9);
         transition: background .3s ease;
     }
 }

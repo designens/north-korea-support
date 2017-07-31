@@ -1684,19 +1684,19 @@ body .wrap { width: 1248px; padding: 0 24px; margin: 0 auto; }
 
 .btn-type-2-01 { display: inline-block; min-width: 200px; height: 40px; line-height: 38px; text-align: center; padding: 0 10px; border-radius: 3px; color: #333; text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); border-bottom: 3px solid #a9b4bc; background: #c5d2db; }
 
-.btn-type-2-01:hover, .btn-type-2-01:focus, .btn-type-2-01:active { background: rgba(197, 210, 219, 0.9); transition: background .3s ease; }
+.btn-type-2-01:hover, .btn-type-2-01:focus, .btn-type-2-01:active { background: #b5c6d1; transition: background .3s ease; }
 
 .btn-type-2-02 { display: inline-block; min-width: 200px; height: 40px; line-height: 38px; text-align: center; padding: 0 10px; border-radius: 3px; color: #333; text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); border-bottom: 3px solid #6f7d87; background: #9fb3c2; }
 
-.btn-type-2-02:hover, .btn-type-2-02:focus, .btn-type-2-02:active { background: rgba(159, 179, 194, 0.9); transition: background .3s ease; }
+.btn-type-2-02:hover, .btn-type-2-02:focus, .btn-type-2-02:active { background: #8fa7b8; transition: background .3s ease; }
 
 .btn-type-2-03 { display: inline-block; min-width: 200px; height: 40px; line-height: 38px; text-align: center; padding: 0 10px; border-radius: 3px; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-bottom: 3px solid #28343d; background: #394a57; }
 
-.btn-type-2-03:hover, .btn-type-2-03:focus, .btn-type-2-03:active { background: rgba(57, 74, 87, 0.9); transition: background .3s ease; }
+.btn-type-2-03:hover, .btn-type-2-03:focus, .btn-type-2-03:active { background: #2f3d48; transition: background .3s ease; }
 
 .btn-type-2-04 { display: inline-block; min-width: 200px; height: 40px; line-height: 38px; text-align: center; padding: 0 10px; border-radius: 3px; color: #fff; text-shadow: 0 0 1px rgba(0, 0, 0, 0.6); border-bottom: 3px solid #002644; background: #003761; }
 
-.btn-type-2-04:hover, .btn-type-2-04:focus, .btn-type-2-04:active { background: rgba(0, 55, 97, 0.9); transition: background .3s ease; }
+.btn-type-2-04:hover, .btn-type-2-04:focus, .btn-type-2-04:active { background: #002948; transition: background .3s ease; }
 
 /* =======================================*/
 /* 화살표 아이콘 기본 스타일*/
@@ -1794,8 +1794,6 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .input-type + label:empty:before, .checkbox-type + label:empty:before, .radio-type + label:empty:before, .radio-type + label:empty:before { margin-right: 0; }
 
-.select-box select { /* 기본 버튼 속성 무시*/ -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; }
-
 /* =======================================*/
 /* 인풋 스타일 */
 /* =======================================*/
@@ -1820,13 +1818,13 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .select-box:before { position: absolute; top: -2px; right: 10px; font-family: 'FontAwesome'; content: "\f0dd"; font-size: 17px; color: #343434; pointer-events: none; }
 
-.select-box label { position: absolute; top: 4px; left: 10px; }
+.select-box label { position: absolute; top: 4px; left: 10px; color: transparent; }
 
-.select-box select { width: 100%; height: 30px; min-height: 30px; color: transparent; line-height: 30px; padding: 0 10px; border: 1px solid #dbdbdb; background: #fff; }
-
-.select-box select option { color: #4c4c4c; }
+.select-box select { width: 100%; height: 30px; min-height: 30px; line-height: 30px; padding: 0 10px; border: 1px solid #dbdbdb; background: #fff; /* 기본 버튼 속성 무시*/ -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; }
 
 .select-box select:focus { border: 1px solid #002847; }
+
+.select-box select::-ms-expand { display: none; }
 
 /* =======================================*/
 /* 검색 영역 스타일*/
@@ -1849,13 +1847,13 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .search-area .select-box:before { position: absolute; top: -2px; right: 10px; font-family: 'FontAwesome'; content: "\f0dd"; font-size: 17px; color: #343434; pointer-events: none; }
 
-.search-area .select-box label { position: absolute; top: 4px; left: 10px; }
+.search-area .select-box label { position: absolute; top: 4px; left: 10px; color: transparent; }
 
-.search-area .select-box select { width: 100%; height: 30px; min-height: 30px; color: transparent; line-height: 30px; padding: 0 10px; border: 1px solid #dbdbdb; background: #fff; }
-
-.search-area .select-box select option { color: #4c4c4c; }
+.search-area .select-box select { width: 100%; height: 30px; min-height: 30px; line-height: 30px; padding: 0 10px; border: 1px solid #dbdbdb; background: #fff; /* 기본 버튼 속성 무시*/ -webkit-appearance: none; -ms-appearance: none; -moz-appearance: none; appearance: none; }
 
 .search-area .select-box select:focus { border: 1px solid #002847; }
+
+.search-area .select-box select::-ms-expand { display: none; }
 
 .search-area .input-type input { width: 360px; height: 30px; line-height: 30px; padding: 0 10px; border: 1px solid #dbdbdb; background: #fff; }
 
@@ -1885,23 +1883,23 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 /* =======================================*/
 /* 탭 스타일*/
 /* =======================================*/
-.tablist { /* 탭의 갯수 t1~t8 까지 class 생성*/ }
+.tablist { /* 탭의 갯수 t1~t8 까지 class 생성*/ width: 100%; }
 
-.tablist.t1 [role="tab"] { float: left; width: calc(100% / 1); }
+.tablist.t1 [role="tab"] { float: left; width: 100%; }
 
-.tablist.t2 [role="tab"] { float: left; width: calc(100% / 2); }
+.tablist.t2 [role="tab"] { float: left; width: 50%; }
 
-.tablist.t3 [role="tab"] { float: left; width: calc(100% / 3); }
+.tablist.t3 [role="tab"] { float: left; width: 33.33333%; }
 
-.tablist.t4 [role="tab"] { float: left; width: calc(100% / 4); }
+.tablist.t4 [role="tab"] { float: left; width: 25%; }
 
-.tablist.t5 [role="tab"] { float: left; width: calc(100% / 5); }
+.tablist.t5 [role="tab"] { float: left; width: 20%; }
 
-.tablist.t6 [role="tab"] { float: left; width: calc(100% / 6); }
+.tablist.t6 [role="tab"] { float: left; width: 16.66667%; }
 
-.tablist.t7 [role="tab"] { float: left; width: calc(100% / 7); }
+.tablist.t7 [role="tab"] { float: left; width: 14.28571%; }
 
-.tablist.t8 [role="tab"] { float: left; width: calc(100% / 8); }
+.tablist.t8 [role="tab"] { float: left; width: 12.5%; }
 
 .tablist [role="tab"] { padding-right: 2px; }
 
@@ -1911,7 +1909,7 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .tablist [role="tab"]:last-child span { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 
-.tablist [role="tab"] span { display: block; text-align: center; height: 40px; line-height: 36px; background: #f5dfd7; border: 2px solid #f1c7b7; }
+.tablist [role="tab"] span { display: block; text-align: center; width: 100%; height: 40px; line-height: 36px; background: #f5dfd7; border: 2px solid #f1c7b7; }
 
 .tablist [role="tab"][aria-selected='true'], .tablist [role="tab"]:focus { outline: 0; }
 
@@ -1977,6 +1975,12 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 .table-dt-dd dt { height: 42px; line-height: 42px; font-weight: bold; text-align: center; color: #2e3a42; background: #f0f3f5; }
 
 .table-dt-dd .lines { padding-top: 10px; padding-bottom: 10px; }
+
+.table-btn-set { margin-top: 30px; font-size: 0; text-align: center; }
+
+.table-btn-set [class^="btn-"] { font-size: 14px; margin-right: 6px; }
+
+.table-btn-set [class^="btn-"]:last-child { margin-right: 0; }
 
 /* GNB 영역 */
 .gnb-area .logo { float: left; margin-top: 10px; }
@@ -2147,7 +2151,7 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .login-content .form-group .btn-login { float: right; letter-spacing: -0.01em; background: #003761; border-bottom: 3px solid #002644; display: inline-block; min-width: 76px; height: 76px; line-height: 74px; text-align: center; padding: 0 10px; border-radius: 3px; color: #fff; text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); border-bottom: 3px solid #002644; background: #003761; }
 
-.login-content .form-group .btn-login:hover, .login-content .form-group .btn-login:focus, .login-content .form-group .btn-login:active { background: rgba(0, 55, 97, 0.9); transition: background .3s ease; }
+.login-content .form-group .btn-login:hover, .login-content .form-group .btn-login:focus, .login-content .form-group .btn-login:active { background: #002948; transition: background .3s ease; }
 
 .login-content .checkbox-type, .login-content .radio-type { position: absolute; left: 50%; -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 147px; width: 220px; }
 
@@ -2159,11 +2163,11 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .login-content .btn-link-set .btn-main { float: left; color: #333; text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); border-bottom: 3px solid #6f7d87; background: #9fb3c2; }
 
-.login-content .btn-link-set .btn-main:hover, .login-content .btn-link-set .btn-main:focus, .login-content .btn-link-set .btn-main:active { background: rgba(159, 179, 194, 0.9); transition: background .3s ease; }
+.login-content .btn-link-set .btn-main:hover, .login-content .btn-link-set .btn-main:focus, .login-content .btn-link-set .btn-main:active { background: #8fa7b8; transition: background .3s ease; }
 
 .login-content .btn-link-set .btn-join { float: right; color: #fff; text-shadow: 0 0 1px rgba(255, 255, 255, 0.6); border-bottom: 3px solid #28343d; background: #394a57; }
 
-.login-content .btn-link-set .btn-join:hover, .login-content .btn-link-set .btn-join:focus, .login-content .btn-link-set .btn-join:active { background: rgba(57, 74, 87, 0.9); transition: background .3s ease; }
+.login-content .btn-link-set .btn-join:hover, .login-content .btn-link-set .btn-join:focus, .login-content .btn-link-set .btn-join:active { background: #2f3d48; transition: background .3s ease; }
 
 .login-content .information { position: absolute; bottom: 0; left: 0; right: 0; color: #4c4c4c; letter-spacing: -0.03em; text-align: center; height: 75px; line-height: 75px; border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; border-top: 1px solid #afc0cc; background: #e5f4ff; }
 
