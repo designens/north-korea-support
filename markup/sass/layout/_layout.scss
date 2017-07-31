@@ -307,3 +307,29 @@
         }
     }
 }
+
+/* 
+ * ---------------------------------------------
+ * 회원서비스 > 법인.단체 > 사업자신청 Step 1 조회
+ * (html/applicant-application-step1.html)
+ * ---------------------------------------------
+ */
+ .applicant-application-step1 {
+    .panel-group {
+        [aria-labelledby="tab1"] {
+            colgroup {
+                col {
+                    &:nth-child(1), &:nth-child(3) {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        [aria-labelledby="tab2"] {
+
+        }
+        [aria-labelledby="tab3"] {
+
+        }
+    }
+ }

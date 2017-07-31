@@ -481,20 +481,20 @@ hr.sub-title-bar {
 .table-type-02 {
     width: 100%;
     tr {
-        th {
-            background: #f0f3f5;
-            color: #2e3a42;
-        }
         th, td {
-            height: 38px;
+            height: 42px;
             text-align: left;
             vertical-align: middle;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 6px 20px;
             border: 1px solid #d1d1d1;
             a {
                 @include ellipsis(1);
             }
+        }
+        th {
+            background: #f0f3f5;
+            color: #2e3a42;
+            border-right: 0;
         }
         .lines {
             padding-top: 12px;
@@ -509,7 +509,7 @@ hr.sub-title-bar {
     li {
         display: table-cell;
         vertical-align: middle;
-        height: 38px;
+        height: 42px;
         padding: 0 20px;
         border-right: 1px solid #d1d1d1;
         &.title {
@@ -518,8 +518,8 @@ hr.sub-title-bar {
             background: #f0f3f5;
         }
         &.lines {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
         }
         &:last-child {
             border-right: 0;
@@ -537,15 +537,15 @@ hr.sub-title-bar {
         }
     }
     dt {
-        height: 38px;
-        line-height: 38px;
+        height: 42px;
+        line-height: 42px;
         font-weight: bold;
         text-align: center;
         color: #2e3a42;
         background: #f0f3f5;
     }
     .lines {
-        padding-top: 9px;
-        padding-bottom: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
