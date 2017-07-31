@@ -11,25 +11,44 @@ body {
 }
 
 // =======================================
-// jQuery UI Drag Style
+// 아이콘 공통 스타일
 // =======================================
-.ui-draggable .ui-dialog-titlebar {
-    cursor: move;
+.icon-hwp {
+    position: relative;
+    padding-left: 20px;
+    &:before {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        content: "";
+        background: url($icon-hwp) no-repeat;
+    }
 }
-.ui-draggable-handle {
-    -ms-touch-action: none;
-    touch-action: none;
-    &.popup.ui-draggable-dragging {
-        -ms-transform: inherit !important;
-        -webkit-transform: inherit !important;
-        transform: inherit !important;
+.icon-doc {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-doc) no-repeat;
+    }
+}
+.icon-pdf {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-pdf) no-repeat;
+    }
+}
+.icon-jpg {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-jpg) no-repeat;
     }
 }
 
 // =======================================
 // 버튼 공통 스타일
 // =======================================
-
 .btn-type-1-01 {
     @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
     @include btn-type-1 ($fz: 14px, $color: #333, $bd: $skyblue, $bg: $skyblue);
@@ -409,11 +428,21 @@ hr.sub-title-bar {
 // =======================================
 // 테이블 스타일
 // =======================================
-.table {
+.download {
+    [class^="icon-"] {
+        display: block;
+        margin-bottom: 5px;
+        color: #003761;
+        font-weight: bold;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.table-type-01 {
     width: 100%;
     thead {
-        color: #2e3a42;
-        background: #f0f3f5;
         border-top: 2px solid #45494d;
         th {
             border-right: 1px solid #d1d1d1;
@@ -427,6 +456,10 @@ hr.sub-title-bar {
         }
     }
     tr {
+        th {
+            background: #f0f3f5;
+            color: #2e3a42;
+        }
         th, td {
             height: 38px;
             text-align: center;
@@ -440,8 +473,79 @@ hr.sub-title-bar {
                 padding-right: 6px;
             }
             &:last-child {
-                border-right-width: 0;
+                border-right: 0;
             }
         }
+    }
+}
+.table-type-02 {
+    width: 100%;
+    tr {
+        th {
+            background: #f0f3f5;
+            color: #2e3a42;
+        }
+        th, td {
+            height: 38px;
+            text-align: left;
+            vertical-align: middle;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #d1d1d1;
+            a {
+                @include ellipsis(1);
+            }
+        }
+        .lines {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}
+.table-li {
+    display: table;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    li {
+        display: table-cell;
+        vertical-align: middle;
+        height: 38px;
+        padding: 0 20px;
+        border-right: 1px solid #d1d1d1;
+        &.title {
+            font-weight: bold;
+            color: #2e3a42;
+            background: #f0f3f5;
+        }
+        &.lines {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+.table-dt-dd {
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    dt, dd {
+        padding: 0 20px;
+        border-bottom: 1px solid #d1d1d1;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    dt {
+        height: 38px;
+        line-height: 38px;
+        font-weight: bold;
+        text-align: center;
+        color: #2e3a42;
+        background: #f0f3f5;
+    }
+    .lines {
+        padding-top: 9px;
+        padding-bottom: 8px;
     }
 }

@@ -112,7 +112,7 @@
 
 /* 
  * --------------------------------
- * 커뮤니티 > FAQ 조회진행중
+ * 커뮤니티 > FAQ 조회
  * (html/faq-list.html)
  * --------------------------------
  */
@@ -208,8 +208,8 @@
 
 /* 
  * --------------------------------
- * 커뮤니티 > Q&A 조회
- * html/qna-list.html
+ * 커뮤니티 > Q&A조회
+ * (html/qna-list.html)
  * --------------------------------
  */
 .qna-content {
@@ -246,123 +246,34 @@
 
 /* 
  * --------------------------------
- * 자료마당 > 자료마당 > 팝업
- * html/popup-qna.html
+ * 커뮤니티 > Q&A조회 > 팝업
+ * (html/qna-list.html)
  * --------------------------------
  */
  .popup-qna-content {
-  table {
-    border: 1px solid #d1d1d1;
-    margin-top: 35px;
-    clear: both;
-  }
-  th {
-    width: 140px;
-    background-color: #f0f3f5;
-    border-bottom: 1px solid #d1d1d1;
-    text-align: left;
-    padding-left: 20px;
-  }
-  table tr {
-    &:nth-child(2) {
-      th:nth-child(3) {
-        border-left: 1px solid #d1d1d1;
-      }
-      td:nth-child(4) {
-        border-right: 1px solid #d1d1d1;
-      }
-    }
-    &:nth-child(3) {
-      th:nth-child(1) {
-        height: 75px;
-      }
-      button {
-        &:first-child {
-          color: #003761;
-          font-weight: bold;
+    table {
+        colgroup {
+            col {
+                &:nth-child(1), &:nth-child(3) {
+                    width: 140px;
+                }
+            }
         }
-        &:last-child {
-          margin-top: 13px;
-          color: #003761;
-          font-weight: bold;
+    }
+    dl {
+        margin-top: 10px;
+        dd {
+            p {
+                span {
+                    &.admin {
+                        font-weight: bold;
+                        margin-right: 6px;
+                    }
+                }
+            }
         }
-      }
-      td img {
-        margin-right: 6px;
-        vertical-align: middle;
-        color: #003761;
-        font-weight: bold;
-      }
-    }
-  }
-  th {
-    &:nth-child(4) {
-      border-left: 1px solid #d1d1d1;
-    }
-    &:nth-child(5), &:last-child {
-      width: 808px;
-      height: 42px;
-      text-align: center;
-    }
-  }
-  td {
-    padding-left: 20px;
-    border-bottom: 1px solid #d1d1d1;
-    &:first-child, &:nth-child(2) {
-      width: 264px;
-      height: 42px;
-    }
-    &:nth-child(3), &:nth-child(4) {
-      width: 264px;
-    }
-    &:nth-child(5) {
-      width: 808px;
-    }
-  }
-}
-
-/* 제목,작성자,패스워드,첨부파일 테이블 */
-
-.popup-qna-content {
-    .popup-qna-btn {
-        float:right;
     }
 }
-.popup-qna-content-li {
-  margin-top: 10px;
-  ul {
-    border-left: 1px solid #d1d1d1;
-    border-bottom: 1px solid #d1d1d1;
-    border-right: 1px solid #d1d1d1;
-    li {
-      width: 808px;
-      height: 42px;
-      &:first-child {
-        background-color: #f0f3f5;
-        text-align: center;
-        color: #333333;
-        border-bottom: 1px solid #d1d1d1;
-      }
-    }
-    &:first-child li {
-      &:first-child {
-        border-top: 1px solid #d1d1d1;
-        padding-top: 7px;
-      }
-      &:last-child {
-        height: 133px;
-        padding-left: 20px;
-        padding-top: 20px;
-      }
-    }
-    &:last-child li:last-child {
-      height: 76px;
-      padding-top: 20px;
-      padding-left: 20px;
-    }
-  }
-}
-
 /* 
  * --------------------------------
  * 자료마당 > 공지사항

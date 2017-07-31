@@ -111,7 +111,23 @@
 // =======================================
 // 테이블 스타일
 // =======================================
-.ui-kit-table {
+.table-type {
+    h3 {
+        font-size: 20px;
+        color: #69c;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .fa {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: -1px;
+        }
+    }
+}
+.table-type-01.table-name {
     thead {
         th {
             &:first-child {
@@ -138,5 +154,19 @@
                 text-align: left;
             }
         }
+    }
+}
+.table-type-02.table-name {
+    colgroup {
+        col {
+            &:nth-child(1), &:nth-child(3) {
+                width: 140px;
+            }
+        }
+    }
+}
+.table-li.table-name {
+    .title {
+        width: 140px;
     }
 }

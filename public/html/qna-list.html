@@ -225,7 +225,7 @@
                 <!-- [End] 검색 영역 -->
 
                 <!-- [Start] Q&ampA 테이블 -->
-                <table class="table">
+                <table class="table-type-01">
                     <caption>Q&amp;A의 카테고리 번호,분야,제목,작성자,첨부파일,등록일 테이블 입니다</caption>
                     <colgroup>
                         <col />
@@ -361,53 +361,57 @@
 
         <!-- [Start] 팝업 콘텐츠 -->
         <div class="popup-content popup-qna-content">
-        <div class="popup-qna-btn">
+        <div class="btn-tr-set">
             <button class="btn-type-1-02">수정</button>
             <button class="btn-type-1-02">삭제</button>
         </div>
         <!-- 첫번째 테이블 (제목,작성자,패스워드,첨부파일) -->
-            <table class="table">
+            <table class="table-type-02">
                 <caption>qna 팝업</caption>
-                <tr>
-                    <th>제목</th>
-                    <td colspan="6">이런 저런 내용으로 제안합니다.</td>
-                </tr>
-                <tr>
-                    <th>작성자</th>
-                    <td colspan="3">홍길동</td>
-                    <th>패스워드</th>
-                    <td>****</td>
-                </tr>
-                <tr>
-                    <th>첨부파일</th>
-                    <td colspan="6">
-                        <button><a href=""><img src="../assets/images/icon/icon-hwp.png" alt="한글 아이콘">첨부파일1.hwp</a></button><br/>
-                        <button><a href=""><img src="../assets/images/icon/icon-hwp.png" alt="한글 아이콘">첨부파일2.hwp</a></button>
-                    </td>
-                </tr>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>제목</th>
+                        <td colspan="3">이런 저런 내용으로 제안합니다.</td>
+                    </tr>
+                    <tr>
+                        <th>작성자</th>
+                        <td>홍길동</td>
+                        <th>패스워드</th>
+                        <td>****</td>
+                    </tr>
+                    <tr>
+                        <th>첨부파일</th>
+                        <td class="download lines" colspan="3">
+                            <a class="icon-hwp" role="button" href>첨부파일1.hwp</a>
+                            <a class="icon-hwp" role="button" href>첨부파일2.hwp</a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
             <!-- ul,li (질문,답변) -->
-            <div class="popup-qna-content-li">
-                <ul>
-                    <li>질문</li>
-                    <li>
-                        이런저런 내용으로 제안합니다.
-                        <br/>
-                        잘 검토하시고 답변 바랍니다.
-                        <br/>
-                        이런저런 내용으로 제안합니다.
-                        <br/>
-                        잘 검토하시고 답변 바랍니다.
-                    </li>
-                </ul>
-                <ul>
-                    <li>답변</li>
-                    <li>
-                        <strong>관리자</strong><span>(2017-05-04)</span>
-                        <p>이런저런 내용으로 제안합니다.</p>
-                    </il>
-                </ul>
-            </div>
+            <dl class="table-dt-dd">
+                <dt>질문</dt>
+                <dd class="lines">
+                    이런저런 내용으로 제안합니다.
+                    <br/>
+                    잘 검토하시고 답변 바랍니다.
+                    <br/>
+                    이런저런 내용으로 제안합니다.
+                    <br/>
+                    잘 검토하시고 답변 바랍니다.
+                </dd>
+                <dt>답변</dt>
+                <dd class="lines">
+                    <p><span class="admin">관리자</span>(2017-05-04)</p>
+                    이런저런 내용으로 제안합니다.
+                </dd>
+            </dl>
             <!-- [Start] 팝업 버튼 -->
             <div class="popup-btn-set">
                 <button class="popup-close">저장하기</button>
