@@ -77,7 +77,7 @@
             margin-top: 30px;
             .popup-close {
                 @include btn-size ($dp: inline-block, $w: 66px);
-                @include btn-type-1 ($fz: 14px, $color: #333, $bd: $skyblue, $bg: $skyblue);
+                @include btn-type-1 ($fz: 14px, $color: #333, $bg: $skyblue);
             }
         }
     }

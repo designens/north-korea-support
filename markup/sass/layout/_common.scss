@@ -56,32 +56,25 @@ body {
 /* 버튼 공통 스타일*/
 /* =======================================*/
 .btn-type-1-01 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #333, $bd: $skyblue, $bg: $skyblue);
+    @extend %btn-type-1-01;
 }
 .btn-type-1-02 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #fff, $bd: #394147, $bg: #394a57, $rgb: #000);
+    @extend %btn-type-1-02;
 }
 .btn-type-1-03 {
-    @include btn-size ($dp: inline-block, $w: 66px, $h: 30px, $radius: 3px);
-    @include btn-type-1 ($fz: 14px, $color: #fff, $bg: #003761);
+    @extend %btn-type-1-03;
 }
 .btn-type-2-01 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #333, $bdb: #a9b4bc, $bg: #c5d2db);
+    @extend %btn-type-2-01;
 }
 .btn-type-2-02 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
+    @extend %btn-type-2-02;
 }
 .btn-type-2-03 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #fff, $bdb: #28343d, $bg: #394a57, $rgb: #000);
+    @extend %btn-type-2-03;
 }
 .btn-type-2-04 {
-    @include btn-size ($dp: inline-block, $w: 200px, $h: 40px, $radius: 3px);
-    @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761, $rgb: #000);
+    @extend %btn-type-2-04;
 }
 
 /* =======================================*/
@@ -341,8 +334,8 @@ hr.sub-title-bar {
             margin-right: 0;
         }
         .btn-lookup {
-            @include btn-size ($dp: inline-block, $w: 66px);
-            @include btn-type-1 ($fz: 14px, $color: #fff, $bd: #394147, $bg: #394a57);
+            @include btn-size ($w: 66px);
+            @include btn-type-1 ($fz: 14px, $color: #fff, $bg: #394a57);
                
        }
     }
@@ -529,7 +522,7 @@ hr.sub-title-bar {
             vertical-align: middle;
             padding: 6px 20px;
             border: 1px solid #d1d1d1;
-            a {
+            .view-link {
                 @include ellipsis(1);
             }
         }

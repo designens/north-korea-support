@@ -310,11 +310,11 @@
 
 /* 
  * ---------------------------------------------
- * 회원서비스 > 법인.단체 > 사업자신청 Step 1 조회
- * (html/applicant-application-step1.html)
+ * 기금사업신청 > 사업신청 조회
+ * (html/business-application-list.html)
  * ---------------------------------------------
  */
- .applicant-application-step1 {
+ .business-application {
     .panel-group {
         [aria-labelledby="tab1"] {
             colgroup {
@@ -332,13 +332,15 @@
                         width: 420px;
                     }
                     .checkbox-type {
+                        @extend %clearfix;
                         li {
                             float: left;
-                            width: -webkit-calc( 100% / 5 );
-                            width: -moz-calc( 100% / 5 );
-                            width: calc( 100% / 5 );
+                            width: percent(5);
                             &:nth-child(5n) {
                                 margin-bottom: 10px;
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
                             }
                         }
                     }
@@ -401,6 +403,66 @@
                 }
             }
 
+        }
+    }
+ }
+
+ /* 
+ * ---------------------------------------------
+ * 기금사업신청 > 사업신청 상세팝업
+ * (html/business-application-list.html)
+ * ---------------------------------------------
+ */
+ .popup-business-application {
+    table {
+        colgroup {
+            col:first-child {
+                width: 140px;
+            }
+        }
+        td {
+            .checkbox-type {
+                @extend %clearfix;
+                li {
+                    float: left;
+                    width: percent(4);
+                    &:nth-child(4n) {
+                        margin-bottom: 7px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            [class^="btn-"] {
+                margin-left: 6px;
+            }
+            &.download {
+                p {
+                    padding-bottom: 6px;
+                    span {
+                        display: inline-block;
+                        min-width: 190px;
+                        letter-spacing: -0.04em;
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                    .btn-download {
+                        @extend %btn-type-1-02;
+                    }
+                }
+            }
+            .summary {
+                ol {
+                    padding-left: 13px;
+                }
+            }
+        }
+    }
+    .popup-btn-set {
+        .popup-close {
+            width: 104px;
         }
     }
  }
