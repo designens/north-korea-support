@@ -98,4 +98,20 @@
         $(this).siblings("label").text(select_name);
     });
 
+    //다운로드 파일 말풍선 설정
+    var download_area = $(".download-type-02");
+    var download_file = $(".download-type-02 .download-file[aria-hidden='true']");
+
+    download_area.on('click', function (){
+        if ( download_file || true ) {
+            $(this).children(".download-file").attr("aria-hidden", "false");
+        };
+    });
+
+    download_area.on('focusout', function () {
+        if(!download_file || true) {
+            $(this).children(".download-file").attr("aria-hidden", "true");
+        }
+    });
+
 })(window, document, window.jQuery);

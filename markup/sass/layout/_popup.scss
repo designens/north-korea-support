@@ -16,6 +16,7 @@
 .popup {
     width: 870px;
     min-height: 500px;
+    max-height: 100vh;
     background: #fff;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     outline: 0; 
@@ -48,26 +49,16 @@
     /* 팝업 콘텐츠 */
     .popup-content {
         padding: 20px 30px 30px 30px;
-        .btn-tl-set {
+        [class$="l-set"] {
             text-align: left;
-            margin-bottom: 10px;
         }
-        .btn-tr-set {
+        [class$="r-set"] {
             text-align: right;
+        }
+        .btn-tl-set, .btn-tr-set {
             margin-bottom: 10px;
         }
-        .btn-cl-set {
-            text-align: left;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .btn-cr-set {
-            text-align: right;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .btn-cc-set {
-            text-align: center;
+        .btn-cl-set, .btn-cr-set {
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -75,9 +66,18 @@
             width: 100%;
             text-align: center;
             margin-top: 30px;
+            .popup-save {
+                @extend %btn-type-1-03;
+            }
             .popup-close {
-                @include btn-size ($dp: inline-block, $w: 66px);
-                @include btn-type-1 ($fz: 14px, $color: #333, $bg: $skyblue);
+                @extend %btn-type-1-01;
+            }
+            button {
+                width: 104px;
+                margin-right: 1px;
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
