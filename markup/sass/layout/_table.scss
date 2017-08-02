@@ -1,7 +1,8 @@
 /* =======================================*/
-/* 테이블 스타일*/
+/* 테이블 스타일
 /* =======================================*/
 [class^="table-type-"] {
+    /* 팝업 테이블 내부 다운로드 아이콘 */
     .download-type-01 {
         [class^="icon-"] {
             display: block;
@@ -13,13 +14,16 @@
             }
         }
     }
+    /* 컨텐츠 테이블 내부 다운로드 아이콘 */
     .download-type-02 {
         position: relative;
+        cursor: pointer;
         [class^="icon-"] {
             display: inline-block;
             width: 14px;
             height: 16px;
         }
+        /* 말풍선 다운로드 위젯 적용 */
         .download-file {
             visibility: hidden;
             @include w-center ($position: absolute);
@@ -45,6 +49,15 @@
                 transform: rotate(45deg);
                 content: "";
             }
+            &:before {
+                display: inline-block;
+                position: absolute;
+                top: -43px;
+                left: 0;
+                right: 0;
+                height: 43px;
+                content: "";
+            }
             strong {
                 display: block;
                 margin-bottom: 6px;
@@ -54,6 +67,10 @@
                 position: relative;
                 padding-left: 10px;
                 padding-bottom: 6px;
+                &:focus, &:hover {
+                    color: #002847;
+                    text-decoration: underline;
+                }
                 &:last-child {
                     padding-bottom: 0;
                 }
@@ -66,23 +83,14 @@
                 }
             }
         }
-        &:focus, &.show-widget {
+        &:hover, &:focus, &.show-widget {
             .download-file {
                 visibility: inherit;
-                &:before {
-                    position: absolute;
-                    top: -44px;
-                    left: 0;
-                    right: 0;
-                    display: block;
-                    height: 43px;
-                    content: "";
-                }
             }
         }
     }
 }
-
+/* Content List Table */
 .table-type-01 {
     width: 100%;
     thead {
@@ -107,13 +115,13 @@
             height: 38px;
             text-align: center;
             vertical-align: middle;
-            padding: 0 20px;
-            a {
+            padding: 0 10px;
+            .view-link {
                 @include ellipsis(1);
-            }
-            &:first-child {
-                padding-left: 6px;
-                padding-right: 6px;
+                &:focus, &:hover {
+                    color: #002847;
+                    text-decoration: underline;
+                }
             }
             &:last-child {
                 border-right: 0;
@@ -121,6 +129,7 @@
         }
     }
 }
+/* Popup List Table */
 .table-type-02 {
     width: 100%;
     tr {
@@ -128,7 +137,6 @@
             height: 42px;
             text-align: left;
             vertical-align: middle;
-            padding: 6px 20px;
             border: 1px solid #d1d1d1;
             .view-link {
                 @include ellipsis(1);
@@ -138,13 +146,14 @@
             background: #f0f3f5;
             color: #2e3a42;
             border-right: 0;
+            padding: 0 20px;
         }
-        .lines {
-            padding-top: 10px;
-            padding-bottom: 10px;
+        td {
+            padding: 10px;
         }
     }
 }
+/* ul, li 테이블 형태 */
 .table-li {
     display: table;
     width: 100%;
@@ -152,28 +161,26 @@
     li {
         display: table-cell;
         vertical-align: middle;
-        height: 42px;
-        padding: 0 20px;
+        min-height: 42px;
+        padding: 10px;
         border-right: 1px solid #d1d1d1;
         &.title {
             font-weight: bold;
             color: #2e3a42;
             background: #f0f3f5;
-        }
-        &.lines {
-            padding-top: 6px;
-            padding-bottom: 6px;
+            height: 42px;
+            padding: 0 20px;
         }
         &:last-child {
             border-right: 0;
         }
     }
 }
+/* dl, dt, dd 테이블 형태 */
 .table-dt-dd {
     width: 100%;
     border: 1px solid #d1d1d1;
     dt, dd {
-        padding: 0 20px;
         border-bottom: 1px solid #d1d1d1;
         &:last-child {
             border-bottom: 0;
@@ -185,13 +192,14 @@
         font-weight: bold;
         text-align: center;
         color: #2e3a42;
+        padding: 0 10px;
         background: #f0f3f5;
     }
-    .lines {
-        padding-top: 10px;
-        padding-bottom: 10px;
+    dd {
+        padding: 10px;
     }
 }
+/* 테이블 버튼 영역 */
 .table-btn-set {
     margin-top: 30px;
     text-align: center;
@@ -200,5 +208,14 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+    &[class*="in-"] {
+        margin-top: 10px;
+    }
+    &.in-left {
+        text-align: left;
+    }
+    &.in-right {
+        text-align: right;
     }
 }

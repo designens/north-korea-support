@@ -48,12 +48,13 @@ var dir = {
 
 // 자바스크립트 프래임워크(framework) 병합
 var js_order = [
+    dir.js + '/smooth-scroll.js',
     dir.js + '/svg-injector.min.js',
     dir.js + '/jquery.popupLayer.js',
     dir.js + '/jquery.a11y.popup.js',
-    dir.js + '/smooth-scroll.js',
     dir.js + '/jquery.accordion.js',
     dir.js + '/jquery.tabs.js',
+    dir.js + '/jquery.downloadWidget.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동

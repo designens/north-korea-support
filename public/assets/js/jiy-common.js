@@ -43,10 +43,15 @@
       $.popupId($popups, 'test-area').open();
     });
 
-    // Q&ampA 팝업
-    $('.btn-popup-qna').on('click', function(e) {
+    // Q&ampA 상세 조회 팝업
+    $('.btn-popup-qna-list').on('click', function(e) {
       e.preventDefault();
-      $.popupId($popups, 'popup-qna').open();
+      $.popupId($popups, 'popup-qna-list').open();
+    });
+    // Q&ampA 상세 입력 팝업
+    $('.btn-popup-qna-write').on('click', function(e) {
+      e.preventDefault();
+      $.popupId($popups, 'popup-qna-write').open();
     });
 
     // 공지사항 상세 팝업
@@ -102,62 +107,10 @@
     //다운로드 파일 말풍선 설정
     // -------------------------------------------------------------------
 
-    // document 객체 jQuery화
-    var doc = $(document);
-    // .download-type-02 문서 객체 참조 jQuery 화
-    var download_areas = $(".download-type-02");
-    // 활성화 클래스 이름 설정(변경 가능, CSS에도 적용해야 함)
-    var download_active_class = 'show-widget';
-
-    // jQuery화된 document 객체에 클릭 이벤트 연결
-    doc.on('click', function(e){
-        // 클릭한 대상(이벤트 타겟) 참조
-        var target = e.target;
-        // 현재 문서에서 활성화된 다운로드 에이리어 요소 참조
-        var activated = download_areas.filter('.'+download_active_class);
-        // 활성화된 요소가 존재한다면
-        if ( activated.length > 0 ) {
-            // 활성화된 요소와 클릭한 대상이 같다면 함수 종료
-            if (activated.is(target)) { return; }
-            // hideDownloadWidget() 함수 호출 (this === 활성화된 요소 적용)
-            hideDownloadWidget.call(activated);
-        }
-    });
-
-    // download_areas 참조 객체를 순환하여 콜백 함수 처리
-    // 순환되는 인덱스(index) 값을 첫번째 매개변수로 받음
-    $.each(download_areas, function(index){
-        // area 변수에 순환되는 jQuery 객체(download_areas 집합의 개별 아이템) 참조
-        var area = download_areas.eq(index);
-        // 각 아이템을 순환하여 이벤트 연결
-        // 포커스, 클릭 이벤트 발생 시 showDownloadWidget() 함수 실행
-        // 함수의 this 컨텍스트를 area (순환되는 개별 아이템)으로 설정
-        area.on('focus click', showDownloadWidget.bind(area));
-    });
-
-    // 다운로드 위젯을 보여주는 함수
-    function showDownloadWidget(){
-        // area 참조 객체에 download_active_class 추가
-        this.addClass(download_active_class);
-        // file 변수에 area 자식 .download-file 대상 찾아 참조
-        var file = this.children('.download-file');
-        // file 객체가 존재한다면
-        if ( file.length > 0 ) {
-            // file 객체에 aria-hidden 속성 false 로 설정
-            file.attr('aria-hidden', false);
-            // file 자식 중 마지막 a 요소를 찾아 focusout 이벤트 연결
-            // 이벤트 발생 시, hideDownloadWidget() 함수 실행
-            // this 참조 값으로 area 객체 설정
-            file.children('a:last').on('focusout', hideDownloadWidget.bind(this));
-        }
-    }
-
-    // 다운로드 위젯을 감추는 함수
-    function hideDownloadWidget(){
-        // area 참조 객체에 download_active_class 제거
-        this.removeClass(download_active_class);
-        // file 객체에 aria-hidden 속성 true 로 설정
-        this.children('.download-file').attr('aria-hidden', true);
-    }
+    // downloadWidget 객체 생성
+    // (필수) 첫번째 인자: 객체 지향 자바스크립트 클래스를 연결할 대상 선택자
+    // (옵션) 두번째 인자: 활성화 CSS 클래스 이름 (기본 값: 'show-widget')
+    // (옵션) 세번째 인자: 다운로드 파일 클래스 이름 (기본 값: 'download-file')
+    new global.downloadWidget('.download-type-02');
 
 })(window, document, window.jQuery);
