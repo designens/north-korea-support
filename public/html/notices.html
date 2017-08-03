@@ -43,6 +43,7 @@
     
     <!-- [Start] Header -->
     <header class="header">
+
         <!-- [Start] Top menu -->
         <div class="top-menu">
             <div class="wrap">
@@ -175,6 +176,8 @@
 
     <!-- [Start] Container Area -->
     <main id="container" class="wrap">
+
+        <!-- [Start] LNB 메뉴 -->
         <nav class="lnb">
             <h3>자료마당</h3>
             <ul class="aco-base accordion-lnb">
@@ -189,7 +192,12 @@
                 </li>
             </ul>
         </nav>
+        <!-- [End] LNB 메뉴 -->
+
+        <!-- [Start] Content Area -->
         <section class="content-area">
+
+            <!-- [Start] 컨텐츠 타이틀 -->
             <header class="headline">
                 <h2 class="sub-title">공지사항</h2>
                 <div class="site-location">
@@ -199,6 +207,9 @@
                 </div>
             </header>
             <hr class="sub-title-bar">
+            <!-- [End] 컨텐츠 타이틀 -->
+
+            <!-- [Start] 컨텐츠 상세 -->
             <div class="content notices-content">
                 <!-- [Start] 검색 영역 -->
                 <ul class="search-area">
@@ -247,16 +258,23 @@
                     </div>
                 </div>
                 <!-- [End] 전체 페이지 단위 선택 영역 -->
-                <!-- [Start] 공지사항 테이블 -->
+                <!-- [Start] 테이블 영역 -->
                 <table class="table-type-01">
                     <caption>공지사항의 번호,제목,작성일,첨부파일,조회수 테이블 입니다.</caption>
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">작성일</th>
-                            <th scope="col">첨부파일</th>
-                            <th scope="col">조회수</th>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                            <th>첨부파일</th>
+                            <th>조회수</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -356,7 +374,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- [End] 공지사항 테이블 -->
+                <!-- [End] 테이블 영역 -->
                 <!-- [Start] 페이징 영역 -->
                 <div class="paging">
                     <button class="first-prev" aria-label="처음으로 이동"></button>
@@ -377,7 +395,11 @@
                 </div>
                 <!-- [End] 페이징 영역 -->
             </div>
+            <!-- [End] 컨텐츠 상세 -->
+
         </section>
+        <!-- [End] Content Area -->
+
     </main>
     <!-- [End] Container Area -->
 
@@ -407,34 +429,36 @@
     <!-- [Start] 팝업 콘텐츠 -->
     <div class="popup-content popup-notices-content">
         <table class="table-type-02">
-            <caption>공지사항의 제목,작성자,작성일,첨부파일,제안내용 항목 테이블 입니다.</caption>
+            <caption>공지사항 상세 내용 테이블의 제목, 작성자, 작성일, 첨부파일, 제안내용 항목이 있습니다.</caption>
             <colgroup>
                 <col>
                 <col>
                 <col>
                 <col>
             </colgroup>
-            <tr>
-                <th>제목</th>
-                <td colspan="3">[이벤트] 이런 저런 내용으로 공지합니다..</td>
-            </tr>
-            <tr>
-                <th>작성자</th>
-                <td colspan="3">id****</td>
-            </tr>
-            <tr>
-                <th>작성일</th>
-                <td>2017-11-12</td>
-                <th>조회수</th>
-                <td>999</td>
-            </tr>
-            <tr>
-                <th>첨부파일</th>
-                <td class="download-type-01" colspan="3">
-                    <a class="icon-hwp" role="button" href>첨부파일1.hwp</a>
-                    <a class="icon-hwp" role="button" href>첨부파일2.hwp</a>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3">[이벤트] 이런 저런 내용으로 공지합니다..</td>
+                </tr>
+                <tr>
+                    <th>작성자</th>
+                    <td colspan="3">id****</td>
+                </tr>
+                <tr>
+                    <th>작성일</th>
+                    <td>2017-11-12</td>
+                    <th>조회수</th>
+                    <td>999</td>
+                </tr>
+                <tr>
+                    <th>첨부파일</th>
+                    <td class="download-type-01" colspan="3">
+                        <a class="icon-hwp" role="button" href>첨부파일1.hwp</a>
+                        <a class="icon-hwp" role="button" href>첨부파일2.hwp</a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
         <dl class="table-dt-dd">
             <dt>제안내용</dt>
@@ -442,7 +466,7 @@
         </dl>
         <!-- [Start] 팝업 버튼 -->
         <div class="popup-btn-set">
-            <button class="popup-close popup-content-close">닫기</button>
+            <button class="popup-close">닫기</button>
         </div>
         <!-- [End] 팝업 버튼 -->
     </div>

@@ -1,0 +1,11 @@
+@mixin gallery($per, $mb) {
+    width: 100%;
+    @extend %clearfix;
+    li {
+        float: left;
+        width: percent($per);
+        &:nth-of-type(#{ $per + n }) {
+            margin-bottom: $mb;
+        }
+    }
+}

@@ -206,8 +206,8 @@
 /* (html/qna-list.html)
 /* =======================================*/
 .qna-content {
-    thead {
-        th {
+    colgroup {
+        col {
             &:first-child {
                 width: 54px;
             }
@@ -341,8 +341,8 @@
 /* (html/notices.html)
 /* =======================================*/
 .notices-content {
-    thead {
-        th {
+    colgroup {
+        col {
             &:first-child {
                 width: 54px;
             }
@@ -360,7 +360,6 @@
     td {
         &:nth-child(2) {
             text-align: left;
-            padding-left: 20px;
         }
     }
     .search-area {
@@ -385,6 +384,72 @@
         margin-top: -1px;
         dd {
             min-height: 210px;
+        }
+    }
+}
+
+/* =======================================*/
+/* 자료마당 > 자료실
+/* (html/resources.html)
+/* =======================================*/
+.resources-content {
+    colgroup {
+        col {
+            &:first-child {
+                width: 54px;
+            }
+            &:nth-child(2) {
+                width: 140px;
+            }
+            &:nth-child(3) {
+                width: 341px;
+            }
+            &:nth-child(4) {
+                width: 110px;
+            }
+            &:nth-child(5) {
+                width: 140px;
+            }
+            &:last-child {
+                width: 140px;
+            }
+        }
+    }
+    td {
+        &:nth-child(3) {
+            text-align: left;
+        }
+    }
+    .search-area {
+        li {
+            &:nth-of-type(2) {
+                @include select-box ($w: 130px);
+            }
+            &:nth-of-type(3) {
+                @include select-box ($w: 90px);
+            }
+        }
+    }
+}
+
+/* =======================================*/
+/* 자료마당 > 자료마당 > 팝업
+/* (html/resources.html)
+/* =======================================*/
+.popup-resources-content {
+    @extend .popup-notices-content;
+}
+
+/* =======================================*/
+/* 자료마당 > 관련사이트
+/* (html/relation-site.html)
+/* =======================================*/
+.relation-site {
+    .panel-group {
+        [role="tabpanel"] {
+            .gallery {
+                @include gallery(4, 20px);
+            }
         }
     }
 }
