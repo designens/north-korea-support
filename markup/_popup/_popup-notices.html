@@ -1,24 +1,51 @@
 <div class="popup" data-id="popup-notices">
-
     <!-- [Start] 팝업 헤드라인 -->
     <header class="popup-headline">
-        <h4>팝업 제목</h4>
+        <h4>공지사항</h4>
         <button class="popup-close">창 닫기</button>
     </header>
     <!-- [End] 팝업 헤드라인 -->
-
     <!-- [Start] 팝업 콘텐츠 -->
-    <div class="popup-content">
-    
-        <p>이 곳에 팝업 상세내용 작성하시면 됩니다.</p>
-
+    <div class="popup-content popup-notices-content">
+        <table class="table-type-02">
+            <caption>공지사항의 제목,작성자,작성일,첨부파일,제안내용 항목 테이블 입니다.</caption>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <th>제목</th>
+                <td colspan="3">[이벤트] 이런 저런 내용으로 공지합니다..</td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td colspan="3">id****</td>
+            </tr>
+            <tr>
+                <th>작성일</th>
+                <td>2017-11-12</td>
+                <th>조회수</th>
+                <td>999</td>
+            </tr>
+            <tr>
+                <th>첨부파일</th>
+                <td class="download-type-01" colspan="3">
+                    <a class="icon-hwp" role="button" href>첨부파일1.hwp</a>
+                    <a class="icon-hwp" role="button" href>첨부파일2.hwp</a>
+                </td>
+            </tr>
+        </table>
+        <dl class="table-dt-dd">
+            <dt>제안내용</dt>
+            <dd>이런 저런 내용으로 제안합니다. 잘 검토하시고 답변주세요.</dd>
+        </dl>
         <!-- [Start] 팝업 버튼 -->
         <div class="popup-btn-set">
-            <button class="popup-close">닫기</button>
+            <button class="popup-close popup-content-close">닫기</button>
         </div>
         <!-- [End] 팝업 버튼 -->
-
     </div>
     <!-- [End] 팝업 콘텐츠 -->
-
 </div>

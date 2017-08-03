@@ -2,7 +2,7 @@
 /* 메인 > 로그인 > 외부로그인
 /* (html/login.html)
 /* =======================================*/
- .login-bg {
+.login-bg {
     position: relative;
     background: #fafafa;
     .login-area {
@@ -246,7 +246,7 @@
 /* 커뮤니티 > Q&A 상세 조회 > 팝업
 /* (html/qna-list.html)
 /* =======================================*/
- .popup-qna-content {
+.popup-qna-content {
     table {
         colgroup {
             col {
@@ -358,8 +358,10 @@
         }
     }
     td {
-        span {
+        .total-number {
             color: #003761;
+            font-weight: bold;
+            margin-left: 4px;
         }
         &:nth-child(2) {
             text-align: left;
@@ -369,10 +371,24 @@
 }
 
 /* =======================================*/
+/* 자료마당 > 공지사항 > 공지사항 상세 팝업완료
+/* (html/notices.html)
+/* =======================================*/
+.popup-notices-content {
+    @extend .popup-qna-content;
+    .table-dt-dd {
+        margin-top: -1px;
+        dd {
+            min-height: 210px;
+        }
+    }
+}
+
+/* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application-list.html)
 /* =======================================*/
- .business-application {
+.business-application {
     .panel-group {
         [aria-labelledby="tab1"] {
             colgroup {
@@ -467,7 +483,7 @@
 /* 기금사업신청 > 사업신청 상세팝업
 /* (html/business-application-list.html)
 /* =======================================*/
- .popup-business-application {
+.popup-business-application {
     table {
         colgroup {
             col:first-child {

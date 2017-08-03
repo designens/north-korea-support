@@ -15,7 +15,13 @@
     <!-- [Start] Header -->
     <header class="header">
         <!-- [Start] Top menu -->
-        <!--#include file="../_inc/_top-menu.html"-->
+        <div class="top-menu">
+            <div class="wrap">
+                <a href="login.html">로그인</a>
+                <a href="apply-to-north-korea.html">대북지원사업자 신청</a>
+                <a href="support-application-status-list.html">사업자 지원접수현황</a>
+            </div>
+        </div>
         <!-- [End] Top menu -->
         
         <!-- [Start] 로고 및 즐겨찾는 메뉴 -->
@@ -164,17 +170,180 @@
                     <a href="#">공지사항</a>
                 </div>
             </header>
-            <hr class="sub-title-bar"/>
-            <div class="content">
-            이 곳에 컨텐츠 작성하시면 됩니다.
+            <hr class="sub-title-bar" />
+            <div class="content notices-content">
+                <ul class="search-area">
+                    <li class="search-title"><span>검색</span></li>
+                    <li class="select-box">
+                        <label for="search">제목</label>
+                        <select id="search" name="search-item">
+                            <option selected="selected">제목</option>
+                            <option>내용</option>
+                            <option>단어</option>
+                        </select>
+                    </li>
+                    <li class="input-type">
+                        <label class="search-keyword">
+                            <span>검색 키워드 입력하세요.</span>
+                            <input type="text" />
+                        </label>
+                    </li>
+                    <li>
+                        <button class="btn-lookup">조회</button>
+                    </li>
+                </ul>
+                <div class="all-pages-view">
+                    <div class="all-page">
+                        <span>총 <strong>199</strong>개 검색 , <strong>1</strong>/22 page</span>
+                    </div>
+                    <div class="select-box">
+                        <label for="search">10개씩보기</label>
+                        <select id="search" name="search-item">
+                            <option selected="selected">10개씩보기</option>
+                            <option>20개씩보기</option>
+                            <option>30개씩보기</option>
+                            <option>40개씩보기</option>
+                            <option>50개씩보기</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- 공지사항 테이블 -->
+                <table class="table-type-01">
+                    <caption>공지사항의 번호,제목,작성일,첨부파일,조회수 테이블 입니다.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">첨부파일</th>
+                            <th scope="col">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td class="download-type-02">
+                                <span class="icon-hwp"></span>
+                                <span class="icon-doc"></span>
+                                <span class="icon-pdf"></span>
+                                <span class="icon-jpg"></span>
+                                <div class="download-file">
+                                    <strong>파일명 :</strong>
+                                    <a href="">대북지원사업신청서.hwp</a>
+                                    <a href="">남북협력기금지원신청서.doc</a>
+                                    <a href="">대북지원사업자 지정신청서.pdf</a>
+                                    <a href="">대북지원사업자 지정신청서.pdf</a>
+                                </div>
+                            </td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[기금공고]</strong> 또 다른 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td class="download-type-02">
+                                <span class="icon-hwp"></span>
+                                <span class="icon-doc"></span>
+                                <span class="icon-pdf"></span>
+                                <span class="icon-jpg"></span>
+                                <div class="download-file">
+                                    <strong>파일명 :</strong>
+                                    <a href="">대북지원사업신청서.hwp</a>
+                                    <a href="">남북협력기금지원신청서.doc</a>
+                                    <a href="">대북지원사업자 지정신청서.pdf</a>
+                                    <a href="">대북지원사업자 지정신청서.pdf</a>
+                                </div>
+                            </td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[이벤트]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 또 다른 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[기금공고]</strong> 또 다른 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                        <tr>
+                            <td>177</td>
+                            <td><a href="" class="btn-popup-notices view-link" role="button"><strong>[공지]</strong> 이런저런 내용으로 공지사항합니다.<span class="total-number">(2)</span></a></td>
+                            <td>2017-11-12</td>
+                            <td></td>
+                            <td>999</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="paging">
+                    <button class="first-prev" aria-label="처음으로 이동"></button>
+                    <button class="prev" aria-label="이전 페이지"></button>
+                    <a href role="button">1</a>
+                    <a href role="button">2</a>
+                    <a href role="button">3</a>
+                    <a href role="button">4</a>
+                    <!-- 선택된 버튼 class="selected"로 제어 -->
+                    <a class="selected" href role="button">5</a>
+                    <a href role="button">6</a>
+                    <a href role="button">7</a>
+                    <a href role="button">8</a>
+                    <a href role="button">9</a>
+                    <a href role="button">10</a>
+                    <button class="next" " aria-label="다음 페이지 "></button>
+                    <button class="last-next " aria-label="끝으로 이동 "></button>
+                </div>
             </div>
-        </section>
-    </main>
+        </main>
     <!-- [End] Container Area -->
 
     <!-- [Start] Footer Area -->
     <!--#include file="../_inc/_site-info.html"-->
     <!-- [End] Footer Area -->
+
+    <!-- [Start] 공지사항 Popup -->
+    <!--#include file="../_popup/_popup-notices.html"-->
+    <!-- [End] 공지사항 Popup -->
 
     <!--#include file="../_inc/_js-bottom-settings.html"-->
 </body>
