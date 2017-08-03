@@ -1,4 +1,6 @@
 // 접근성 글자 감추기
 %text-hidden {
-    text-indent: -9999px;
+    position:absolute;
+    left: -9999px;
+    visibility: hidden;
 }

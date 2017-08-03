@@ -243,7 +243,7 @@
 }
 
 /* =======================================*/
-/* 커뮤니티 > Q&A조회 > 팝업
+/* 커뮤니티 > Q&A 상세 조회 > 팝업
 /* (html/qna-list.html)
 /* =======================================*/
  .popup-qna-content {
@@ -252,6 +252,68 @@
             col {
                 &:nth-child(1), &:nth-child(3) {
                     width: 140px;
+                }
+            }
+        }
+        tbody {
+            td {
+                padding-top: 6px;
+                padding-bottom: 6px;
+                .input-type {
+                    @include input-type ($w: 100%);
+                }
+                .secret-article {
+                    margin-top: 7px;
+                    margin-bottom: 3px;
+                }
+                &.security-text-area {
+                    * {
+                        float: left;
+                    }
+                    .input-type {
+                        @include input-type ($w: 140px);
+                    }
+                    .security-text {
+                        width: 154px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        margin: 0 6px;
+                        background: #d5d5d5;
+                    }
+                    strong {
+                        color: #333;
+                        line-height: 30px;
+                    }
+                }
+                .add-file-sherch {
+                    @extend %clearfix;
+                    margin-bottom: 10px;
+                    span {
+                        line-height: 30px;
+                    }
+                    .file-sherch {
+                        float: right;
+                        .input-type {
+                            @include input-type ($w: 470px);
+                        }
+                        .btn-file-sherch {
+                            @extend %btn-type-1-02;
+                            width: 100px;
+                        }
+                    }
+                }
+                .add-file-area {
+                    padding-left: 73px;
+                    .file {
+                        a[class^="icon-"] {
+                            display: inline-block;
+                            margin-right: 20px;
+                        }
+                        .btn-file-remove {
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }

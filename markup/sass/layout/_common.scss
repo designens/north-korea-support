@@ -366,9 +366,7 @@ hr.sub-title-bar {
         @include input-type ($w: 360px);
         label {
             span {
-                position:absolute;
-                height:1px;
-                overflow:hidden;
+                @extend %text-hidden;
             }
         }
     }
@@ -576,5 +574,18 @@ hr.sub-title-bar {
         &[aria-hidden='true'] {
             display: none;
         }
+    }
+}
+
+/* =======================================*/
+/* 웹에디터 영역
+/* =======================================*/
+.web-edit-area {
+    height: 300px;
+    background: #d5d5d5;
+    margin-top: 10px;
+    p {
+        text-align: center;
+        line-height: 300px;
     }
 }

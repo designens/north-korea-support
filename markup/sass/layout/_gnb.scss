@@ -28,7 +28,7 @@
             width: 24px;
             height: 19px;
             margin-top: 26px;
-            @extend %text-hidden;
+            text-indent: -9999px;
             background: url($btn-gnb-all) no-repeat;
         }
     }
@@ -188,8 +188,30 @@
             bottom: 0;
             width: 54px;
             height: 54px;
-            @extend %text-hidden;
-            background: #003761 url($btn-gnb-close) center no-repeat;
+            text-indent: -9999px;
+            background: #003761;
+            &:before {
+                position: absolute;
+                top: 27px;
+                left: 13px;
+                display: block;
+                width: 28px;
+                height: 1px;
+                background: #fff;
+                transform: rotate(45deg);
+                content: "";
+            }
+            &:after {
+                position: absolute;
+                top: 27px;
+                left: 13px;
+                display: block;
+                width: 28px;
+                height: 1px;
+                background: #fff;
+                transform: rotate(-45deg);
+                content: "";
+            }
         }
     }
 }

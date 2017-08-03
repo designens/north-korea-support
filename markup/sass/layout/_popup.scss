@@ -38,12 +38,34 @@
             letter-spacing: -0.04em;
         }
         .popup-close {
+            position: relative;
             float: right;
             width: 21px;
             height: 21px;
             margin-top: 15px;
-            @extend %text-hidden;
-            background: url($btn-gnb-close) center no-repeat;
+            text-indent: -9999px;
+            &:before {
+                position: absolute;
+                top: 10px;
+                left: -4px;
+                display: block;
+                width: 135%;
+                height: 1px;
+                background: #fff;
+                transform: rotate(45deg);
+                content: "";
+            }
+            &:after {
+                position: absolute;
+                top: 10px;
+                left: -4px;
+                display: block;
+                width: 135%;
+                height: 1px;
+                background: #fff;
+                transform: rotate(-45deg);
+                content: "";
+            }
         }
     }
     /* 팝업 콘텐츠 */
