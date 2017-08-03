@@ -358,14 +358,19 @@
         }
     }
     td {
-        .total-number {
-            color: #003761;
-            font-weight: bold;
-            margin-left: 4px;
-        }
         &:nth-child(2) {
             text-align: left;
             padding-left: 20px;
+        }
+    }
+    .search-area {
+        li {
+            &:nth-of-type(2) {
+                @include select-box ($w: 130px);
+            }
+            &:nth-of-type(3) {
+                @include select-box ($w: 90px);
+            }
         }
     }
 }

@@ -149,11 +149,10 @@
         <nav class="lnb">
             <h3>자료마당</h3>
             <ul class="aco-base accordion-lnb">
-                <li>
+                <li class="open">
                     <a href="#" class="lnb-link" role="button">공지사항<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                 </li>
-                <!-- 메뉴 펼침 class="open"으로 제어 -->
-                <li class="open">
+                <li>
                     <a href="#" class="lnb-link" role="button">자료실<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                 </li>
                 <li>
@@ -170,10 +169,19 @@
                     <a href="#">공지사항</a>
                 </div>
             </header>
-            <hr class="sub-title-bar" />
+            <hr class="sub-title-bar">
             <div class="content notices-content">
+                <!-- [Start] 검색 영역 -->
                 <ul class="search-area">
                     <li class="search-title"><span>검색</span></li>
+                    <li class="select-box">
+                        <label for="search">말머리:전체</label>
+                        <select id="search" name="search-item">
+                            <option selected="selected">말머리:전체</option>
+                            <option>내용</option>
+                            <option>단어</option>
+                        </select>
+                    </li>
                     <li class="select-box">
                         <label for="search">제목</label>
                         <select id="search" name="search-item">
@@ -192,6 +200,8 @@
                         <button class="btn-lookup">조회</button>
                     </li>
                 </ul>
+                <!-- [End] 검색 영역 -->
+                <!-- [Start] 전체 페이지 단위 선택 영역 -->
                 <div class="all-pages-view">
                     <div class="all-page">
                         <span>총 <strong>199</strong>개 검색 , <strong>1</strong>/22 page</span>
@@ -207,7 +217,8 @@
                         </select>
                     </div>
                 </div>
-                <!-- 공지사항 테이블 -->
+                <!-- [End] 전체 페이지 단위 선택 영역 -->
+                <!-- [Start] 공지사항 테이블 -->
                 <table class="table-type-01">
                     <caption>공지사항의 번호,제목,작성일,첨부파일,조회수 테이블 입니다.</caption>
                     <thead>
@@ -316,6 +327,8 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- [End] 공지사항 테이블 -->
+                <!-- [Start] 페이징 영역 -->
                 <div class="paging">
                     <button class="first-prev" aria-label="처음으로 이동"></button>
                     <button class="prev" aria-label="이전 페이지"></button>
@@ -333,8 +346,10 @@
                     <button class="next" " aria-label="다음 페이지 "></button>
                     <button class="last-next " aria-label="끝으로 이동 "></button>
                 </div>
+                <!-- [End] 페이징 영역 -->
             </div>
-        </main>
+        </section>
+    </main>
     <!-- [End] Container Area -->
 
     <!-- [Start] Footer Area -->

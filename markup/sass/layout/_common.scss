@@ -24,7 +24,7 @@ body {
     padding-left: 20px;
     &:before {
         position: absolute;
-        top: 2px;
+        top: 3px;
         left: 0;
         display: inline-block;
         width: 14px;
@@ -360,7 +360,12 @@ hr.sub-title-bar {
         color: #2e3a42;
     }
     .select-box {
-        @include select-box ($w: 90px);
+        &:nth-of-type(1) {
+            @include select-box ($w: 130px);
+        }
+        &:nth-of-type(2) {
+            @include select-box ($w: 90px);
+        }
     }
     .input-type {
         @include input-type ($w: 360px);
@@ -407,6 +412,7 @@ hr.sub-title-bar {
     font-size: 12px;
     color: #8f8f8f;
     background: #06111a;
+    @extend %clearfix;
     .site-info {
         text-align: center;
         padding-top: 45px;

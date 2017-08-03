@@ -23,7 +23,7 @@
         width: 100%;
         height: $h;
         min-height: $h;
-        line-height: $h;
+        line-height: $h - 2;
         padding: $p;
         border: 1px solid $bdc;
         background: $bg;
