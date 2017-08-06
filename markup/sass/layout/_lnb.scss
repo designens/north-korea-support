@@ -47,11 +47,11 @@
             }
         }
         &.open {
+            background: #cee4f5;
             [class*="link"] {
                 position: relative;
                 color: #003761;
                 padding-left: 33px;
-                background: #cee4f5;
                 &:before {
                     position: absolute;
                     left: 20px;

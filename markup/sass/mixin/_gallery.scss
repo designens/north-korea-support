@@ -4,8 +4,9 @@
     li {
         float: left;
         width: percent($per);
-        &:nth-of-type(#{ $per + n }) {
-            margin-bottom: $mb;
+        margin-top: $mb;
+        &:nth-of-type(#{ $per + 1n }) {
+            clear: both;
         }
     }
 }
