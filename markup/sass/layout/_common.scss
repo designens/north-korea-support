@@ -51,6 +51,18 @@ body {
         background: url($icon-jpg) no-repeat;
     }
 }
+.icon-xls {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-xls) no-repeat;
+    }
+}
+.icon-ppt {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-ppt) no-repeat;
+    }
+}
 
  /* =======================================*/
  /* 페이징 스타일
