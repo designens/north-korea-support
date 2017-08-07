@@ -3,10 +3,15 @@
     @extend %clearfix;
     @for $i from 1 through $num-of-columns {
         &.col#{$i} {
+            $gutter: $num-gutter * ($i - 1);
+            $col: calc((100% - #{$gutter}) / #{$i});
             li {
                 float: left;
-                width: percent($i);
-                padding: 0 $num-gutter;
+                width: $col;
+                margin-right: $num-gutter;
+                &:nth-of-type(#{ $i + n }) {
+                    margin-right: 0;
+                }
                 &:nth-of-type(#{ $i + 1n }) {
                     clear: both;
                 }

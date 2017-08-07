@@ -108,6 +108,94 @@
 }
 
 /* =======================================*/
+/* 커뮤니티 > 뉴스레터
+/* (html/news-letters.html)
+/* =======================================*/
+.news-letters {
+    padding: 13px 67px 57px 67px;
+    margin: 0 10px;
+    background: #f5f8fa;
+    .gallery {
+        @include gallery(3, 44px);
+        li {
+            position: relative;
+            height: 330px;
+            margin-top: 44px;
+            background: url($news-letters-bg) no-repeat;
+            .vol-area {
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                right: 3px;
+                z-index: 10;
+                height: 60px;
+                color: #fff;
+                background: url($news-letters-title-bg) no-repeat;
+                .vol {
+                    float: left;
+                    min-width: 36px;
+                    height: 36px;
+                    margin-top: 12px;
+                    background: #62b5f5;
+                    span {
+                        display: block;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 1.15;
+                        &:first-child {
+                            font-size: 8px;
+                            padding-top: 4px;
+                        }
+                    }
+                }
+                .vol-title {
+                    float: left;
+                    margin-top: 12px;
+                    span {
+                        display: block;
+                        font-size: 24px;
+                        line-height: 1.15;
+                        padding-left: 8px;
+                        &:first-child {
+                            font-size: 11px;
+                        }
+                        &:last-child {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            a {
+                figure {
+                    div {
+                        position: absolute;
+                        top: 3px;
+                        left:  3px;
+                        right:  3px;
+                        height: 270px;
+                        border-top-left-radius: 3px;
+                        border-top-right-radius: 3px;
+                        z-index: 9;
+                        img {
+                            overflow: hidden;
+                        }
+                    }
+                    figcaption {
+                        position: absolute;
+                        bottom: 7px;
+                        left:  3px;
+                        right:  3px;
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
 /* 커뮤니티 > FAQ 조회
 /* (html/faq-list.html)
 /* =======================================*/

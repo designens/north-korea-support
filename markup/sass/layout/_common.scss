@@ -450,7 +450,7 @@ hr.sub-title-bar {
 .checkbox-type,
 .radio-type {
     input {
-        /* 기본 버튼 속성 무시*/
+        /* 기본 버튼 속성 무시 */
         -webkit-appearance: none;
         -ms-appearance: none;
         -moz-appearance: none;
@@ -487,17 +487,17 @@ hr.sub-title-bar {
 .aco-base, .aco-open {
     > li {
         &.open {
-            /* 아코디언 메뉴 패널 펼침*/
+            /* 아코디언 메뉴 패널 펼침 */
         }
     }
-    /* 아코디언 메뉴*/
+    /* 아코디언 메뉴 */
     [class*="link"] {
         display: block;
         -webkit-transition: all 0.4s ease;
         -o-transition: all 0.4s ease;
         transition: all 0.4s ease;
     }
-    /* 아코디언 패널*/
+    /* 아코디언 패널 */
    [class*="sub"] {
         display: none;
     }
@@ -507,15 +507,17 @@ hr.sub-title-bar {
 /* 갤러리 스타일
 /* =======================================*/
 .gallery {
-    /* 컬럼의 갯수 col1~col6 까지 class 생성*/
-    @include gallery(6, 5px);
+    /* 컬럼의 갯수 col1~col6 까지 class 생성 */
+    /* @include gallery(컬럼 수, 마진 우측 px) */
+    @include gallery(6, 10px);
 }
 
 /* =======================================*/
 /* 탭 스타일
 /* =======================================*/
 .tablist {
-    /* 탭의 갯수 t1~t8 까지 class 생성*/
+    /* 탭의 갯수 t1~t8 까지 class 생성 */
+    /* @include tabs(컬럼 수) */
     @include tabs(8);
     [role="tab"] {
         padding-right: 2px;
