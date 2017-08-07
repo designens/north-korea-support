@@ -448,9 +448,8 @@
     .panel-group {
         [role="tabpanel"] {
             .gallery {
-                @include gallery(4, 20px);
                 li {
-                    padding-right: 10px;
+                    margin-top: 20px;
                     h6 {
                         position: relative;
                         font-size: 14px;

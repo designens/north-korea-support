@@ -1,12 +1,16 @@
-@mixin gallery($per, $mb) {
+@mixin gallery($num-of-columns, $num-gutter) {
     width: 100%;
     @extend %clearfix;
-    li {
-        float: left;
-        width: percent($per);
-        margin-top: $mb;
-        &:nth-of-type(#{ $per + 1n }) {
-            clear: both;
+    @for $i from 1 through $num-of-columns {
+        &.col#{$i} {
+            li {
+                float: left;
+                width: percent($i);
+                padding: 0 $num-gutter;
+                &:nth-of-type(#{ $i + 1n }) {
+                    clear: both;
+                }
+            }
         }
     }
 }
