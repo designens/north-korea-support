@@ -231,35 +231,38 @@
             <!-- [End] 컨텐츠 타이틀 -->
             
             <!-- [Start] 컨텐츠 상세  -->
-            <div class="content support-application-status-write-content">
-                <div class="support-application-status-write-check">
-                    <h2>사업자 신청 조회</h2>
-                    <div class="support-application-status-write-form">
+            <div class="content support-application-status">
+
+                <!-- [Start] 사업자 신청 조회 -->
+                <article class="content-box">
+                    <h3>사업자 신청 조회</h3>
+                    <div class="form-area">
                         <div class="form-group">
                             <div class="input-area">
                                 <input type="text" id="username" name="username" required="required" />
                                 <label for="username">법인·단체 ID</label>
-                                <br/>
+                                <br>
                                 <input type="password" id="password" name="password" required="required" />
                                 <label for="password">비밀번호</label>
                             </div>
-                            <a class="btn-search" role="">조회</a>
+                            <button class="btn-search">조회</button>
                         </div>
                     </div>
-                </div>
+                </article>
+                <!-- [End] 사업자 신청 조회 -->
 
-                <!-- 사업자 신청 진행 현황 -->
-                <div>
-                    <h2>사업자 신청 진행 현황</h2>
-                </div>
-                
-                <!-- 보완요청 사항 -->
-                <div class="support-application-status-write-table">
-                    <h2>보완요청 사항</h2>
+                <!-- [Start] 사업자 신청 진행 현황 -->
+                <article class="content-box">
+                    <h3>사업자 신청 진행 현황</h3>
+                </article>
+                <!-- [End] 사업자 신청 진행 현황 -->
+
+                <!-- [Start] 보완요청 사항 -->
+                <article class="content-box">
+                    <h3>보완요청 사항</h3>
                     <table class="table-type-02">
                         <caption>보완요청 사항에 대한 테이블 입니다.</caption>
                         <colgroup>
-                            <col>
                             <col>
                             <col>
                         </colgroup>
@@ -278,14 +281,16 @@
                             </tr>
                         </tbody>
                     </table>
+                </article>
+                <!-- [End] 보완요청 사항 -->
+
+                <!-- [Start] 신청 완료 -->
+                <div class="sub-complete">
+                    <p class="icon-confirm">대북지원단체1 사업자 등록이 <span>완료</span> 되었습니다.</p><br>
+                    <a class="btn-contact-person" role="button" href>담당자 회원 가입</a>
                 </div>
-                <div class="support-application-status-write-confirm">
-                    <img src="../assets/images/icon/icon-confirm.svg" alt="사업자 신청 완료 아이콘" />
-                    <p class="support-application-status-write-confirm-notice">대북지원단체1 사업자 등록이 <span class="support-application-status-write-blue">완료</span> 되었습니다.</p>
-                </div>
-                <div class="support-application-status-write-btn">
-                    <a href="" class="btn-type-2-04">담당자 회원 가입</a>
-                </div>
+                <!-- [End] 신청 완료 -->
+
             </div>
             <!-- [End] 컨텐츠 상세  -->
 

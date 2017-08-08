@@ -361,6 +361,32 @@ hr.sub-title-bar {
     background: #fff;
 }
 
+/* =======================================*/
+/* Sub Page : 신청완료 스타일
+/* =======================================*/
+.sub-complete {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    .icon-confirm {
+        position: relative;
+        font-size: 20px;
+        letter-spacing: -0.04em;
+        &:before {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+            margin-bottom: -12px;
+            background: url($icon-confirm) no-repeat;
+            content: "";
+        }
+        span {
+            font-weight: bold;
+            color: #003761;
+        }
+    }
+}
 
 /* =======================================*/
 /* 검색 영역 스타일
@@ -386,9 +412,7 @@ hr.sub-title-bar {
             margin-right: 0;
         }
         .btn-lookup {
-            @include btn-size ($w: 66px);
-            @include btn-type-1 ($fz: 14px, $color: #fff, $bg: #394a57);
-               
+            @extend %btn-type-1-02;
        }
     }
     .search-title {

@@ -1,40 +1,6 @@
 @charset "UTF-8";
 /* 회원서비스 > 법인.단체 > 지원접수현황 입력
 html/support-application-status-write.html */
-.support-application-status-write-form { width: 930px; margin: 0 auto; }
-
-.support-application-status-write-check { width: 930px; margin: 0 auto; }
-
-.support-application-status-write-check h2 { border-left: 3px solid #003761; font-size: 16px; font-weight: bold; padding-left: 7px; line-height: 16px; margin-bottom: 18px; }
-
-.support-application-status-write-form { position: relative; height: 178px; border-radius: 7px; border: 1px solid #afc0cc; box-shadow: 0 0 6px 6px #fdfdfd; background: #fff; }
-
-.support-application-status-write-form .form-group { width: 406px; height: 76px; margin: 50px auto; }
-
-.support-application-status-write-form .form-group .input-area { float: left; }
-
-.support-application-status-write-form .form-group .input-area input { float: right; margin-bottom: 8px; clear: both; cursor: auto; width: 220px; height: 34px; line-height: 34px; padding: 0 10px; border: 1px solid #e6e9eb; background: #fff; }
-
-.support-application-status-write-form .form-group .input-area label { float: left; line-height: 34px; font-weight: bold; letter-spacing: -0.04em; color: #2e3a42; margin-right: 18px; }
-
-.support-application-status-write-form .btn-search { float: right; letter-spacing: -0.01em; background: #003761; border-bottom: 3px solid #002644; display: inline-block; min-width: 76px; height: 76px; line-height: 74px; text-align: center; padding: 0 10px; border-radius: 3px; color: #fff; text-shadow: 0 0 1px #003359; border-bottom: 3px solid #002644; background: #003761; }
-
-.support-application-status-write-content h2 { border-left: 3px solid #003761; font-size: 16px; font-weight: bold; padding-left: 7px; line-height: 16px; margin-bottom: 18px; width: 930px; margin: 58px auto; }
-
-.support-application-status-write-table { width: 930px; margin: 58px auto; }
-
-.support-application-status-write-table h2 { border-left: 3px solid #003761; font-size: 16px; font-weight: bold; padding-left: 7px; line-height: 16px; margin-bottom: 18px; }
-
-.support-application-status-write-table .table-type-02 th { width: 50px; }
-
-.support-application-status-write-table .table-type-02 td { width: 878px; padding-left: 20px; }
-
-.support-application-status-write-confirm { width: 930px; margin: 0 auto; width: 444px; margin: 30px auto; }
-
-.support-application-status-write-confirm h2 { border-left: 3px solid #003761; font-size: 16px; font-weight: bold; padding-left: 7px; line-height: 16px; margin-bottom: 18px; }
-
-.support-application-status-write-confirm img { width: 40px; margin-right: 20px; vertical-align: middle; }
-
 .support-application-status-write-confirm-notice { display: inline-block; text-align: center; font-size: 20px; vertical-align: middle; letter-spacing: -0.09em; position: relative; }
 
 .support-application-status-write-btn { width: 200px; margin: 0 auto; }
