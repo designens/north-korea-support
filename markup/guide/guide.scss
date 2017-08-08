@@ -1,50 +1,10 @@
 /*! guide.css © inyoung, 2017.07.20 */
 
+// =======================================
+// UI Kit 플러그인
+// =======================================
 @charset "utf-8";
-
-// =======================================
-// Framework import
-// =======================================
-@import "../sass/lib/susy/susy";
-
-// =======================================
-// Base Design
-// =======================================
-@import "../sass/base/reset-css";
-@import "../sass/base/susy-settings";
-
-// =======================================
-// Function
-// =======================================
-@import "../sass/function/de-unit";
-@import "../sass/function/retina";
-@import "../sass/function/percent";
-
-// =======================================
-// Mixin
-// =======================================
-@import "../sass/mixin/align";
-@import "../sass/mixin/ellipsis";
-@import "../sass/mixin/fa-icon";
-@import "../sass/mixin/psd-fz";
-@import "../sass/mixin/psd-lh";
-@import "../sass/mixin/psd-mb";
-@import "../sass/mixin/heading";
-@import "../sass/mixin/retina-img";
-@import "../sass/mixin/tabs";
-@import "../sass/mixin/progress";
-@import "../sass/mixin/input-type";
-@import "../sass/mixin/select-box";
-@import "../sass/mixin/arrow";
-@import "../sass/mixin/gallery";
-
-// =======================================
-// Placeholder
-// =======================================
-@import "../sass/placeholder/clearfix";
-@import "../sass/placeholder/row";
-@import "../sass/placeholder/box-hidden";
-@import "../sass/placeholder/text-hidden";
+@import "../sass/jiy-style";
 
 // =======================================
 // Typography
@@ -58,7 +18,7 @@ html {
     font-size: 10px;
 }
 body {
-    font-family: 'Noto Sans Korean', sans-serif, serif;
+    font-family: 'Noto Sans Korean', sans-serif, serif !important;
     font-size: rem(14px);
     line-height: 1.5;
     height: 100vh;
