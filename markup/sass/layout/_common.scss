@@ -348,6 +348,31 @@ hr.sub-title-bar {
     letter-spacing: -0.03em;
     text-align: center;
 }
+.content-box-area {
+    h3 {
+        position: relative;
+        font-size: 16px;
+        padding-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        &:before {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            display: inline-block;
+            width: 3px;
+            height: 16px;
+            background: #003761;
+            content: "";
+        }
+    }
+    &:first-child {
+        position: relative;
+        h3 {
+            margin-top: 0;
+        }
+    }
+}
 
 /* =======================================*/
 /* Sub Page : Content Box 스타일
@@ -362,13 +387,13 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
-/* Sub Page : 신청완료 스타일
+/* Sub Page : 등록 완료 스타일
 /* =======================================*/
-.sub-complete {
+.sub-completed {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 120px;
-    .icon-confirm {
+    margin-bottom: 90px;
+    .message {
         position: relative;
         font-size: 20px;
         letter-spacing: -0.04em;
@@ -386,6 +411,19 @@ hr.sub-title-bar {
             color: #003761;
         }
     }
+    .btn-completed {
+        margin-top: 50px;
+        @extend %btn-type-2-04;
+    }
+}
+
+/* =======================================*/
+/* Sub Page : 하단 버튼 영역 스타일
+/* =======================================*/
+.sub-bottom-btn-area {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 90px;
 }
 
 /* =======================================*/

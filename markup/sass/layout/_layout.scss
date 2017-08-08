@@ -640,34 +640,7 @@
 .support-application-status {
     padding-left: 10px;
     padding-right: 10px;
-    .content-box {
-        h3 {
-            position: relative;
-            font-size: 16px;
-            padding-left: 10px;
-            margin-top: 60px;
-            margin-bottom: 10px;
-            &:before {
-                position: absolute;
-                top: 4px;
-                left: 0;
-                display: inline-block;
-                width: 3px;
-                height: 16px;
-                background: #003761;
-                content: "";
-            }
-        }
-        &:first-child {
-            position: relative;
-            h3 {
-                margin-top: 0;
-            }
-        }
-    }
-}
-.support-application-status {
-    .content-box {
+    .content-box-area {
         .form-area {
             @include content-box(178px);
             .form-group {
@@ -704,7 +677,7 @@
     }
 }
 .support-application-status {
-    .content-box {
+    .content-box-area {
         .table-type-02 {
             colgroup {
                 col {
@@ -718,13 +691,68 @@
             }
         }
     }
-    .sub-complete {
-        .btn-contact-person {
-            margin-top: 50px;
-            @extend %btn-type-2-04;
+}
+
+/* =======================================*/
+/* 회원서비스 > 회원가입안내 > 약관동의 조회
+/* (html/accept-terms.html)
+/* =======================================*/
+.accept-terms {
+    .content-box-area {
+        .text-area {
+            height: 140px;
+            border: solid 1px #d2d4d6;
+            padding: 10px;
+            overflow-y: scroll;
+            h5 {
+                font-size: 16px;
+            }
+            ul {
+                li {
+                    h6 {
+                        font-size: 15px;
+                        margin: 10px 0;
+                    }
+                    &:first-child {
+                        h6 {
+                        }
+                    }
+                }
+            }
+            ol {
+                margin: 10px 0;
+                li {
+                    list-style: decimal;
+                    list-style-position: inside;
+                }
+            }
+        }
+        .checkbox-type {
+            margin-top: 7px;
         }
     }
 }
+
+/* =======================================*/
+/* 회원서비스 > 회원가입안내 > 가입탈퇴 조회
+/* (html/unsubscribe.html)
+/* =======================================*/
+.unsubscribe {
+    @extend .support-application-status;
+    .content-box-area {
+        .form-area {
+            .btn-secession {
+                float: right;
+                letter-spacing: -0.01em;
+                background: #003761;
+                border-bottom: 3px solid #002644;
+                @include btn-size ($dp: inline-block, $w: 76px, $h: 76px);
+                @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761);
+            }
+        }
+    }
+}
+
 /* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application-list.html)
