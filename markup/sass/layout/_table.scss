@@ -83,7 +83,7 @@
                 }
             }
         }
-        &:hover, &:focus, &.show-widget {
+        &:focus, &.show-widget {
             .download-file {
                 visibility: inherit;
             }
