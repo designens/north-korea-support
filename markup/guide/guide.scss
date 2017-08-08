@@ -16,8 +16,9 @@
 // =======================================
 // Function
 // =======================================
+@import "../sass/function/de-unit";
 @import "../sass/function/retina";
-@import "../sass/function/px-rem";
+@import "../sass/function/percent";
 
 // =======================================
 // Mixin
@@ -29,10 +30,13 @@
 @import "../sass/mixin/psd-lh";
 @import "../sass/mixin/psd-mb";
 @import "../sass/mixin/heading";
-@import "../sass/mixin/button";
 @import "../sass/mixin/retina-img";
 @import "../sass/mixin/tabs";
 @import "../sass/mixin/progress";
+@import "../sass/mixin/input-type";
+@import "../sass/mixin/select-box";
+@import "../sass/mixin/arrow";
+@import "../sass/mixin/gallery";
 
 // =======================================
 // Placeholder
@@ -40,6 +44,7 @@
 @import "../sass/placeholder/clearfix";
 @import "../sass/placeholder/row";
 @import "../sass/placeholder/box-hidden";
+@import "../sass/placeholder/text-hidden";
 
 // =======================================
 // Typography
