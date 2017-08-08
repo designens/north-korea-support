@@ -1,5 +1,4 @@
 @mixin input-type ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff, $phc: #fff) {
-    width: $w;
     input {
         width: $w;
         height: $h;
@@ -22,5 +21,8 @@
         &:focus {
             border: 1px solid #002847;
         }
+    }
+    label {
+        line-height: $h;
     }
 }

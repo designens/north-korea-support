@@ -143,31 +143,36 @@
 
         <!-- [Start] LNB 메뉴 -->
         <nav class="lnb">
-            <h3>제목</h3>
+            <h3>회원서비스</h3>
             <ul class="aco-base accordion-lnb">
                 <li>
-                    <a href="#" class="lnb-link" role="button">대분류 1<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <a href="#" class="lnb-link" role="button">회원가입안내<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                     <ul class="sub-menu">
-                        <li><a href="#">중분류 1</a>
+                        <li><a href="#">법인·단체</a>
                             <ul>
-                                 <li><a href="">세분류 1</a></li>
-                                 <li><a href="">세분류 2</a></li>
-                                 <li><a href="">세분류 3</a></li>
+                                 <li><a href="">사업자 가입안내</a></li>
+                                 <li><a href="">사업자 신청</a></li>
+                                 <li><a href="">지원접수현황</a></li>
                              </ul> 
                         </li>
-                        <li><a href="#">중분류 2</a></li>
+                        <li><a href="#">담당자</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="lnb-link" role="button">대분류 2<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <a href="#" class="lnb-link" role="button">단체정보 관리<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                     <ul class="sub-menu">
-                        <li><a href="#">중분류 1</a></li>
-                        <li><a href="#">중분류 2</a></li>
-                        <li><a href="#">중분류 3</a></li>
+                        <li><a href="#">정보 조회</a></li>
+                        <li><a href="#">변경사항 요청</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="lnb-link" role="button">대분류 3<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                    <a href="#" class="lnb-link" role="button">정책제안<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="#" class="lnb-link" role="button">게시판<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="#" class="lnb-link" role="button">설문조사<span class="fa fa-angle-down" aria-hidden="true"></span></a>
                 </li>
             </ul>
         </nav>
@@ -178,20 +183,74 @@
 
             <!-- [Start] 컨텐츠 타이틀 -->
             <header class="headline">
-                <h2 class="sub-title">제목</h2>
+                <h2 class="sub-title">사업자 신청</h2>
                 <div class="site-location">
                     <a href="#"><img src="../assets/images/icon/icon-home.svg" alt="home"/></a>
-                    <a href="#">대분류</a>
-                    <a href="#">중분류</a>
-                    <a href="#">세분류</a>
+                    <a href="#">회원서비스</a>
+                    <a href="#">회원가입안내</a>
+                    <a href="#">법인·단체</a>
+                    <a href="#">지원접수현황</a>
                 </div>
             </header>
             <hr class="sub-title-bar"/>
             <!-- [End] 컨텐츠 타이틀 -->
             
             <!-- [Start] 컨텐츠 상세  -->
-            <div class="content">
-            이 곳에 컨텐츠 작성하시면 됩니다.
+            <div class="content support-application-status-write-content">
+                <div class="support-application-status-write-check">
+                    <h2>사업자 신청 조회</h2>
+                    <div class="support-application-status-write-form">
+                        <div class="form-group">
+                            <div class="input-area">
+                                <input type="text" id="username" name="username" required="required" />
+                                <label for="username">법인·단체 ID</label>
+                                <br/>
+                                <input type="password" id="password" name="password" required="required" />
+                                <label for="password">비밀번호</label>
+                            </div>
+                            <a class="btn-search" role="">조회</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사업자 신청 진행 현황 -->
+                <div>
+                    <h2>사업자 신청 진행 현황</h2>
+                </div>
+                
+                <!-- 보완요청 사항 -->
+                <div class="support-application-status-write-table">
+                    <h2>보완요청 사항</h2>
+                    <table class="table-type-02">
+                        <caption>보완요청 사항에 대한 테이블 입니다.</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>추진계획서 보완요청</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>신원증명서 미제출</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="support-application-status-write-confirm">
+                    <img src="../assets/images/icon/icon-confirm.svg" alt="사업자 신청 완료 아이콘" />
+                    <p class="support-application-status-write-confirm-notice">대북지원단체1 사업자 등록이 <span class="support-application-status-write-blue">완료</span> 되었습니다.</p>
+                </div>
+                <div class="support-application-status-write-btn">
+                    <a href="" class="btn-type-2-04">담당자 회원 가입</a>
+                </div>
             </div>
             <!-- [End] 컨텐츠 상세  -->
 

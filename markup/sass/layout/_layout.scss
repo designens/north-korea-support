@@ -8,23 +8,15 @@
     .login-area {
         @include wh-center ($position: absolute);
         width: 740px;
-        .login-title {
-            height: 50px;
+        h2 {
+            @extend %content-title;
+            font-size: 50px;
             margin-bottom: 40px;
-            @extend %text-hidden;
-            background: url($login-title) center no-repeat;
         }
     }
 }
 .login-content {
-    position: relative;
-    height: 356px;
-    border-radius: 7px;
-    border: 1px solid #afc0cc;
-    box-shadow: 0 0 6px 6px #fdfdfd;
-    background: #fff;
-}
-.login-content {
+    @include content-box(356px);
     .form-group {
         @include w-center ($position: absolute);
         top: 50px;
@@ -32,19 +24,17 @@
         @extend %clearfix;
         .input-area {
             float: left;
+            width: 316px;
             @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
             input {
                 float: right;
                 margin-bottom: 8px;
-                clear: both;
             }
             label {
                 float: left;
-                line-height: 34px;
                 font-weight: bold;
                 letter-spacing: -0.04em;
                 color: #002644;
-                margin-right: 10px;
             }
         }
         .btn-login {
@@ -69,20 +59,13 @@
 }
 .login-content {
     .btn-link-set {
-        @include w-center ($position: absolute);
-        top: 190px;
-        width: 406px;
-        [class*='btn-'] {
-            @include btn-size ($dp: inline-block, $w: 200px, $h: 40px);
-            letter-spacing: -0.01em;
-        }
+        text-align: center;
+        margin-top: 190px;
         .btn-main {
-            float: left;
-            @include btn-type-2 ($color: #333, $bdb: #6f7d87, $bg: #9fb3c2);
+            @extend %btn-type-2-02;
         }
         .btn-join {
-            float: right;
-            @include btn-type-2 ($color: #fff, $bdb: #28343d, $bg: #394a57);
+            @extend %btn-type-2-03;
         }
     }
 }
@@ -406,6 +389,8 @@
             }
         }
     }
+}
+.popup-qna-content {
     dl {
         margin-top: 10px;
         dd {
@@ -508,6 +493,8 @@
             text-align: left;
         }
     }
+}
+.resources-content {
     .search-area {
         li {
             &:nth-of-type(2) {
@@ -576,6 +563,71 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+/* ===============================================*/
+/* 회원서비스 > 법인.단체 > 사업자신청 완료
+/* (html/completion-of-business-application.html)
+/* ===============================================*/
+.completion-of-business-application {
+    .list-check {
+        width: 560px;
+        height: 66px;
+        margin: 60px auto;
+        img {
+            width: 66px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+        .notice {
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            vertical-align: middle;
+            letter-spacing: -0.14em;
+            span {
+                color: #003761;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.completion-of-business-application {
+    .list-form {
+        @include content-box(317px);
+        h3 {
+            @extend %content-title;
+            margin-top: 50px;
+        }
+        .form-group {
+            @include w-center ($position: absolute, $w-percent: 50%);
+            top: 120px;
+            width: 406px;
+            .input-area {
+                @include input-type ($w: 316px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
+                input {
+                    float: right;
+                    margin-bottom: 8px;
+                }
+                label {
+                    float: left;
+                    font-weight: bold;
+                    letter-spacing: -0.04em;
+                    color: #002644;
+                }
+            }
+        }
+        .btn-link-set {
+            text-align: center;
+            margin-top: 130px;
+            .btn-edit-information {
+                @extend %btn-type-2-02;
+            }
+            .btn-view-status {
+                @extend %btn-type-2-03;
             }
         }
     }

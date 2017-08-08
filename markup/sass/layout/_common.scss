@@ -339,6 +339,30 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
+/* Sub Page : Title Font 스타일
+/* =======================================*/
+%content-title {
+    font-size: 30px;
+    font-weight: normal;
+    color: #003761;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+/* =======================================*/
+/* Sub Page : Content Box 스타일
+/* =======================================*/
+@mixin content-box($h) {
+    position: relative;
+    height: $h;
+    border-radius: 7px;
+    border: 1px solid #afc0cc;
+    box-shadow: 0 0 6px 6px #fdfdfd;
+    background: #fff;
+}
+
+
+/* =======================================*/
 /* 검색 영역 스타일
 /* =======================================*/
 .search-area {
