@@ -704,18 +704,25 @@
             border: solid 1px #d2d4d6;
             padding: 10px;
             overflow-y: scroll;
+            font-size: 13px;
+            color: #666;
             h5 {
-                font-size: 16px;
+                font-size: 13px;
+            }
+            span {
+                font-weight: bold;
+            }
+            p {
+                padding-bottom: 22px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
             }
             ul {
                 li {
                     h6 {
-                        font-size: 15px;
-                        margin: 10px 0;
-                    }
-                    &:first-child {
-                        h6 {
-                        }
+                        font-size: 13px;
+                        margin: 13px 0;
                     }
                 }
             }
