@@ -1,4 +1,5 @@
-@mixin input-type ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff, $phc: #fff) {
+@mixin input-type ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff) {
+    width: $w;
     input {
         width: $w;
         height: $h;
@@ -6,18 +7,6 @@
         padding: $p;
         border: 1px solid $bdc;
         background: $bg;
-        &::-webkit-input-placeholder {
-            color: $phc;
-        }
-        &::-moz-placeholder {
-            color: $phc;
-        }
-        &:-ms-input-placeholder {
-            color: $phc !important;
-        }
-        &:-moz-placeholder {
-            color: $phc;
-        }
         &:focus {
             border: 1px solid #002847;
         }

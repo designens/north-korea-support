@@ -1,20 +1,9 @@
 /* =======================================*/
 /* 테이블 스타일
 /* =======================================*/
+/* 컨텐츠 테이블 내부 다운로드 아이콘 */
 [class^="table-type-"] {
-    /* 팝업 테이블 내부 다운로드 아이콘 */
-    .download-type-01 {
-        [class^="icon-"] {
-            display: block;
-            margin-bottom: 5px;
-            color: #003761;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    /* 컨텐츠 테이블 내부 다운로드 아이콘 */
-    .download-type-02 {
+    .table-download {
         position: relative;
         cursor: pointer;
         outline: none;

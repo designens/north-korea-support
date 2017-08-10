@@ -17,6 +17,34 @@ body {
 }
 
 /* =======================================*/
+/* 팝업 테이블 내부 다운로드 아이콘
+/* =======================================*/
+.add-file-area {
+    .file {
+        width: 244px;
+        margin: 3px 0;
+        @extend %clearfix;
+        a[class^="icon-"] {
+            float: left;
+            display: inline-block;
+            width: 178px;
+            color: #003761;
+            @include ellipsis(1);
+        }
+        &.full-name {
+            width: 100%;
+            a {
+                width: 100%;
+            }
+        }
+        .btn-file-remove {
+            text-decoration: underline;
+            float: right;
+        }
+    }
+}
+
+/* =======================================*/
 /* 아이콘 공통 스타일
 /* =======================================*/
 .icon-hwp {
@@ -46,6 +74,12 @@ body {
     }
 }
 .icon-jpg {
+    @extend .icon-hwp;
+    &:before {
+        background: url($icon-jpg) no-repeat;
+    }
+}
+.icon-png {
     @extend .icon-hwp;
     &:before {
         background: url($icon-jpg) no-repeat;
@@ -388,6 +422,43 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
+/* Sub Page : Content Box Form 스타일
+/* =======================================*/
+.content-form-area {
+    @include content-box(178px);
+    .form-group {
+        @include w-center ($position: absolute);
+        top: 50px;
+        width: 406px;
+        height: 76px;
+        @extend %clearfix;
+        .input-area {
+            float: left;
+            width: 316px !important;
+            @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
+            input {
+                float: right;
+                margin-bottom: 8px;
+            }
+            label {
+                float: left;
+                font-weight: bold;
+                letter-spacing: -0.04em;
+                color: #002644;
+            }
+        }
+        .btn-input-area {
+            float: right;
+            letter-spacing: -0.01em;
+            background: #003761;
+            border-bottom: 3px solid #002644;
+            @include btn-size ($dp: inline-block, $w: 76px, $h: 76px);
+            @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761);
+        }
+    }
+}
+
+/* =======================================*/
 /* Sub Page : 등록 완료 스타일
 /* =======================================*/
 .sub-completed {
@@ -423,8 +494,56 @@ hr.sub-title-bar {
 /* =======================================*/
 .sub-bottom-btn-area {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 90px;
+}
+
+/* =======================================*/
+/* Sub Page : 진행 현황 공통 스타일
+/* =======================================*/
+.porgress-area {
+    &[class*="bar-step"] {
+        position: relative;
+        &:before {
+            @include w-center ($position: absolute, $w-percent: 50%);
+            top: 27px;
+            display: block;
+            width: 716px;
+            height: 16px;
+            background-size: 100%;
+            content: "";
+        }
+    }
+    &.bar-step0 {
+        &:before {
+            background: url($bar-step0) no-repeat;
+        }
+    }
+    &.bar-step1 {
+        &:before {
+            background: url($bar-step1) no-repeat;
+        }
+    }
+    &.bar-step2 {
+        &:before {
+            background: url($bar-step2) no-repeat;
+        }
+    }
+    &.bar-step3 {
+        &:before {
+            background: url($bar-step3) no-repeat;
+        }
+    }
+    &.bar-step4 {
+        &:before {
+            background: url($bar-step4) no-repeat;
+        }
+    }
+    &.bar-step5 {
+        &:before {
+            background: url($bar-step5) no-repeat;
+        }
+    }
 }
 
 /* =======================================*/
@@ -554,6 +673,7 @@ hr.sub-title-bar {
         -ms-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        @include placehoder(#757575);
     }
     + label {
         &:empty {

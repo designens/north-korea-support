@@ -376,15 +376,6 @@
                 }
                 .add-file-area {
                     padding-left: 73px;
-                    .file {
-                        a[class^="icon-"] {
-                            display: inline-block;
-                            margin-right: 20px;
-                        }
-                        .btn-file-remove {
-                            text-decoration: underline;
-                        }
-                    }
                 }
             }
         }
@@ -641,43 +632,6 @@
     padding-left: 10px;
     padding-right: 10px;
     .content-box-area {
-        .form-area {
-            @include content-box(178px);
-            .form-group {
-                @include w-center ($position: absolute);
-                top: 50px;
-                width: 406px;
-                height: 76px;
-                @extend %clearfix;
-                .input-area {
-                    float: left;
-                    width: 316px;
-                    @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
-                    input {
-                        float: right;
-                        margin-bottom: 8px;
-                    }
-                    label {
-                        float: left;
-                        font-weight: bold;
-                        letter-spacing: -0.04em;
-                        color: #002644;
-                    }
-                }
-                .btn-search {
-                    float: right;
-                    letter-spacing: -0.01em;
-                    background: #003761;
-                    border-bottom: 3px solid #002644;
-                    @include btn-size ($dp: inline-block, $w: 76px, $h: 76px);
-                    @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761);
-                }
-            }
-        }
-    }
-}
-.support-application-status {
-    .content-box-area {
         .table-type-02 {
             colgroup {
                 col {
@@ -688,6 +642,55 @@
             }
             th {
                 text-align: center;
+            }
+        }
+        .tracking-progress {
+            padding: 30px 20px;
+            background: #faf6f5;
+            h4 {
+                position: relative;
+                font-size: 14px;
+                font-weight: normal;
+                letter-spacing: -0.04em;
+                padding-left: 12px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                &:before {
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                    width: 6px;
+                    height: 10px;
+                    display: inline-block;
+                    background: url($icon-progress-title) no-repeat;
+                    content: "";
+                }
+                &:first-child {
+                    margin-top: -4px;
+                }
+            }
+            ul {
+                display: table;
+                width: 100%;
+                height: 142px;
+                border: 1px solid #b3b3b3;
+                border-radius: 7px;
+                background: #fff;
+                @extend %clearfix;
+                li {
+                    display: table-cell;
+                    width: percent(5);
+                    text-align: center;
+                    letter-spacing: -0.04em;
+                    padding-top: 56px;
+                    border-right: 1px dashed #e1e4e6;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    .now-step {
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }
@@ -746,18 +749,6 @@
 /* =======================================*/
 .unsubscribe {
     @extend .support-application-status;
-    .content-box-area {
-        .form-area {
-            .btn-secession {
-                float: right;
-                letter-spacing: -0.01em;
-                background: #003761;
-                border-bottom: 3px solid #002644;
-                @include btn-size ($dp: inline-block, $w: 76px, $h: 76px);
-                @include btn-type-2 ($color: #fff, $bdb: #002644, $bg: #003761);
-            }
-        }
-    }
 }
 
 /* =======================================*/

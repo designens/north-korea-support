@@ -60,6 +60,16 @@
 }
 
 // =======================================
+// Porgress 스타일
+// =======================================
+.porgress-area-test {
+    .porgress-area {
+        position: relative;
+        height: 100px;
+    }
+}
+
+// =======================================
 // 화살표 스타일
 // =======================================
 .arrow-box {
@@ -91,6 +101,26 @@
     }
     .aco-open {
         @extend .accordion-faq;
+    }
+}
+
+// =======================================
+// 인풋 스타일
+// =======================================
+.form-group {
+    h3 {
+        font-size: 20px;
+        color: #69c;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .fa {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: 2px;
+        }
     }
 }
 
