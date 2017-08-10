@@ -64,6 +64,14 @@ progress[value]::-moz-progress-bar, progress[value]::-webkit-progress-value { di
 
 textarea { color: inherit; }
 
+textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color: transparent; }
+
+textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: transparent; }
+
+textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color: transparent; }
+
+textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transparent; }
+
 input[type="button"], input[type="text"], input[type="image"], input[type="submit"] { -webkit-appearance: none; -webkit-border-radius: 0; }
 
 input:checked[type="checkbox"] { background-color: #fff; -webkit-appearance: checkbox; }

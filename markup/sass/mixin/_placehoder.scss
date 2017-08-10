@@ -11,16 +11,4 @@
     &:-moz-placeholder {
         color: $phc;
     }
-    &:focus::-webkit-input-placeholder {
-    color: white;
-    }
-    &:focus:-moz-placeholder {
-        color: white;
-    }
-    &:focus::-moz-placeholder {
-        color: white;
-    }
-    &:focus:-ms-input-placeholder {
-        color: white;
-    }
 }
