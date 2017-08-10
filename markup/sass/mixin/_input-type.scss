@@ -1,5 +1,5 @@
 @mixin input-type ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff) {
-    width: $w;
+    min-width: $w;
     input {
         width: $w;
         height: $h;
