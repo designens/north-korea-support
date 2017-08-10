@@ -677,6 +677,11 @@
                 border-radius: 7px;
                 background: #fff;
                 @extend %clearfix;
+                &[class*="bar-step"] {
+                    &:before {
+                        width: 716px;
+                    }
+                }
                 li {
                     display: table-cell;
                     width: percent(5);
@@ -701,6 +706,7 @@
 /* (html/accept-terms.html)
 /* =======================================*/
 .accept-terms {
+    padding: 0 10px;
     .content-box-area {
         .text-area {
             height: 140px;

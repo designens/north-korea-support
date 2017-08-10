@@ -63,9 +63,16 @@
 // Porgress 스타일
 // =======================================
 .porgress-area-test {
-    .porgress-area {
-        position: relative;
-        height: 100px;
+    h3 {
+        font-size: 20px;
+        color: #69c;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        .fa {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: 2px;
+        }
     }
 }
 
@@ -118,7 +125,7 @@
         }
         .fa {
             font-size: 16px;
-            margin-right: 10px;
+            margin-right: 6px;
             vertical-align: 2px;
         }
     }

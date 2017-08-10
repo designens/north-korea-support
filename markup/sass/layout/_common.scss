@@ -499,6 +499,109 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
+/* Sub Page : 상단 버튼 영역 스타일
+/* =======================================*/
+.sub-top-btn-area {
+    text-align: right;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    .btn-file-upload {
+        @extend %btn-type-2-03;
+        &:after {
+            display: inline-block;
+            width: 28px;
+            height: 22px;
+            background: url($icon-upload) center no-repeat;
+            margin-left: 10px;
+            vertical-align: -6px;
+            content: "";
+        }
+    }
+}
+
+/* =======================================*/
+/* Sub Page : 진행 순서 버튼 영역
+/* =======================================*/
+.step-area {
+    height: 200px;
+    border: 1px solid #a8a8a8;
+    border-radius: 7px;
+    overflow: hidden;
+    ul {
+        display: table;
+        width: 100%;
+        height: 140px;
+        @extend %clearfix;
+        li {
+            display: table-cell;
+            width: percent(5);
+            text-align: center;
+            letter-spacing: -0.04em;
+            padding-top: 56px;
+            border-right: 1px dashed #c5d2db;
+            &:last-child {
+                border-right: 0;
+            }
+            .now-step {
+                font-weight: bold;
+            }
+        }
+    }
+    .help-text {
+        height: 58px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: -0.03em;
+        background: #faf6f5;
+        border-top: 1px solid #c5d2db;
+        .icon-help {
+            text-indent: -9999px;
+            display: inline-block;
+            width: 22px;
+            height: 60px;
+            margin-right: 10px;
+            background: url($icon-help) center no-repeat;
+        }
+        .help-email {
+            font-weight: bold;
+        }
+    }
+}
+.porgress-area {
+    @extend %clearfix;
+    li {
+        [class^="step-"] {
+            .btn-step {
+                display: inline-block;
+                width: 132px;
+                height: 37px;
+                line-height: 37px;
+                text-align: center;
+                letter-spacing: -0.04em;
+                margin-top: 5px;
+            }
+        }
+        .step-open {
+            .btn-step {
+                background: url($btn-step-open) no-repeat;
+                color: #fff;
+                &:after {
+                    margin-left: 6px;
+                    display: inline-block;
+                    @include fa($fa-icon:"\f105", $fz: 14px);
+                }
+            }
+        }
+        .step-close {
+            .btn-step {
+                color: #5c5c5c;
+                background: url($btn-step-close) no-repeat;
+            }
+        }
+    }
+}
+
+/* =======================================*/
 /* Sub Page : 진행 현황 공통 스타일
 /* =======================================*/
 .porgress-area {
@@ -508,40 +611,45 @@ hr.sub-title-bar {
             @include w-center ($position: absolute, $w-percent: 50%);
             top: 27px;
             display: block;
-            width: 716px;
+            width: 755px;
             height: 16px;
-            background-size: 100%;
             content: "";
         }
     }
     &.bar-step0 {
         &:before {
             background: url($bar-step0) no-repeat;
+            background-size: 100% 100%;
         }
     }
     &.bar-step1 {
         &:before {
             background: url($bar-step1) no-repeat;
+            background-size: 100% 100%;
         }
     }
     &.bar-step2 {
         &:before {
             background: url($bar-step2) no-repeat;
+            background-size: 100% 100%;
         }
     }
     &.bar-step3 {
         &:before {
             background: url($bar-step3) no-repeat;
+            background-size: 100% 100%;
         }
     }
     &.bar-step4 {
         &:before {
             background: url($bar-step4) no-repeat;
+            background-size: 100% 100%;
         }
     }
     &.bar-step5 {
         &:before {
             background: url($bar-step5) no-repeat;
+            background-size: 100% 100%;
         }
     }
 }
