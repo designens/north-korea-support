@@ -678,12 +678,12 @@ hr.sub-title-bar {
     background: #f5f8fa;
     li {
         display: inline-block;
+        height: 30px;
+        line-height: 30px;
         font-size: 14px;
         margin-right: 6px;
-        vertical-align: top;
         &:first-child {
             margin-right: 10px;
-            vertical-align: -1px;
         }
         &:last-child {
             margin-right: 0;
