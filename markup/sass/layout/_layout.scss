@@ -712,6 +712,13 @@
         .title {
             width: 200px;
         }
+        .input-type {
+            @include input-type ($w: 250px);
+        }
+        .btn-type-1-02 {
+            width: 126px;
+            margin-left: 2px;
+        }
     }
     .content-box-area {
         .text-area {
