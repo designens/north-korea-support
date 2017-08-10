@@ -102,21 +102,28 @@ body {
  /* 페이징 스타일
  /* =======================================*/
 .paging {
+    display: inline-block;
     text-align: center;
     margin-top: 30px;
+    @extend %clearfix;
+    @include w-center ($position: relative, $w-percent: 50%);
     button {
+        float: left;
         position: relative;
         display: inline-block;
         width: 36px;
         height: 36px;
         vertical-align: top;
         padding: 0 4px;
-        border: 1px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
+        border-left: 1px solid #c2c2c2;
+        border-bottom: 1px solid #c2c2c2;
         &:before, &:after {
             position: absolute;
             top: 12px;
         }
         &.first-prev {
+            margin-left: 0;
             &:before {
                 left: 10px;
                 @include fa ($fa-icon: "\f053", $fz: 12px, $color: #879dad);
@@ -133,6 +140,7 @@ body {
             }
         }
         &.last-next {
+            border-right: 1px solid #c2c2c2;
             &:before {
                 left: 10px;
                 @include fa ($fa-icon: "\f054", $fz: 12px, $color: #879dad);
@@ -156,12 +164,15 @@ body {
         }
     }
     a {
+        float: left;
         display: inline-block;
         width: 36px;
         height: 36px;
         line-height: 34px;
         padding: 0 4px;
-        border: 1px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
+        border-left: 1px solid #c2c2c2;
+        border-bottom: 1px solid #c2c2c2;
         &:focus, &:active, &.selected {
             font-weight: bold;
             color: #003761;

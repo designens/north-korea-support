@@ -707,6 +707,11 @@
 /* =======================================*/
 .accept-terms {
     padding: 0 10px;
+    .table-li {
+        .title {
+            width: 200px;
+        }
+    }
     .content-box-area {
         .text-area {
             height: 140px;
