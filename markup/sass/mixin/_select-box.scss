@@ -1,4 +1,4 @@
-@mixin select-box ($w: 160px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff) {
+@mixin select-box ($w: 150px, $h: 30px, $p: 0 10px, $bdc: #dbdbdb, $bg: #fff) {
     position: relative;
     width: $w;
     height: $h;

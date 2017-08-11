@@ -16,7 +16,7 @@
 .popup {
     width: 870px;
     min-height: 500px;
-    max-height: 100vh;
+    max-height: 760px;
     background: #fff;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     outline: 0; 
@@ -71,6 +71,8 @@
     /* 팝업 콘텐츠 */
     .popup-content {
         padding: 20px 30px 30px 30px;
+        max-height: calc(710px - 50px);
+        overflow: auto;
         [class$="l-set"] {
             text-align: left;
         }
