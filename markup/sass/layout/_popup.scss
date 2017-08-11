@@ -16,11 +16,14 @@
 .popup {
     width: 870px;
     min-height: 500px;
-    max-height: 760px;
+    max-height: 700px;
     background: #fff;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     outline: 0; 
     z-index: 10000;
+    @include susy-breakpoint(690px, 10) {
+
+    }
     &.is-center {
         @include wh-center($position: absolute);
     }
@@ -71,7 +74,7 @@
     /* 팝업 콘텐츠 */
     .popup-content {
         padding: 20px 30px 30px 30px;
-        max-height: calc(710px - 50px);
+        max-height: calc(650px - 50px);
         overflow: auto;
         [class$="l-set"] {
             text-align: left;
@@ -103,6 +106,16 @@
                     margin-right: 0;
                 }
             }
+        }
+    }
+}
+// 760px 이하 브라우저 적용
+@media only screen and (max-height: 699px) {
+    .popup {
+        min-height: 100vh;
+        max-height: 100vh;
+        .popup-content {
+            max-height: calc(100vh - 50px);
         }
     }
 }
