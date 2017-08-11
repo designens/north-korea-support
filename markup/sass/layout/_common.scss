@@ -809,6 +809,29 @@ hr.sub-title-bar {
 .input-type {
     display: inline-block;
     @include input-type;
+    &.tel {
+        @include input-type(70px);
+        label {
+            &:after {
+                content: "-";
+            }
+            &:last-child {
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    }
+    &.e-mail {
+        @include input-type(140px);
+        label {
+            &:first-child {
+                &:after {
+                    content: "@";
+                }
+            }
+        }
+    }
 }
 
 /* =======================================*/
