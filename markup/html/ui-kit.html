@@ -416,25 +416,59 @@
             <!-- [Start] 서브 검색 영역 공통 -->
             <article>
                 <h2>Seb Search Style</h2>
-                <ul class="search-area">
-                    <li class="search-title"><span>검색</span></li>
-                    <li class="select-box">
-                        <label for="search">제목</label>
-                        <select id="search" name="search-item">
-                            <option selected="selected">제목</option>
-                            <option>내용</option>
-                            <option>단어</option>
-                        </select>
-                    </li>
-                    <li class="input-type">
-                        <label class="search-keyword" aria-label="검색 키워드 입력하세요.">
-                            <input type="text"/>
-                        </label>
-                    </li>
-                    <li>
-                        <button class="btn-lookup">조회</button>
-                    </li>
-                </ul>
+                <div class="search-type-area">
+
+                    <!-- [Start] 검색 타입 1. -->
+                    <h3><div class="fa fa-angle-double-right"></div>검색 타입 1.</h3>
+                    <ul class="search-area">
+                        <li><span class="search-title">검색</span></li>
+                        <li class="select-box">
+                            <label for="search">검색</label>
+                            <select id="search" name="search-item">
+                                <option selected="selected">제목</option>
+                                <option>내용</option>
+                                <option>단어</option>
+                            </select>
+                        </li>
+                        <li class="input-type">
+                            <label class="search-keyword">
+                                <input type="text" aria-label="검색 키워드 입력하세요."/>
+                            </label>
+                            <button class="btn-lookup">조회</button>
+                        </li>
+                    </ul>
+                    <!-- [End] 검색 타입 1. -->
+
+                    <!-- [Start] 검색 타입 2. -->
+                    <h3><div class="fa fa-angle-double-right"></div>검색 타입 2.</h3>
+                    <ul class="search-area">
+                        <li class="search-title"><span>검색</span></li>
+                        <li class="select-box all">
+                            <label for="search">말머리:전체</label>
+                            <select id="search" name="search-item">
+                                <option selected="selected">말머리:전체</option>
+                                <option>내용</option>
+                                <option>단어</option>
+                            </select>
+                        </li>
+                        <li class="select-box">
+                            <label for="search">제목</label>
+                            <select id="search" name="search-item">
+                                <option selected="selected">제목</option>
+                                <option>내용</option>
+                                <option>단어</option>
+                            </select>
+                        </li>
+                        <li class="input-type">
+                            <label class="search-keyword">
+                                <input type="text" aria-label="검색 키워드 입력하세요."/>
+                            </label>
+                            <button class="btn-lookup">조회</button>
+                        </li>
+                    </ul>
+                    <!-- [End] 검색 타입 2. -->
+
+                </div>
             </article>
             <!-- [End] 서브 검색 영역 공통 -->
 

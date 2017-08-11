@@ -697,11 +697,9 @@ hr.sub-title-bar {
         color: #2e3a42;
     }
     .select-box {
-        &:nth-of-type(1) {
+        @include select-box ($w: 90px);
+        &.all {
             @include select-box ($w: 130px);
-        }
-        &:nth-of-type(2) {
-            @include select-box ($w: 90px);
         }
     }
     .input-type {

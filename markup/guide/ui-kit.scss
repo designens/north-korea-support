@@ -222,6 +222,22 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 // =======================================
 // 인풋 스타일
 // =======================================
+.search-type-area {
+    h3 {
+        font-size: 20px;
+        color: #69c;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        .fa {
+            font-size: 16px;
+            margin-right: 10px;
+            vertical-align: 2px;
+        }
+    }
+ }
+// =======================================
+// 인풋 스타일
+// =======================================
 .form-group {
     h3 {
         font-size: 20px;

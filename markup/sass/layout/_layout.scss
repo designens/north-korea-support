@@ -426,16 +426,6 @@
             text-align: left;
         }
     }
-    .search-area {
-        li {
-            &:nth-of-type(2) {
-                @include select-box ($w: 130px);
-            }
-            &:nth-of-type(3) {
-                @include select-box ($w: 90px);
-            }
-        }
-    }
 }
 
 /* =======================================*/
