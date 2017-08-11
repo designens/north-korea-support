@@ -1,0 +1,250 @@
+/*! style.css v1.0.0 © inyoung524@naver.com */
+
+// =======================================
+// UI Kit 플러그인
+// =======================================
+@charset "utf-8"
+
+// =======================================
+// Base Design
+// =======================================
+@import "base/reset-css"
+@import "base/susy-settings"
+@import "base/color-system"
+@import "base/checkbox-radio"
+
+// =======================================
+// Function
+// =======================================
+@import "function/de-unit"
+@import "function/retina"
+@import "function/px-rem"
+@import "function/percent"
+
+// =======================================
+// Mixin
+// =======================================
+@import "mixin/align"
+@import "mixin/ellipsis"
+@import "mixin/placehoder"
+@import "mixin/fa-icon"
+@import "mixin/psd-fz"
+@import "mixin/psd-lh"
+@import "mixin/psd-mb"
+@import "mixin/heading"
+@import "mixin/button"
+@import "mixin/retina-img"
+@import "mixin/tabs"
+@import "mixin/progress"
+@import "mixin/input-type"
+@import "mixin/select-box"
+@import "mixin/arrow"
+@import "mixin/gallery"
+
+// =======================================
+// Placeholder
+// =======================================
+@import "placeholder/clearfix"
+@import "placeholder/row"
+@import "placeholder/box-hidden"
+@import "placeholder/text-hidden"
+@import "placeholder/button-type"
+
+// =======================================
+// Typography
+// =======================================
+@import "fonts/font-settings"
+@import "fonts/typography"
+
+// =======================================
+// Layout
+// =======================================
+@import "layout/common"
+@import "layout/table"
+@import "layout/gnb"
+@import "layout/lnb"
+@import "layout/popup"
+@import "layout/ie"
+
+// =======================================
+// Background Images  Guide
+// =======================================
+
+// 버튼
+$btn-gnb-all: "../assets/images/common/btn-gnb-all.svg"
+
+// 아이콘
+$icon-hwp: "../assets/images/icon/icon-hwp.png"
+$icon-doc: "../assets/images/icon/icon-doc.png"
+$icon-pdf: "../assets/images/icon/icon-pdf.png"
+$icon-jpg: "../assets/images/icon/icon-jpg.png"
+$icon-png: "../assets/images/icon/icon-jpg.png"
+$icon-xls: "../assets/images/icon/icon-xls.png"
+$icon-ppt: "../assets/images/icon/icon-ppt.png"
+$icon-confirm: "../assets/images/icon/icon-confirm.png"
+$icon-progress-title: "../assets/images/icon/icon-progress-title.png"
+$icon-help: "../assets/images/icon/icon-help.png"
+$icon-upload: "../assets/images/icon/icon-upload.svg"
+
+// 배경
+$sub-banner: "../assets/images/bg/sub-banner.png"
+$sub-title-bar: "../assets/images/bg/sub-title-bar.png"
+$lnb_title: "../assets/images/bg/lnb_title.png"
+$popup-title: "../assets/images/bg/popup-title.png"
+$bar-step0: "../assets/images/bg/bar-step0.png"
+$bar-step1: "../assets/images/bg/bar-step1.png"
+$bar-step2: "../assets/images/bg/bar-step2.png"
+$bar-step3: "../assets/images/bg/bar-step3.png"
+$bar-step4: "../assets/images/bg/bar-step4.png"
+$bar-step5: "../assets/images/bg/bar-step5.png"
+$btn-step-open: "../assets/images/bg/btn-step-open.png"
+$btn-step-close: "../assets/images/bg/btn-step-close.png"
+
+// 서브 페이지
+$news-letters-bg: "../assets/images/sub/news-letters-bg.png"
+$news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png"
+
+// =======================================
+// UI Kit 가이드 스타일
+// =======================================
+.ui-kit
+    background: #f3f3f3
+    overflow: hidden
+    h1
+        font-size: 40px
+        color: #002847
+        letter-spacing: -0.03em
+        padding: 20px 0 10px 0
+        margin-bottom: 10px
+        .fa
+            font-size: 30px
+            vertical-align: 4px
+    section
+        > article
+            background: #fff
+            padding: 20px
+            margin-bottom: 20px
+            border: 1px solid #e2e2e2
+            h2
+                color: #002847
+                padding-bottom: 10px
+                margin-bottom: 20px
+                border-bottom: 1px solid #e2e2e2
+
+// =======================================
+// 버튼 스타일
+// =======================================
+.btn-type-sample
+    p
+        font-size: 12px
+        margin-top: 20px
+        margin-bottom: 10px
+        &:first-child
+            margin-top: 0
+    button
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+
+// =======================================
+// Porgress 스타일
+// =======================================
+.porgress-area-test
+    h3
+        font-size: 20px
+        color: #69c
+        margin-top: 20px
+        margin-bottom: 10px
+        .fa
+            font-size: 16px
+            margin-right: 10px
+            vertical-align: 2px
+
+// =======================================
+// 화살표 스타일
+// =======================================
+.arrow-box
+    [class^="arrow-"]
+        display: inline-block
+        margin-right: 10px
+
+// =======================================
+// 아코디언 스타일
+// =======================================
+.accordion-test
+    h3
+        font-size: 20px
+        color: #69c
+        margin-bottom: 10px
+        .fa
+            font-size: 16px
+            margin-right: 10px
+            vertical-align: 2px
+    .aco-base
+        margin-bottom: 20px
+        // class 추가 후 디자인에 맞춰 스타일 설정
+        // 아키디언 기본 구조 sass/layout/_common.scss파일 "아코디언 스타일" 참조
+        @extend .accordion-lnb
+    .aco-open
+        @extend .accordion-faq
+
+// =======================================
+// 인풋 스타일
+// =======================================
+.form-group
+    h3
+        font-size: 20px
+        color: #69c
+        margin-top: 20px
+        margin-bottom: 10px
+        &:first-child
+            margin-top: 0
+        .fa
+            font-size: 16px
+            margin-right: 6px
+            vertical-align: 2px
+
+// =======================================
+// 테이블 스타일
+// =======================================
+.table-type
+    h3
+        font-size: 20px
+        color: #69c
+        margin-top: 20px
+        margin-bottom: 10px
+        &:first-child
+            margin-top: 0
+        .fa
+            font-size: 16px
+            margin-right: 10px
+            vertical-align: -1px
+.table-type-01.table-name
+    thead
+        th
+            &:first-child
+                width: 70px
+            &:nth-child(2)
+                width: 200px
+            &:nth-child(4), &:nth-child(5)
+                width: 140px
+            &:last-child
+                width: 140px
+    tbody
+        td
+            &:first-child
+                padding-left: 10px
+                padding-right: 10px
+            &:nth-child(3)
+                text-align: left
+.table-type-02.table-name
+    colgroup
+        col
+            &:nth-child(1), &:nth-child(3)
+                width: 140px
+.table-li.table-name
+    .title
+        width: 140px
+.table-dl
+    dt
+        width: 140px
