@@ -76,7 +76,6 @@
         left: 0;
         right: 0;
         color: #4c4c4c;
-        letter-spacing: -0.03em;
         text-align: center;
         height: 75px;
         line-height: 75px;
@@ -277,28 +276,6 @@
 /* (html/qna-list.html)
 /* =======================================*/
 .qna-content {
-    colgroup {
-        col {
-            &:first-child {
-                width: 54px;
-            }
-            &:nth-child(2) {
-                width: 140px;
-            }
-            &:nth-child(3) {
-                width: 341px;
-            }
-            &:nth-child(4) {
-                width: 110px;
-            }
-            &:nth-child(5) {
-                width: 140px;
-            }
-            &:last-child {
-                width: 140px;
-            }
-        }
-    }
     tbody {
         td {
             &:nth-child(3) {
@@ -319,13 +296,6 @@
 /* =======================================*/
 .popup-qna-content {
     table {
-        colgroup {
-            col {
-                &:nth-child(1), &:nth-child(3) {
-                    width: 140px;
-                }
-            }
-        }
         tbody {
             td {
                 padding-top: 6px;
@@ -405,22 +375,6 @@
 /* (html/notices.html)
 /* =======================================*/
 .notices-content {
-    colgroup {
-        col {
-            &:first-child {
-                width: 54px;
-            }
-            &:nth-child(2) {
-                width: 502px;
-            }
-            &:nth-child(3), &:nth-child(4) {
-                width: 140px;
-            }
-            &:last-child {
-                width: 70px;
-            }
-        }
-    }
     td {
         &:nth-child(2) {
             text-align: left;
@@ -447,28 +401,6 @@
 /* (html/resources.html)
 /* =======================================*/
 .resources-content {
-    colgroup {
-        col {
-            &:first-child {
-                width: 54px;
-            }
-            &:nth-child(2) {
-                width: 140px;
-            }
-            &:nth-child(3) {
-                width: 341px;
-            }
-            &:nth-child(4) {
-                width: 110px;
-            }
-            &:nth-child(5) {
-                width: 140px;
-            }
-            &:last-child {
-                width: 140px;
-            }
-        }
-    }
     td {
         &:nth-child(3) {
             text-align: left;
@@ -623,13 +555,6 @@
     padding-right: 10px;
     .content-box-area {
         .table-type-02 {
-            colgroup {
-                col {
-                    &:nth-child(1) {
-                        width: 62px;
-                    }
-                }
-            }
             th {
                 text-align: center;
             }
@@ -756,7 +681,21 @@
 /* html/applicant-application-step1.html
 /* =======================================*/
 .popup-applicant-application-content {
-    
+    .table-type-02 {
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                    button {
+                        width: 136px;
+                    }
+                    &:nth-child(1) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* =======================================*/
@@ -769,18 +708,11 @@
 
 /* =======================================*/
 /* 기금사업신청 > 사업신청 조회
-/* (html/business-application-list.html)
+/* (html/business-application.html)
 /* =======================================*/
 .business-application {
     .panel-group {
         [aria-labelledby="tab1"] {
-            colgroup {
-                col {
-                    &:nth-child(1), &:nth-child(3) {
-                        width: 200px;
-                    }
-                }
-            }
             table {
                 td {
                     .select-box {
@@ -840,24 +772,8 @@
             }
         }
         [aria-labelledby="tab2"] {
-            colgroup {
-                col {
-                    &:nth-child(1), &:nth-child(3) {
-                        width: 200px;
-                    }
-                }
-            }
-
         }
         [aria-labelledby="tab3"] {
-            colgroup {
-                col {
-                    &:nth-child(1), &:nth-child(3) {
-                        width: 200px;
-                    }
-                }
-            }
-
         }
     }
  }
@@ -868,11 +784,6 @@
 /* =======================================*/
 .popup-business-application {
     table {
-        colgroup {
-            col:first-child {
-                width: 140px;
-            }
-        }
         td {
             .checkbox-type {
                 @extend %clearfix;

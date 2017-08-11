@@ -325,7 +325,6 @@ body {
                 float: left;
                 position: relative;
                 font-weight: bold;
-                letter-spacing: -0.03em;
                 padding-left: 30px;
                 &:before, &:after {
                     position: absolute;
@@ -346,7 +345,6 @@ body {
                 a {
                     font-size: 12px;
                     color: #666;
-                    letter-spacing: -0.03em;
                     img {
                         vertical-align: text-top;
                     }
@@ -390,14 +388,12 @@ hr.sub-title-bar {
     font-size: 30px;
     font-weight: normal;
     color: #003761;
-    letter-spacing: -0.03em;
     text-align: center;
 }
 .content-box-area {
     h3 {
         position: relative;
         font-size: 16px;
-        letter-spacing: -0.04em;
         padding-left: 10px;
         margin-top: 30px;
         margin-bottom: 10px;
@@ -562,7 +558,6 @@ hr.sub-title-bar {
         height: 58px;
         line-height: 58px;
         text-align: center;
-        letter-spacing: -0.03em;
         background: #faf6f5;
         border-top: 1px solid #c5d2db;
         .icon-help {

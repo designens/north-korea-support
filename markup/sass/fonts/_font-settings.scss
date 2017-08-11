@@ -25,6 +25,7 @@ html {
         font-size: rem($body-fz);
         -webkit-font-smoothing: antialiased;
         color: $font-base;
+        letter-spacing: -0.03em;
         line-height: $line-height;
     }
 }
