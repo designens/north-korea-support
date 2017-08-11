@@ -94,7 +94,7 @@
 /* (html/news-letters.html)
 /* =======================================*/
 .news-letters {
-    padding: 13px 67px 57px 67px;
+    padding: 13px 67px 57px 67px !important;
     margin: 0 10px;
     background: #f5f8fa;
     .gallery {
@@ -551,8 +551,6 @@
 /* (html/support-application-status.html)
 /* =======================================*/
 .support-application-status {
-    padding-left: 10px;
-    padding-right: 10px;
     .content-box-area {
         .table-type-02 {
             th {
@@ -621,7 +619,6 @@
 /* (html/accept-terms.html)
 /* =======================================*/
 .accept-terms {
-    padding: 0 10px;
     .table-li {
         margin-top: 50px;
         .title {
@@ -696,14 +693,6 @@
             }
         }
     }
-}
-
-/* =======================================*/
-/* 회원서비스 > 회원가입안내 > 가입탈퇴 조회
-/* (html/unsubscribe.html)
-/* =======================================*/
-.unsubscribe {
-    @extend .support-application-status;
 }
 
 /* =======================================*/

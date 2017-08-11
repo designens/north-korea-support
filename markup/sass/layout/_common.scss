@@ -15,6 +15,13 @@ body {
       margin: 0 auto;
     }
 }
+// 폰트 컬러 사용
+.red {
+    color: $font-rad !important;
+}
+.blue {
+    color: $font-blue !important;
+}
 
 /* =======================================*/
 /* 팝업 테이블 내부 다운로드 아이콘
@@ -365,6 +372,9 @@ body {
                     }
                 }
             }
+        }
+        .content {
+            padding: 0 10px;
         }
     }
 }
