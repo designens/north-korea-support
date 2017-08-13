@@ -2,7 +2,7 @@
 /* Layout Common Style
 /* =======================================*/
 body {
-    min-width: 1200px;
+    min-width: 1248px;
     * {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -26,11 +26,65 @@ body {
 /* =======================================*/
 /* 팝업 테이블 내부 다운로드 아이콘
 /* =======================================*/
+.address-area {
+    li {
+        margin-bottom: 6px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2), &:nth-child(3) {
+            .input-type {
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+/* =======================================*/
+/* 팝업 테이블 내부 다운로드 아이콘
+/* =======================================*/
+.add-file-sherch {
+    margin-bottom: 6px;
+    @extend %clearfix;
+    span {
+        float: left;
+        display: inline-block;
+        width: 73px;
+        line-height: 30px;
+    }
+    .file-sherch {
+        float: right;
+        width: calc(100% - 73px);
+        .input-type {
+            @include input-type ($w: calc(100% - 106px));
+            input {
+                width: 100%;
+            }
+        }
+        .btn-file-sherch {
+            @extend %btn-type-1-02;
+            width: 100px;
+            float: right;
+        }
+    }
+}
 .add-file-area {
+    $file-height: 26px;
     .file {
         width: 244px;
-        margin: 3px 0;
+        // float: left;
+        // width: percent(2);
+        height: $file-height;
+        line-height: $file-height;
         @extend %clearfix;
+        // &:nth-of-type(odd) {
+        //     padding-right: 10px;
+        // }
+        // &:nth-of-type(even) {
+        //     padding-left: 10px;
+        // }
         a[class^="icon-"] {
             float: left;
             display: inline-block;
@@ -42,11 +96,14 @@ body {
             width: 100%;
             a {
                 width: 100%;
+                width: calc(100% - 60px);
             }
         }
         .btn-file-remove {
-            text-decoration: underline;
             float: right;
+            height: $file-height;
+            line-height: $file-height;
+            text-decoration: underline;
         }
     }
 }
@@ -59,7 +116,7 @@ body {
     padding-left: 20px;
     &:before {
         position: absolute;
-        top: 3px;
+        top: 5px;
         left: 0;
         display: inline-block;
         width: 14px;
@@ -406,7 +463,7 @@ hr.sub-title-bar {
         font-size: 16px;
         padding-left: 10px;
         margin-top: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         &:before {
             position: absolute;
             top: 4px;
@@ -704,7 +761,7 @@ hr.sub-title-bar {
     .select-box {
         @include select-box ($w: 90px);
         &.all {
-            @include select-box ($w: 130px);
+            width: 130px;
         }
     }
     .input-type {
@@ -735,12 +792,7 @@ hr.sub-title-bar {
     }
     .select-box {
         float: right;
-        &:before {
-            top: 1px;
-        }
-        select {
-            height: 34px;
-        }
+        @include select-box ($h: 34px, $icon-top: 1px);
     }
 }
 /* =======================================*/
@@ -752,7 +804,6 @@ hr.sub-title-bar {
     font-size: 12px;
     color: #8f8f8f;
     background: #06111a;
-    @extend %clearfix;
     .site-info {
         text-align: center;
         padding-top: 45px;
@@ -813,12 +864,21 @@ hr.sub-title-bar {
     display: inline-block;
     @include input-type;
     &.tel {
-        @include input-type(70px);
-        label {
+        @include input-type(71px);
+        @extend %clearfix;
+        .dialog {
+            position: relative;
+            display: inline-block;
+            margin-right: 11px;
             &:after {
+                display: inline-block;
+                position: absolute;
+                top: 4px;
+                right: -10px;
                 content: "-";
             }
             &:last-child {
+                margin-right: 0;
                 &:after {
                     content: "";
                 }
@@ -827,12 +887,36 @@ hr.sub-title-bar {
     }
     &.e-mail {
         @include input-type(140px);
-        label {
+        .email {
+            position: relative;
+            display: inline-block;
             &:first-child {
+                margin-right: 19px;
                 &:after {
+                    display: inline-block;
+                    position: absolute;
+                    top: 4px;
+                    right: -18px;
                     content: "@";
                 }
             }
+        }
+    }
+    &.date {
+        position: relative;
+        // @include input-type(157px);
+        input {
+            padding-right: 0;
+        }
+        .icon-calender {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 23px;
+            height: 22px;
+            vertical-align: -5px;
+            background: url($icon-calender) no-repeat;
+            pointer-events: none;
         }
     }
 }
@@ -843,8 +927,24 @@ hr.sub-title-bar {
 .select-box {
     display: inline-block;
     @include select-box;
+    &.e-mail {
+        @include select-box(140px);
+    }
 }
 
+/* =======================================*/
+/* 텍스트박스 스타일
+/* =======================================*/
+.textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: -5px;
+    background: #fff;
+    &:focus {
+        border: 1px solid #002847;
+    }
+}
 /* =======================================*/
 /* 아코디언 스타일
 /* =======================================*/

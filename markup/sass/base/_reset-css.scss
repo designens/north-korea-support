@@ -89,11 +89,6 @@ table {
 th, td {
     border-collapse: collapse;
 }
-input {
-    &[type="reset"], &[type="button"], &[type="submit"] {
-        line-height: normal !important;
-    }
-}
 progress[value] {
     appearance: none;
     -moz-appearance: none;
@@ -154,6 +149,9 @@ textarea {
 
 // input 설정 
 input {
+    &[type="reset"], &[type="button"], &[type="submit"] {
+        line-height: normal !important;
+    }
     &[type="button"], &[type="text"], &[type="image"], &[type="submit"] {
         -webkit-appearance: none;
         -webkit-border-radius: 0;
@@ -164,11 +162,6 @@ input {
     }
 }
 
-// input 자동완성 스타일 제거(변경)
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-    -webkit-text-fill-color: inherit;
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-}
 // input placeholder 색상 변경
 input {
     color: inherit;
@@ -187,5 +180,37 @@ input {
     &:-moz-placeholder {
         /* Firefox 18-*/
         color: inherit;
+    }
+}
+
+// input 자동완성 스타일 제거(변경)
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input {
+    &[type="date"]::-webkit-clear-button {
+        display: none;
+    }
+    &[type="date"]::-webkit-inner-spin-button { 
+        display: none;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+        color: #343434;
+        background: #fff;
+    }
+    &[type="date"] {
+        appearance: none;
+        -webkit-appearance: none;
+        display: inline-block !important;
+        visibility: visible !important;
+    }
+    &[type="date"], focus {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
     }
 }

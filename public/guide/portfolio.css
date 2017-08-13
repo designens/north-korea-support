@@ -44,8 +44,6 @@ table { table-layout: fixed; border-collapse: collapse; border-spacing: 0; }
 
 th, td { border-collapse: collapse; }
 
-input[type="reset"], input[type="button"], input[type="submit"] { line-height: normal !important; }
-
 progress[value] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
 
 progress[value][role][aria-valuenow] { appearance: none; -moz-appearance: none; -webkit-appearance: none; display: inline-block; border: none; background-size: auto; }
@@ -72,11 +70,11 @@ textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color: transparent;
 
 textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color: transparent; }
 
+input[type="reset"], input[type="button"], input[type="submit"] { line-height: normal !important; }
+
 input[type="button"], input[type="text"], input[type="image"], input[type="submit"] { -webkit-appearance: none; -webkit-border-radius: 0; }
 
 input:checked[type="checkbox"] { background-color: #fff; -webkit-appearance: checkbox; }
-
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0px 1000px white inset; }
 
 input { color: inherit; }
 
@@ -87,6 +85,18 @@ input::-moz-placeholder { /* Firefox 19+*/ color: inherit; }
 input:-ms-input-placeholder { /* IE 10+*/ color: inherit !important; }
 
 input:-moz-placeholder { /* Firefox 18-*/ color: inherit; }
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+input[type="date"]::-webkit-clear-button { display: none; }
+
+input[type="date"]::-webkit-inner-spin-button { display: none; }
+
+input[type="date"]::-webkit-calendar-picker-indicator { color: #343434; background: #fff; }
+
+input[type="date"] { appearance: none; -webkit-appearance: none; display: inline-block !important; visibility: visible !important; }
+
+input[type="date"], input focus { box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
 
 .portfolio-list, .project-area .project { *zoom: 1; }
 

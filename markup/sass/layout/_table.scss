@@ -103,7 +103,6 @@
         th, td {
             height: 38px;
             text-align: center;
-            vertical-align: middle;
             padding: 0 10px;
             /* 제목 - 팝업 링크 */
             .view-link {
@@ -133,7 +132,6 @@
         th, td {
             height: 42px;
             text-align: left;
-            vertical-align: middle;
             border: 1px solid #d1d1d1;
             .view-link {
                 @include ellipsis(1);

@@ -1,3 +1,121 @@
 // =======================================
 // 김효진 CSS Style 관리
 // =======================================
+
+/* =======================================*/
+/* 회원서비스 > 회원가입안내 > 가입신청 조회
+/* html/sign-up-list.html
+/* =======================================*/
+.sign-up-content {
+    .content-box-area {
+        width: 930px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .table-corporate-body {
+        col {
+            &:first-child {
+                width: 200px;
+            }
+            &:nth-child(2) {
+                width: 264px;
+            }
+            &:nth-child(3) {
+                width: 200px;
+            }
+            &:nth-child(4) {
+                width: 264px;
+            }
+        }
+        .input-type input {
+            width: 140px;
+        }
+        tr:first-child td:last-child {
+            font-weight: bold;
+        }
+    }
+    .table-contact-information {
+        .btn-type-1-02 {
+            width: 126px;
+        }
+        tr {
+            &:first-child .id-notice {
+                color: #bd1313;
+                letter-spacing: -1px;
+            }
+            &:nth-child(2) .pwd-figure {
+                letter-spacing: -1px;
+            }
+            &:nth-child(4) .pwd-confirm {
+                color: #bd1313;
+                letter-spacing: -1px;
+            }
+            &:nth-child(5) {
+                .radio-type label {
+                    margin-right: 40px;
+                }
+            }
+            &:nth-child(8) {
+                .input-type input {
+                    width: 138px;
+                }
+                span {
+                    padding: 0 5px;
+                }
+            }
+        }
+        h4 {
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+        .proof-of-employment {
+            border: 1px solid #e6e6e6;
+            padding-top: 6px;
+            padding-left: 9px;
+            padding-right: 9px;
+            padding-bottom: 12px;
+        }
+        tr {
+            &:nth-child(7) .input-type input {
+                width: 70px;
+            }
+            &:last-child {
+                .icon-hwp {
+                    position: relative;
+                    padding-left: 20px;
+                }
+                .add-file-area {
+                    margin-top: -13px;
+
+                    .file {
+                        width: 176px;
+                    }
+                    a[class^="icon-"] {
+                        width: 110px;
+                    }
+                }
+            }
+            &:first-child label {
+                color: #bd1313;
+                letter-spacing: -1px;
+            }
+            &:nth-child(2) label {
+                letter-spacing: -1px;
+            }
+        }
+        .input-type.tel label input {
+            position: relative;
+
+            &::before {
+                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+                    content: "-";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding-left: 20px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

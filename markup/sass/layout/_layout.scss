@@ -26,15 +26,15 @@
             float: left;
             width: 316px;
             @include input-type ($w: 220px, $h: 34px, $p: 0 10px, $bdc: #e6e9eb);
-            input {
-                float: right;
-                margin-bottom: 8px;
-            }
             label {
                 float: left;
                 font-weight: bold;
                 letter-spacing: -0.04em;
                 color: #002644;
+            }
+            input {
+                float: right;
+                margin-bottom: 8px;
             }
         }
         .btn-login {
@@ -298,8 +298,6 @@
     table {
         tbody {
             td {
-                padding-top: 6px;
-                padding-bottom: 6px;
                 .input-type {
                     @include input-type ($w: 100%);
                 }
@@ -325,23 +323,6 @@
                     strong {
                         color: #333;
                         line-height: 30px;
-                    }
-                }
-                .add-file-sherch {
-                    @extend %clearfix;
-                    margin-bottom: 10px;
-                    span {
-                        line-height: 30px;
-                    }
-                    .file-sherch {
-                        float: right;
-                        .input-type {
-                            @include input-type ($w: 470px);
-                        }
-                        .btn-file-sherch {
-                            @extend %btn-type-1-02;
-                            width: 100px;
-                        }
                     }
                 }
                 .add-file-area {
@@ -389,7 +370,8 @@
 .popup-notices-content {
     @extend .popup-qna-content;
     .table-dt-dd {
-        margin-top: -1px;
+            margin-top: 0;
+            border-top: 1px solid #f0f3f5;
         dd {
             min-height: 210px;
         }
@@ -673,9 +655,44 @@
         }
     }
 }
+
+/* =======================================*/
+/* 회원서비스 > 법인.단체 > 사업자신청 Step 1. 가입여부 확인 조회
+/* (html/applicant-application-step1.html)
+/* =======================================*/
+.applicant-application-step1 {
+    @extend .accept-terms;
+}
+
+/* =======================================*/
+/* 회원서비스 > 법인.단체 > 사업자신청 Step 4. 연혁정보 조회
+/* (html/applicant-application-step4.html)
+/* =======================================*/
+.applicant-application-step4 {
+    .content-box-area {
+        h3 {
+            margin-top: 37px;
+        }
+        .sub-top-btn-area {
+            margin-top: -41px;
+        }
+    }
+    .table-type-01 {
+        tbody {
+            tr {
+                td {
+                    &:nth-child(4) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* =======================================*/
 /* 회원서비스 > 법인.단체 > 사업자신청 구비서류 팝업
-/* html/applicant-application-step1.html
+/* (html/applicant-application-step1.html)
 /* =======================================*/
 .popup-applicant-application-content {
     .table-type-02 {
