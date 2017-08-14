@@ -330,12 +330,24 @@
                 }
             }
         }
+        &.qna-comments {
+            margin-top: 10px;
+        }
     }
 }
 .popup-qna-content {
     dl {
         margin-top: 10px;
+        dt {
+            position: relative;
+            .icon-comment {
+                position: absolute;
+                top: 4px;
+                right: 10px;
+            }
+        }
         dd {
+            position: relative;
             p {
                 span {
                     &.admin {
@@ -344,6 +356,52 @@
                     }
                     &.date {
                         color: #757575;
+                    }
+                }
+            }
+            .comment-edit-area {
+                position: absolute;
+                top: 6px;
+                right: 10px;
+                .input-type {
+                    margin-right: 20px;
+                    @include input-type($w: 100px);
+                    label {
+                        margin-right: 6px;
+                    }
+                }
+                button[class^="comment-"] {
+                    position: relative;
+                    height: 30px;
+                    line-height: 30px;
+                    margin-right: 10px;
+                    &:before {
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        content: "";
+                        border: 1px solid #a3a3a3;
+                        margin-right: 4px;
+                        vertical-align: text-bottom;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                .comment-edit {
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        left: 4px;
+                        @include fa($fa-icon:"\f040", $fz:12px, $color: #4d4d4d);
+                    }
+                }
+                .comment-delete {
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        left: 3px;
+                        @include fa($fa-icon:"\f00d", $fz:13px, $color: #4d4d4d);
                     }
                 }
             }
