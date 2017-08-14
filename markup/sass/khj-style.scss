@@ -84,3 +84,75 @@
         }
     }
 }
+
+.information-inquiry-content {
+    .sub-top-button-area {
+        float: right;
+
+        button {
+            &:first-child {
+                width: 190px;
+            }
+            &:nth-child(2) {
+                width: 100px;
+            }
+            &:nth-child(3), &:nth-child(4) {
+                width: 110px;
+            }
+            &:last-child {
+                width: 150px;
+            }
+        }
+    }
+    .table-type-01 {
+        letter-spacing: -1px;
+    }
+    .table-type-02 tr {
+        &:first-child .td-pwd-number {
+            color: #bd1313;
+        }
+        &:nth-child(9) textarea, &:nth-child(10) textarea, &:last-child textarea {
+            width: 708px;
+            height: 54px;
+            line-height: 30px;
+            padding: 0 10px;
+            border: 1px solid #dbdbdb;
+            background: #fff;
+        }
+        &:nth-child(7) {
+            .btn-type-1-02 {
+                width: 126px;
+            }
+            .td-address .input-type {
+                input {
+                    width: 708px;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+                &:first-child input:first-child {
+                    width: 244px;
+                }
+                &:nth-child(2) input {
+                    width: 708px;
+                }
+            }
+        }
+    }
+    #panel3 {
+        p {
+            color: #003761;
+            float: right;
+            margin-bottom: 11px;
+
+            strong {
+                font-weight: bold;
+            }
+        }
+        .table-type-01 tr td:nth-child(4) {
+            text-align: left;
+        }
+    }
+    #panel4 .table-type-01 tr td:nth-child(3) {
+        text-align: left;
+    }
+}

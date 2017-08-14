@@ -49,7 +49,7 @@ body {
     border: 1px solid #e6e6e6;
     padding: 6px 10px;
 }
-.add-file-sherch {
+.add-file-search {
     margin-bottom: 6px;
     @extend %clearfix;
     span {
@@ -58,7 +58,7 @@ body {
         width: 73px;
         line-height: 30px;
     }
-    .file-sherch {
+    .file-search {
         float: right;
         width: calc(100% - 73px);
         .input-type {
@@ -67,7 +67,7 @@ body {
                 width: 100%;
             }
         }
-        .btn-file-sherch {
+        .btn-file-search {
             @extend %btn-type-1-02;
             width: 100px;
             float: right;
@@ -284,7 +284,19 @@ body {
 }
 
 .icon-comment {
-    @extend %icon-comment;
+    @include btn-size ($w: 80px, $h: 33px);
+    text-shadow: 0 0 1px #a3a3a3;
+    border: 1px solid #a3a3a3;
+    background: #fff;
+    &:before {
+        display: inline-block;
+        width: 22px;
+        height: 20px;
+        background: url($icon-comment) center no-repeat;
+        margin-right: 10px;
+        vertical-align: -6px;
+        content: "";
+    }
 }
 
 /* =======================================*/
@@ -795,6 +807,15 @@ hr.sub-title-bar {
             line-height: 34px;
             strong {
                 color: #333;
+            }
+            &:before {
+                display: inline-block;
+                width: 8px;
+                height: 14px;
+                vertical-align: -5px;
+                margin-right: 5px;
+                background: url($icon-all-page) no-repeat;
+                content: "";
             }
         }
     }

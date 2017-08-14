@@ -50,19 +50,3 @@
     @extend %btn-type-3-size;
     @include btn-type-1 ($color: #fff, $bg: #003761);
 }
-
-%icon-comment {
-    @include btn-size ($w: 80px, $h: 33px);
-    text-shadow: 0 0 1px #a3a3a3;
-    border: 1px solid #a3a3a3;
-    background: #fff;
-    &:before {
-        display: inline-block;
-        width: 22px;
-        height: 20px;
-        background: url($icon-comment) center no-repeat;
-        margin-right: 10px;
-        vertical-align: -6px;
-        content: "";
-    }
-}
