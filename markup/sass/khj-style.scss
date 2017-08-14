@@ -6,7 +6,7 @@
 /* 회원서비스 > 회원가입안내 > 가입신청 조회
 /* html/sign-up-list.html
 /* =======================================*/
-.sign-up-content {
+.sign-up-list {
     .content-box-area {
         width: 930px;
         margin: 0 auto;
@@ -67,41 +67,6 @@
         h4 {
             font-size: 14px;
             margin-bottom: 9px;
-        }
-        .proof-of-employment {
-            border: 1px solid #e6e6e6;
-            padding-top: 6px;
-            padding-left: 9px;
-            padding-right: 9px;
-            padding-bottom: 12px;
-        }
-        tr {
-            &:nth-child(7) .input-type input {
-                width: 70px;
-            }
-            &:last-child {
-                .icon-hwp {
-                    position: relative;
-                    padding-left: 20px;
-                }
-                .add-file-area {
-                    margin-top: -13px;
-
-                    .file {
-                        width: 176px;
-                    }
-                    a[class^="icon-"] {
-                        width: 110px;
-                    }
-                }
-            }
-            &:first-child label {
-                color: #bd1313;
-                letter-spacing: -1px;
-            }
-            &:nth-child(2) label {
-                letter-spacing: -1px;
-            }
         }
         .input-type.tel label input {
             position: relative;

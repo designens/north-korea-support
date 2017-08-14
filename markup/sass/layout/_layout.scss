@@ -690,6 +690,44 @@
     }
 }
 
+.applicant-application-step5 {
+    .content-box-area {
+        .table-li {
+            li {
+                &.title {
+                    width: 200px;
+                }
+                &:last-child {
+                    padding: 0;
+                }
+            }
+            .table-dt-dd {
+                border: 0;
+                dt {
+                    background: #cfdce6;
+                }
+                dd {
+                    border-bottom: 0;
+                    .title {
+                        h4 {
+                            font-size: 14px;
+                            display: inline-block;
+                            margin-right: 6px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    p {
+                        margin: 5px 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* =======================================*/
 /* 회원서비스 > 법인.단체 > 사업자신청 구비서류 팝업
 /* (html/applicant-application-step1.html)
@@ -708,6 +746,19 @@
                     }
                 }
             }
+        }
+    }
+}
+
+/* =======================================*/
+/* 회원서비스 > 회원가입안내 > 가입신청완료진행중
+/* (html/sign-up-write.html)
+/* =======================================*/
+.sign-up-write {
+    .sub-completed {
+        margin-top: 60px;
+        .message {
+            margin-bottom: 65px;
         }
     }
 }
