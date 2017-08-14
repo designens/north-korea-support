@@ -948,6 +948,9 @@ hr.sub-title-bar {
             pointer-events: none;
         }
     }
+    &.full {
+        @include input-type(100%);
+    }
 }
 
 /* =======================================*/
@@ -970,6 +973,7 @@ hr.sub-title-bar {
     border: 1px solid #dbdbdb;
     margin-bottom: -5px;
     background: #fff;
+    overflow-y: scroll;
     &:focus {
         border: 1px solid #002847;
     }
