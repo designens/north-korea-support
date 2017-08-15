@@ -287,7 +287,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         }
     }
 }
-.table-type-01.table-name {
+.table-type-01 {
     thead {
         th {
             &:first-child {
@@ -316,7 +316,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         }
     }
 }
-.table-type-02.table-name {
+.table-type-02 {
     colgroup {
         col {
             &:nth-child(1), &:nth-child(3) {
@@ -325,7 +325,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         }
     }
 }
-.table-li.table-name {
+.table-li {
     .title {
         width: 140px;
     }

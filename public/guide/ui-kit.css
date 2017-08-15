@@ -1719,7 +1719,7 @@ body .wrap { width: 1248px; padding: 0 24px; margin: 0 auto; }
 
 .red { color: #bd1313 !important; }
 
-.blue { color: #002847 !important; }
+.blue { color: #003761 !important; }
 
 /* =======================================*/
 /* 팝업 테이블 내부 다운로드 아이콘
@@ -3058,6 +3058,26 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 .sign-up-write .sub-completed .message { margin-bottom: 65px; }
 
 /* =======================================*/
+/* 회원서비스 > 단체정보관리 > 정보조회
+/* (html/information-inquiry.html)
+/* =======================================*/
+.information-inquiry .panel-group #panel3 .blue { text-align: right; }
+
+.information-inquiry .panel-group #panel3 .sub-top-btn-area { margin-top: -38px; }
+
+.information-inquiry .panel-group #panel3 .sub-top-btn-area button:first-child { width: 190px; }
+
+.information-inquiry .panel-group #panel3 .sub-top-btn-area button:nth-child(2) { width: 100px; }
+
+.information-inquiry .panel-group #panel3 .sub-top-btn-area button:nth-child(3), .information-inquiry .panel-group #panel3 .sub-top-btn-area button:nth-child(4) { width: 110px; }
+
+.information-inquiry .panel-group #panel3 .sub-top-btn-area button:last-child { width: 150px; }
+
+.information-inquiry .panel-group #panel3 .table-type-01 tbody td:nth-child(4) { text-align: left; }
+
+.information-inquiry .panel-group #panel4 .table-type-01 tbody td:nth-child(3) { text-align: left; }
+
+/* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application.html)
 /* =======================================*/
@@ -3261,21 +3281,21 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
 
 .table-type h3 .fa { margin-right: 10px; vertical-align: -1px; }
 
-.table-type-01.table-name thead th:first-child { width: 70px; }
+.table-type-01 thead th:first-child { width: 70px; }
 
-.table-type-01.table-name thead th:nth-child(2) { width: 200px; }
+.table-type-01 thead th:nth-child(2) { width: 200px; }
 
-.table-type-01.table-name thead th:nth-child(4), .table-type-01.table-name thead th:nth-child(5) { width: 140px; }
+.table-type-01 thead th:nth-child(4), .table-type-01 thead th:nth-child(5) { width: 140px; }
 
-.table-type-01.table-name thead th:last-child { width: 140px; }
+.table-type-01 thead th:last-child { width: 140px; }
 
-.table-type-01.table-name tbody td:first-child { padding-left: 10px; padding-right: 10px; }
+.table-type-01 tbody td:first-child { padding-left: 10px; padding-right: 10px; }
 
-.table-type-01.table-name tbody td:nth-child(3) { text-align: left; }
+.table-type-01 tbody td:nth-child(3) { text-align: left; }
 
-.table-type-02.table-name colgroup col:nth-child(1), .table-type-02.table-name colgroup col:nth-child(3) { width: 140px; }
+.table-type-02 colgroup col:nth-child(1), .table-type-02 colgroup col:nth-child(3) { width: 140px; }
 
-.table-li.table-name .title { width: 140px; }
+.table-li .title { width: 140px; }
 
 .table-dl dt { width: 140px; }
 
