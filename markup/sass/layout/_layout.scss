@@ -715,6 +715,52 @@
 }
 
 /* =======================================*/
+/* 회원서비스 > 회원가입안내 > 가입신청 조회
+/* html/sign-up-list.html
+/* =======================================*/
+.sign-up-list {
+    .content-box-area {
+        &:nth-child(1) {
+            .table-li {
+                li {
+                    &.title {
+                        width: 200px;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        width: 264px;
+                    }
+                    .input-type {
+                        input {
+                            width: 144px;
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            .table-type-02 {
+                tbody {
+                    td {
+                        .radio-type {
+                            label {
+                                margin-right: 40px;
+                            }
+                        }
+                        .select-box {
+                            width: 157px;
+                        }
+                        h4 {
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
 /* 회원서비스 > 법인.단체 > 사업자신청 Step 1. 가입여부 확인 조회
 /* (html/applicant-application-step1.html)
 /* =======================================*/
