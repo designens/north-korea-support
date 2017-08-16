@@ -580,7 +580,7 @@ hr.sub-title-bar {
 }
 .sub-completed-big {
     text-align: center;
-    margin: 60px 0;
+    margin: 120px 0;
     .message {
         position: relative;
         display: inline-block;
@@ -611,6 +611,9 @@ hr.sub-title-bar {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 90px;
+    .btn-completed {
+        @extend .btn-type-2-04;
+    }
 }
 
 /* =======================================*/

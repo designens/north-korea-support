@@ -534,6 +534,7 @@
 .completion-of-business-application {
     .list-form {
         @include content-box(317px);
+        margin-bottom: 90px;
         h3 {
             @extend %content-title;
             margin-top: 50px;
@@ -836,11 +837,6 @@
         }
     }
 }
-
-/* =======================================*/
-/* 회원서비스 > 회원가입안내 > 가입신청완료진행중
-/* (html/sign-up-write.html)
-/* =======================================*/
 
 /* =======================================*/
 /* 회원서비스 > 단체정보관리 > 정보조회
