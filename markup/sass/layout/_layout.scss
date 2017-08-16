@@ -294,7 +294,7 @@
 /* 커뮤니티 > Q&A 상세 조회 > 팝업
 /* (html/qna-list.html)
 /* =======================================*/
-.popup-qna-content {
+.popup-qna-list {
     table {
         tbody {
             td {
@@ -335,7 +335,7 @@
         }
     }
 }
-.popup-qna-content {
+.popup-qna-list {
     dl {
         margin-top: 10px;
         dt {
@@ -425,11 +425,10 @@
 /* 자료마당 > 공지사항 > 공지사항 상세 팝업완료
 /* (html/notices.html)
 /* =======================================*/
-.popup-notices-content {
-    @extend .popup-qna-content;
+.popup-notices {
     .table-dt-dd {
-            margin-top: 0;
-            border-top: 1px solid #f0f3f5;
+        margin-top: 0;
+        border-top: 1px solid #f0f3f5;
         dd {
             min-height: 210px;
         }
@@ -464,8 +463,8 @@
 /* 자료마당 > 자료마당 > 팝업
 /* (html/resources.html)
 /* =======================================*/
-.popup-resources-content {
-    @extend .popup-notices-content;
+.popup-resources {
+    @extend .popup-notices;
 }
 
 /* =======================================*/
@@ -918,6 +917,19 @@
     }
 }
 
+.popup-information-inquiry {
+    .table-type-02 {
+        tbody {
+            td {
+                .radio-type {
+                    label {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
 /* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application.html)

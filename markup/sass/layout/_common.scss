@@ -599,7 +599,7 @@ hr.sub-title-bar {
     text-align: right;
     margin-top: -20px;
     margin-bottom: 10px;
-    .btn-file-upload {
+    .btn-popup-applicant-application {
         @extend %btn-type-2-03;
         &:after {
             display: inline-block;
