@@ -11,6 +11,12 @@
             display: inline-block;
             width: 14px;
             height: 16px;
+            padding-left: 0;
+            margin: 0 3px;
+            vertical-align: -2px;
+            &:before {
+                top: 0;
+            }
         }
         /* 말풍선 다운로드 위젯 적용 */
         .download-file {

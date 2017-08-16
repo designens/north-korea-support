@@ -558,7 +558,7 @@ hr.sub-title-bar {
 .sub-completed {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     .message {
         position: relative;
         font-size: 20px;
@@ -577,9 +577,30 @@ hr.sub-title-bar {
             color: #003761;
         }
     }
-    .btn-completed {
-        margin-top: 50px;
-        @extend %btn-type-2-04;
+}
+.sub-completed-big {
+    text-align: center;
+    margin: 60px 0;
+    .message {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        color: #333;
+        text-align: left;
+        letter-spacing: -0.04em;
+        padding-left: 86px;
+        span {
+            color: #003761;
+            font-weight: bold;
+        }
+        &:before {
+            @include h-center ($position: absolute, $h-percent: 50%);
+            left: 0;
+            width: 66px;
+            height: 66px;
+            background: url($icon-status-check) no-repeat;
+            content: "";
+        }
     }
 }
 
@@ -588,7 +609,7 @@ hr.sub-title-bar {
 /* =======================================*/
 .sub-bottom-btn-area {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 90px;
 }
 

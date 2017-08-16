@@ -1,26 +1,24 @@
-<div class="popup" data-id="popup-policy-proposal-write">
+<div class="popup" data-id="popup-notice-board-write">
     <!-- [Start] 팝업 헤드라인 -->
     <header class="popup-headline">
-        <h4>정책제안</h4>
+        <h4>Q&amp;A</h4>
         <button class="popup-close">창 닫기</button>
     </header>
     <!-- [End] 팝업 헤드라인 -->
     <!-- [Start] 팝업 콘텐츠 -->
-    <div class="popup-content popup-policy-proposal-write">
+    <div class="popup-content popup-notice-board-write">
         <table class="table-type-02">
-            <caption>정책제안 상세 내용 테이블의 작성자, 제목, 첨부파일 항목 입니다.</caption>
+            <caption>Q&amp;A 입력 내용 테이블의 제목, 작성자, 패스워드, 보안문자, 첨부파일 항목이 있습니다.</caption>
             <colgroup>
+                <col width="140">
+                <col>
                 <col width="140">
                 <col>
             </colgroup>
             <tbody>
                 <tr>
-                    <th>작성자</th>
-                    <td>홍길동</td>
-                </tr>
-                <tr>
                     <th>제목</th>
-                    <td>
+                    <td colspan="3">
                         <div class="input-type full">
                             <input type="text" aria-label="제목 입력하세요."/>
                         </div>
@@ -31,8 +29,32 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>첨부파일</th>
+                    <th for="username">작성자</th>
                     <td>
+                        <div class="input-type full">
+                            <input type="text" id="username" name="username" required="required" aria-label="작성자명 입력하세요." />
+                        </div>
+                    </td>
+                    <th for="password">패스워드</th>
+                    <td>
+                        <div class="input-type full">
+                            <input type="password" id="password" name="password" required="required" aria-label="패스워드 입력하세요."/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>보안문자</th>
+                    <td class="security-text-area" colspan="3">
+                        <div class="input-type">
+                            <input type="text" aria-label="보안문자 입력하세요."/>
+                        </div>
+                        <div class="security-text">보안문자 영역</div>
+                        <strong>* 보안문자를 확인하시고 입력해주세요.</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <th>첨부파일</th>
+                    <td colspan="3">
                         <div class="add-file-search">
                             <span>파일추가 : </span>
                             <div class="file-search">
@@ -45,11 +67,11 @@
                         <div class="add-file-area">
                             <div class="file">
                                 <a class="icon-hwp" role="button" href>첨부파일1.hwp</a>
-                                <button type="button" class="btn-file-remove">파일삭제</button>
+                                <button class="btn-file-remove">파일삭제</button>
                             </div>
                             <div class="file">
                                 <a class="icon-hwp" role="button" href>첨부파일2.hwp</a>
-                                <button type="button" class="btn-file-remove">파일삭제</button>
+                                <button class="btn-file-remove">파일삭제</button>
                             </div>
                         </div>
                     </td>

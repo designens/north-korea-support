@@ -291,51 +291,13 @@
 }
 
 /* =======================================*/
-/* 커뮤니티 > Q&A 상세 조회 > 팝업
+/* 커뮤니티 > Q&A 상세 조회 팝업
 /* (html/qna-list.html)
 /* =======================================*/
 .popup-qna-list {
-    table {
-        tbody {
-            td {
-                .input-type {
-                    @include input-type ($w: 100%);
-                }
-                .secret-article {
-                    margin-top: 7px;
-                    margin-bottom: 3px;
-                }
-                &.security-text-area {
-                    * {
-                        float: left;
-                    }
-                    .input-type {
-                        @include input-type ($w: 140px);
-                    }
-                    .security-text {
-                        width: 154px;
-                        height: 30px;
-                        line-height: 30px;
-                        text-align: center;
-                        margin: 0 6px;
-                        background: #d5d5d5;
-                    }
-                    strong {
-                        color: #333;
-                        line-height: 30px;
-                    }
-                }
-                .add-file-area {
-                    padding-left: 73px;
-                }
-            }
-        }
-        &.qna-comments {
-            margin-top: 10px;
-        }
+    .qna-comments {
+        margin-top: 10px;
     }
-}
-.popup-qna-list {
     dl {
         margin-top: 10px;
         dt {
@@ -403,6 +365,51 @@
                         left: 3px;
                         @include fa($fa-icon:"\f00d", $fz:13px, $color: #4d4d4d);
                     }
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
+/* 커뮤니티 > Q&A 상세 입력 팝업
+/* (html/qna-list.html)
+/* =======================================*/
+.popup-qna-write {
+     table {
+        tbody {
+            td {
+                .secret-article {
+                    margin-top: 7px;
+                    margin-bottom: 3px;
+                    label {
+                        span {
+                            color: #757575;
+                        }
+                    }
+                }
+                &.security-text-area {
+                    * {
+                        float: left;
+                    }
+                    .input-type {
+                        @include input-type ($w: 140px);
+                    }
+                    .security-text {
+                        width: 154px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        margin: 0 6px;
+                        background: #d5d5d5;
+                    }
+                    strong {
+                        color: #333;
+                        line-height: 30px;
+                    }
+                }
+                .add-file-area {
+                    padding-left: 73px;
                 }
             }
         }
@@ -524,29 +531,6 @@
 /* 회원서비스 > 법인.단체 > 사업자신청 완료
 /* (html/completion-of-business-application.html)
 /* =======================================*/
-.completion-of-business-application {
-    .list-check {
-        width: 560px;
-        height: 66px;
-        margin: 60px auto;
-        img {
-            width: 66px;
-            margin-right: 20px;
-            vertical-align: middle;
-        }
-        .notice {
-            display: inline-block;
-            text-align: center;
-            font-size: 16px;
-            vertical-align: middle;
-            letter-spacing: -0.14em;
-            span {
-                color: #003761;
-                font-weight: bold;
-            }
-        }
-    }
-}
 .completion-of-business-application {
     .list-form {
         @include content-box(317px);
@@ -857,14 +841,6 @@
 /* 회원서비스 > 회원가입안내 > 가입신청완료진행중
 /* (html/sign-up-write.html)
 /* =======================================*/
-.sign-up-write {
-    .sub-completed {
-        margin-top: 60px;
-        .message {
-            margin-bottom: 65px;
-        }
-    }
-}
 
 /* =======================================*/
 /* 회원서비스 > 단체정보관리 > 정보조회
@@ -917,6 +893,10 @@
     }
 }
 
+/* =======================================*/
+/* 회원서비스 > 단체정보관리 > 정보조회 인물정보 팝업
+/* (html/information-inquiry.html)
+/* =======================================*/
 .popup-information-inquiry {
     .table-type-02 {
         tbody {
@@ -930,6 +910,80 @@
         }
     }
 }
+
+/* =======================================*/
+/* 회원서비스 > 정책제안 조회
+/* (html/policy-proposal.html)
+/* =======================================*/
+.policy-proposal {
+    .table-type-01 {
+        tbody {
+            td {
+                &:nth-child(2) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .table-btn-set {
+        .btn-popup-policy-proposal-write {
+            @extend .btn-type-3-02;
+        }
+    }
+}
+
+/* =======================================*/
+/* 회원서비스 > 정책제안 상세 내용 팝업
+/* (html/policy-proposal.html)
+/* =======================================*/
+.popup-policy-proposal-list {
+    .table-dt-dd {
+        margin-top: 10px;
+        dd {
+            min-height: 350px;
+        }
+    }
+}
+
+/* =======================================*/
+/* 회원서비스 > 정책제안 글쓰기 팝업
+/* (html/policy-proposal.html)
+/* =======================================*/
+.popup-policy-proposal-write {
+    @extend .popup-qna-write;
+}
+
+/* =======================================*/
+/* 회원서비스 > 게시판 조회
+/* (html/notice-board.html)
+/* =======================================*/
+.notice-board {
+    .panel-group {
+        [role="tabpanel"] {
+            .table-type-01 {
+                tbody {
+                    td {
+                        &:nth-child(3) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            .table-btn-set {
+                .btn-popup-notice-board-write {
+                    @extend .btn-type-3-02;
+                }
+            }
+        }
+    }
+}
+.popup-notice-board-list {
+    @extend .popup-policy-proposal-list;
+}
+.popup-notice-board-write {
+    @extend .popup-qna-write;
+}
+
 /* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application.html)
