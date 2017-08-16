@@ -844,7 +844,7 @@
 /* =======================================*/
 .information-inquiry {
     .panel-group {
-        #panel3 {
+        [aria-labelledby="tab3"] {
             .blue {
                 text-align: right;
             }
@@ -875,7 +875,7 @@
                 }
             }
         }
-        #panel4 {
+        [aria-labelledby="tab4"] {
             .table-type-01 {
                 tbody {
                     td {

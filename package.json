@@ -1,7 +1,7 @@
 {
-  "name": "THALAND_Project",
+  "name": "North-Korea-Support-Project",
   "version": "0.0.1",
-  "description": "교원 빨간펜 스마트 라이브러리",
+  "description": "대북지원정보시스템",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.8.11"
@@ -11,6 +11,8 @@
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-css-scss": "^0.1.0",
+    "gulp-csscomb": "^3.0.8",
     "gulp-csso": "^1.1.0",
     "gulp-filter": "^2.0.2",
     "gulp-html-ssi": "^0.0.92",
@@ -39,5 +41,5 @@
     "sass"
   ],
   "author": "정인영",
-  "license": "Kyowon"
+  "license": "Cycomms"
 }
