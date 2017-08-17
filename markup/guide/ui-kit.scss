@@ -178,6 +178,11 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         }
     }
 }
+.comment {
+    padding: 15px;
+    border: 5px solid #dee4e8;
+    // margin-top: 20px;
+}
 
 // =======================================
 // 버튼 스타일
@@ -310,13 +315,6 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             vertical-align: -1px;
         }
     }
-}
-
-// =======================================
-// 팝업 스타일
-// =======================================
-.popup-name {
-    margin-top: 20px;
 }
 
 // =======================================
