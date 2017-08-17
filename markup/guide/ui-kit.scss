@@ -153,6 +153,16 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         padding: 60px 30px 30px 30px;
         margin-top: 30px;
         position: relative;
+        &.html {
+            &:before {
+                content: "HTML";
+            }
+        }
+        &.js {
+            &:before {
+                content: "JavaScript";
+            }
+        }
         &:before {
             position: absolute;
             top: 20px;
@@ -160,7 +170,6 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             font-size: 20px;
             font-weight: bold;
             color: #002847;
-            content: "HTML";
         }
     }
 }
@@ -296,6 +305,13 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             vertical-align: -1px;
         }
     }
+}
+
+// =======================================
+// 팝업 스타일
+// =======================================
+.popup-name {
+    margin-top: 20px;
 }
 
 // =======================================
