@@ -147,6 +147,22 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             }
         }
     }
+    pre {
+        font-family: $font-family;
+        background: #f3f3f3;
+        padding: 60px 30px 30px 30px;
+        margin-top: 30px;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #002847;
+            content: "HTML";
+        }
+    }
 }
 
 // =======================================
@@ -162,7 +178,11 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
         }
     }
     button {
+        margin-top: 30px;
         margin-right: 10px;
+        &:first-child {
+            margin-top: 10px;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -265,6 +285,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 // =======================================
 .file-area-test {
     @extend .form-group;
+    margin-top: 20px;
     margin-bottom: 20px;
     &:last-child {
         margin-bottom: 0;
@@ -289,6 +310,9 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 // =======================================
 .table-type {
     @extend .form-group;
+    h2 {
+        margin-top: 20px;
+    }
     h3 {
         .fa {
             margin-right: 10px;
