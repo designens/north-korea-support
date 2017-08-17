@@ -147,40 +147,120 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             }
         }
     }
-    pre {
+    code[class*="language-"], pre[class*="language-"] {
         font-family: $font-family;
-        background: #dee4e8;
+        color: inherit;
+        background: none;
+        text-align: left;
+        white-space: pre-wrap;
+        line-height: 1.5;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        &::-moz-selection, ::-moz-selection {
+            text-shadow: none;
+        }
+        .toolbar {
+            .toolbar-item {
+                &:first-child {
+                    position: absolute;
+                    top: 20px;
+                    left: 30px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #002847;
+                    text-transform: uppercase
+                }
+                &:last-child {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    a {
+                        @extend .btn-type-1-03;
+                        line-height: 26px;;
+                    }
+                }
+            }
+        }
+    }
+    code[class*="language-"] {
+        &::-moz-selection, ::-moz-selection {
+            text-shadow: none;
+        }
+        &::selection, ::selection {
+            text-shadow: none;
+        }
+        &::selection, ::selection {
+            text-shadow: none;
+        }
+    }
+    pre[class*="language-"] {
+        position: relative;
         padding: 60px 30px 30px 30px;
         margin-top: 30px;
-        position: relative;
-        &.html {
-            &:before {
-                content: "HTML";
-            }
+        border-radius: 10px;
+        background: #eff4f7;
+        overflow: auto;
+    }
+    :not(pre) > code[class*="language-"] {
+        padding: .1em;
+        border-radius: .3em;
+        white-space: normal;
+    }
+    .token {
+        &.comment, &.prolog, &.doctype, &.cdata {
+            color: slategray;
         }
-        &.css {
-            &:before {
-                content: "CSS";
-            }
+        &.punctuation {
+            color: #999;
         }
-        &.js {
-            &:before {
-                content: "JavaScript";
-            }
+        &.property, &.tag, &.boolean, &.number, &.constant, &.symbol, &.deleted {
+            color: #905;
         }
-        &:before {
-            position: absolute;
-            top: 20px;
-            left: 30px;
-            font-size: 20px;
+        &.selector, &.attr-name, &.string, &.char, &.builtin, &.inserted {
+            color: #690;
+        }
+        &.operator, &.entity, &.url {
+            color: #a67f59;
+        }
+        &.atrule, &.attr-value, &.keyword {
+            color: #07a;
+        }
+        &.function {
+            color: #DD4A68;
+        }
+        &.regex, &.important, &.variable {
+            color: #e90;
+        }
+        &.important, &.bold {
             font-weight: bold;
-            color: #002847;
+        }
+        &.italic {
+            font-style: italic;
+        }
+        &.entity {
+            cursor: help;
+        }
+    }
+    .language-css .token.string, .style .token.string {
+        color: #a67f59;
+    }
+    .namespace {
+        opacity: .7;
+    }
+    @media print {
+        code[class*="language-"], pre[class*="language-"] {
+            text-shadow: none;
         }
     }
 }
-.comment {
+.ui-kit-comment {
     padding: 15px;
-    border: 5px solid #dee4e8;
+    border: 5px solid #eff4f7;
     // margin-top: 20px;
 }
 
@@ -266,22 +346,6 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 // =======================================
 // 인풋 스타일
 // =======================================
-.search-type-area {
-    h3 {
-        font-size: 20px;
-        color: #69c;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        .fa {
-            font-size: 16px;
-            margin-right: 10px;
-            vertical-align: 2px;
-        }
-    }
- }
-// =======================================
-// 인풋 스타일
-// =======================================
 .form-group {
     h3 {
         font-size: 20px;
@@ -297,6 +361,12 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             vertical-align: 2px;
         }
     }
+}
+.search-type-area {
+    @extend .form-group;
+}
+.select-box-group {
+    @extend .form-group;
 }
 
 // =======================================
