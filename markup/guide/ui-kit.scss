@@ -149,13 +149,18 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
     }
     pre {
         font-family: $font-family;
-        background: #f3f3f3;
+        background: #dee4e8;
         padding: 60px 30px 30px 30px;
         margin-top: 30px;
         position: relative;
         &.html {
             &:before {
                 content: "HTML";
+            }
+        }
+        &.css {
+            &:before {
+                content: "CSS";
             }
         }
         &.js {
