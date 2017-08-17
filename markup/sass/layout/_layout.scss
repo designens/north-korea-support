@@ -976,9 +976,21 @@
                 }
             }
         }
-        [aria-labelledby="tab2"] {
-        }
         [aria-labelledby="tab3"] {
+            table {
+                tbody {
+                    td {
+                        .add-file-area {
+                            float: left;
+                            width: calc(100% - 106px);
+                            margin-top: 3px;
+                        }
+                        > .btn-type-1-02 {
+                            float: right;
+                        }
+                    }
+                }
+            }
         }
     }
  }
