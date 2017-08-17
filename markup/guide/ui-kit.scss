@@ -147,6 +147,12 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             }
         }
     }
+}
+
+// =======================================
+// 마크업 스킨 다운 스타일
+// =======================================
+.ui-kit {
     code[class*="language-"], pre[class*="language-"] {
         font-family: $font-family;
         color: inherit;
@@ -260,8 +266,8 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 }
 .ui-kit-comment {
     padding: 15px;
-    border: 5px solid #eff4f7;
-    // margin-top: 20px;
+    border: 10px solid #eff4f7;
+    margin-top: -10px;
 }
 
 // =======================================
