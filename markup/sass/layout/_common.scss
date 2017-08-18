@@ -494,7 +494,7 @@ hr.sub-title-bar {
 .content-box-area {
     h3 {
         position: relative;
-        float: left;
+        display: inline-block;
         font-size: 16px;
         padding-left: 10px;
         margin-top: 30px;
@@ -509,6 +509,10 @@ hr.sub-title-bar {
             background: #003761;
             content: "";
         }
+    }
+    h3 + .sub-top-btn-area {
+        float: right;
+        margin-top: 27px;
     }
     &:first-child {
         position: relative;

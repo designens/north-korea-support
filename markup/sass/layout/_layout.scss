@@ -686,15 +686,6 @@
 /* (html/applicant-application-step4.html)
 /* =======================================*/
 .applicant-application-step4 {
-    .content-box-area {
-        h3 {
-            margin-top: 33px;
-        }
-        .sub-top-btn-area {
-            float: right;
-            margin-top: 30px;
-        }
-    }
     .table-type-01 {
         tbody {
             tr {
@@ -906,6 +897,13 @@
 .popup-notice-board-list {
     table {
         margin-bottom: 10px;
+        tbody {
+            td {
+                .btn-type-2-04 {
+                    @include btn-size($w: 76px, $h: 76px);
+                }
+            }
+        }
     }
 }
 .popup-notice-board-write {
