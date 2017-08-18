@@ -350,13 +350,13 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 }
 
 // =======================================
-// 인풋 스타일
+// h3 제목 스타일
 // =======================================
 .form-group {
     h3 {
         font-size: 20px;
         color: #69c;
-        margin-top: 20px;
+        margin-top: 50px;
         margin-bottom: 10px;
         &:first-child {
             margin-top: 0;
@@ -374,23 +374,11 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 .select-box-group {
     @extend .form-group;
 }
-
-// =======================================
-// 파일 아이콘 스타일
-// =======================================
 .file-area-test {
     @extend .form-group;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    &:last-child {
-        margin-bottom: 0;
-    }
-    h3 {
-        .fa {
-            margin-right: 10px;
-            vertical-align: -1px;
-        }
-    }
+}
+.all-pages-view-area {
+    @extend .form-group;
 }
 
 // =======================================
@@ -461,12 +449,6 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 .table-dl {
     dt {
         width: 140px;
-    }
-}
-
-.content-box-area {
-    p {
-        clear: both;
     }
 }
 .content-form-area {

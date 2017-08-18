@@ -22,6 +22,9 @@ body {
 .blue {
     color: $font-blue !important;
 }
+.skyblue {
+    color: $font-skyblue !important;
+}
 
 /* =======================================*/
 /* 팝업 테이블 내부 다운로드 아이콘
@@ -76,6 +79,9 @@ body {
 }
 .add-file-area {
     $file-height: 26px;
+    &.popup-type {
+        padding-left: 73px;
+    }
     .file {
         width: 244px;
         // float: left;
