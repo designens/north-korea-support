@@ -84,21 +84,12 @@ body {
     }
     .file {
         width: 244px;
-        // float: left;
-        // width: percent(2);
         height: $file-height;
         line-height: $file-height;
-        @extend %clearfix;
-        // &:nth-of-type(odd) {
-        //     padding-right: 10px;
-        // }
-        // &:nth-of-type(even) {
-        //     padding-left: 10px;
-        // }
         a[class^="icon-"] {
             float: left;
             display: inline-block;
-            width: 178px;
+            width: calc(100% - 66px);
             color: #003761;
             @include ellipsis(1);
         }

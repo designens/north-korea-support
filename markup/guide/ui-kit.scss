@@ -174,7 +174,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
             .toolbar-item {
                 &:first-child {
                     position: absolute;
-                    top: 20px;
+                    top: 22px;
                     left: 30px;
                     font-size: 20px;
                     font-weight: bold;
@@ -206,7 +206,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
     }
     pre[class*="language-"] {
         position: relative;
-        padding: 60px 30px 30px 30px;
+        padding: 70px 30px 30px 30px;
         margin-top: 30px;
         border-radius: 10px;
         background: #eff4f7;

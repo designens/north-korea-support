@@ -2,18 +2,57 @@
 <div class="popup" data-id="popup-request-change">
     <!-- [Start] 팝업 헤드라인 -->
     <header class="popup-headline">
-        <h4>팝업 제목</h4>
-        <button type="button" class="popup-close">창 닫기</button>
+        <h4>변경사항 요청</h4>
+        <button class="popup-close">창 닫기</button>
     </header>
     <!-- [End] 팝업 헤드라인 -->
     <!-- [Start] 팝업 콘텐츠 -->
     <div class="popup-content">
-        <p>이 곳에 팝업 상세내용 작성하시면 됩니다.</p>
+        <table class="table-type-02">
+            <caption>변경사항 요청 상세 내용 테이블의 작성자,제목,첨부문서가 있습니다.</caption>
+            <colgroup>
+                <col width="140">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>작성자</th>
+                    <td colspan="3">홍길동</td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td colspan="3">
+                    <div class="input-type full"  class="td-title full">
+                            <input type="text" aria-label="제목 입력하세요.">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>첨부문서</th>
+                    <td colspan="3">
+                        <div class="add-file-search">
+                            <span>파일추가 : </span>
+                            <div class="file-search">
+                                <div class="input-type">
+                                    <label>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <button class="btn-file-search">파일 검색</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="web-edit-area">
+            <p>웹 에디터 영역</p>
+        </div>
         <!-- [Start] 팝업 버튼 -->
         <div class="popup-btn-set">
-            <!-- 닫기 버튼 필수 (접근성) -->
-            <button type="button" class="popup-close">닫기</button>
+            <button class="popup-save">저장하기</button>
         </div>
+        <!-- [End] 팝업 버튼 -->
         <!-- [End] 팝업 버튼 -->
     </div>
     <!-- [End] 팝업 콘텐츠 -->

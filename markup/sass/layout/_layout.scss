@@ -829,6 +829,22 @@
 }
 
 /* =======================================*/
+/* 회원서비스 > 단체정보관리 > 변경사항요청 조회
+/* (html/request-change.html)
+/* =======================================*/
+.request-change {
+    .table-type-01 {
+        tbody {
+            td {
+                &:nth-child(3) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
 /* 회원서비스 > 정책제안 조회
 /* (html/policy-proposal.html)
 /* =======================================*/
@@ -935,23 +951,6 @@
                             }
                         }
                     }
-                    .input-type {
-                        display: block;
-                        &.w100p {
-                            width: 100%;
-                            label {
-                                span {
-                                    display: block;
-                                    height: 0;
-                                    text-indent: -9999px;
-                                    visibility: hidden;
-                                }
-                            }
-                            input {
-                                width: 100%;
-                            }
-                        }
-                    }
                     &.input-price {
                         .input-type {
                             margin-bottom: 6px;
@@ -1046,3 +1045,73 @@
         }
     }
  }
+
+/* =======================================*/
+/* 기금사업신청 > 결과조회
+/* (html/view-results.html)
+/* =======================================*/
+.view-results {
+    .table-type-01 {
+        tbody {
+            td {
+                &:nth-child(2) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
+/* 기금사업신청 > 결과조회 상세 내용 팝업
+/* (html/view-results.html)
+/* =======================================*/
+.popup-view-results-business {
+    table {
+        margin-bottom: 10px;
+        td {
+            .checkbox-type {
+                @extend %clearfix;
+                li {
+                    float: left;
+                    width: percent(4);
+                    &:nth-child(4n) {
+                        margin-bottom: 7px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table-dl {
+        dt {
+            line-height: 1.5;
+        }
+        .add-file-area {
+            padding: 6px 10px;
+            ul {
+                @extend %clearfix;
+                li {
+                    height: 26px;
+                    line-height: 26px;
+                }
+                &:nth-child(1) {
+                    float: left;
+                    width: calc(100% - 220px);
+                    li {
+                        @include ellipsis(1);
+                    }
+                }
+                &:nth-child(2) {
+                    float: right;
+                    width: 210px;
+                    [class^="icon-"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

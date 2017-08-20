@@ -140,6 +140,7 @@
             height: 38px;
             text-align: center;
             padding: 0 10px;
+            padding-top: 1px;
             /* 제목 - 팝업 링크 */
             .view-link {
                 @include ellipsis(1);
@@ -220,6 +221,7 @@
         font-weight: bold;
         color: #2e3a42;
         padding: 0 20px;
+        vertical-align: middle;
         background: #f0f3f5;
         border-right: 1px solid #d1d1d1;
     }
