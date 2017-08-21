@@ -794,6 +794,12 @@ hr.sub-title-bar {
             background-size: 100% 100%;
         }
     }
+    &.bar-step-all {
+        &:before {
+            background: url($bar-step-all) no-repeat;
+            background-size: 100% 100%;
+        }
+    }
 }
 
 /* =======================================*/
