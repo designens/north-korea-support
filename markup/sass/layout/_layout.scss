@@ -765,6 +765,31 @@
 /* =======================================*/
 .information-inquiry {
     .panel-group {
+        [aria-labelledby="tab1"] {
+            .table-type-02 {
+                tbody {
+                    tr {
+                        &:nth-child(4) {
+                            td {
+                                &:nth-child(3) {
+                                    padding: 10px;
+                                    .ceo-photo {
+                                        width: 100px;
+                                        height: 107px;
+                                        border: 1px solid #d1d1d1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    td {
+                        .btn-type-1-02 {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
         [aria-labelledby="tab3"] {
             .blue {
                 text-align: right;
