@@ -14,6 +14,10 @@
     @extend %btn-type-1-size;
     @include btn-type-1 ($color: #fff, $bg: #003761);
 }
+%btn-type-1-04 {
+    @extend %btn-type-1-size;
+    @include btn-type-1 ($color: #fff, $bg: #d14411);
+}
 // 버튼 타입 02
 %btn-type-2-size {
     @include btn-size ($w: 200px, $h: 40px);
