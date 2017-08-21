@@ -139,8 +139,7 @@
         th, td {
             height: 38px;
             text-align: center;
-            padding: 0 10px;
-            padding-top: 1px;
+            padding: 1px 10px;
             /* 제목 - 팝업 링크 */
             .view-link {
                 @include ellipsis(1);
