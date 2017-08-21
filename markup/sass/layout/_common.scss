@@ -210,17 +210,17 @@ body {
         &.first-prev {
             margin-left: 0;
             &:before {
-                left: 10px;
+                left: 9px;
                 @include fa ($fa-icon: "\f053", $fz: 12px, $color: #879dad);
             }
             &:after {
-                right: 10px;
+                right: 11px;
                 @include fa ($fa-icon: "\f053", $fz: 12px, $color: #879dad);
             }
         }
         &.prev {
             &:before {
-                left: 11px;
+                left: 12px;
                 @include fa ($fa-icon: "\f053", $fz: 12px, $color: #879dad);
             }
         }
@@ -231,13 +231,13 @@ body {
                 @include fa ($fa-icon: "\f054", $fz: 12px, $color: #879dad);
             }
             &:after {
-                right: 10px;
+                right: 9px;
                 @include fa ($fa-icon: "\f054", $fz: 12px, $color: #879dad);
             }
         }
         &.next {
             &:before {
-                right: 11px;
+                right: 12px;
                 @include fa ($fa-icon: "\f054", $fz: 12px, $color: #879dad);
             }
         }
