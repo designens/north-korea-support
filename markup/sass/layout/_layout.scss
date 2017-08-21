@@ -1137,6 +1137,23 @@
 }
 .popup-register-your-funds-usage-report-business {
     @extend .popup-view-results-business;
+    .table-type-02 {
+        tbody {
+            tr {
+                &:nth-child(4) {
+                    th {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            td {
+                .input-type {
+                    @include input-type($w: 210px);
+                }
+            }
+        }
+    }
     .table-dl {
         .add-file-area {
             ul {

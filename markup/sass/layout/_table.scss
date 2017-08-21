@@ -135,6 +135,9 @@
         th {
             background: #f0f3f5;
             color: #2e3a42;
+            &.sub-title {
+                font-weight: normal;
+            }
         }
         th, td {
             height: 38px;
@@ -177,6 +180,9 @@
             background: #f0f3f5;
             color: #2e3a42;
             padding: 0 20px;
+            &.sub-title {
+                font-weight: normal;
+            }
         }
         td {
             padding: 6px 10px;

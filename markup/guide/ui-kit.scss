@@ -258,11 +258,6 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
     .namespace {
         opacity: .7;
     }
-    @media print {
-        code[class*="language-"], pre[class*="language-"] {
-            text-shadow: none;
-        }
-    }
 }
 .ui-kit-comment {
     padding: 15px;
