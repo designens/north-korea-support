@@ -27,18 +27,18 @@ $susy: (
 	// Output
 	// 레이아웃 출력 모드 설정 (float, isolate)
 	// ※ 현재 Susy 버전은 Float을 메인으로 출력하지만, 향후 Flexbox 등 다양한 방법 지원 예정
-	output: isolate,
+	output: float,
 
 	// Columns
-	columns: 3,
+	columns: 12,
 
 	// Gutters
 	// 거터의 폭 설정 (1/4, <gutter-width>/<column-width>)
-	gutters: 20px/320px,
+	gutters: 24px/78px,
 
 	// Column Width
 	// 컬럼의 폭 설정 (false, null, <length>)
-	column-width: 320px,
+	column-width: 78px,
 
 	// Gutter Position
 	// 거터의 방향 설정 (after, before, split, inside, inside-static)

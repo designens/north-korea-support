@@ -111,7 +111,7 @@ body { font-family: "Noto Sans Korean", sans-serif, serif; font-size: 14px; line
 
 body * { box-sizing: border-box; word-wrap: break-word; }
 
-.portfolio-list { max-width: 1000px; margin-left: auto; margin-right: auto; min-width: 480px; max-width: 1000px; padding: 20px; }
+.portfolio-list { max-width: 1200px; margin-left: auto; margin-right: auto; min-width: 480px; max-width: 1000px; padding: 20px; }
 
 .portfolio-list:after { content: " "; display: block; clear: both; }
 
@@ -123,14 +123,14 @@ body * { box-sizing: border-box; word-wrap: break-word; }
 
 .project-area .project .item { width: 100%; float: left; margin-left: 0; margin-right: 0; height: 380px; margin-bottom: 20px; border-radius: 10px; background: #fff; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
-@media (min-width: 760px) { .project-area .project .item { width: 48.48485%; float: left; }
+@media (min-width: 760px) { .project-area .project .item { width: 43.33333%; float: left; }
   .project-area .project .item:nth-child(2n + 1) { margin-left: 0; margin-right: -100%; clear: both; margin-left: 0; }
-  .project-area .project .item:nth-child(2n + 2) { margin-left: 51.51515%; margin-right: -100%; clear: none; } }
+  .project-area .project .item:nth-child(2n + 2) { margin-left: 56.66667%; margin-right: -100%; clear: none; } }
 
-@media (min-width: 1000px) { .project-area .project .item { width: 32%; float: left; }
+@media (min-width: 1000px) { .project-area .project .item { width: 27.65957%; float: left; }
   .project-area .project .item:nth-child(3n + 1) { margin-left: 0; margin-right: -100%; clear: both; margin-left: 0; }
-  .project-area .project .item:nth-child(3n + 2) { margin-left: 34%; margin-right: -100%; clear: none; }
-  .project-area .project .item:nth-child(3n + 3) { margin-left: 68%; margin-right: -100%; clear: none; } }
+  .project-area .project .item:nth-child(3n + 2) { margin-left: 36.17021%; margin-right: -100%; clear: none; }
+  .project-area .project .item:nth-child(3n + 3) { margin-left: 72.34043%; margin-right: -100%; clear: none; } }
 
 .project-img { position: relative; height: 180px; overflow: hidden; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 

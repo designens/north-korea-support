@@ -1214,3 +1214,300 @@
         }
     }
 }
+
+/* =======================================*/
+/* 메인 > 외부 메인
+/* (html/main.html)
+/* =======================================*/
+.user-main {
+    article {
+        h2 {
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+        }
+        &:first-child {
+            @include span(6);
+            .tablist {
+                width: 100%;
+                margin-left: 0;
+                border: 1px solid #dbdbdb;
+                border-bottom-width: 0;
+                [role="tab"] {
+                    padding: 0;
+                    span {
+                        font-size: 16px;
+                        height: 44px;
+                        line-height: 42px;
+                        background: #fff;
+                        border: 0;
+                        border-right: 1px solid #dbdbdb;
+                        border-bottom: 1px solid #dbdbdb;
+                        &:hover, &:focus {
+                            background: #d14411;
+                            border: 0;
+                        }
+
+                    }
+                    &:first-child {
+                        span {
+                            border-left-width: 1px;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+                        }
+                    }
+                    &:last-child {
+                        span {
+                            border-right: 0;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                    }
+                    &[aria-selected='true'] {
+                        span {
+                            background: #d14411;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+            .panel-group {
+                height: 634px;
+                padding: 30px;
+                border: 1px solid #dbdbdb;
+                border-top-width: 0;
+                margin-top: 0;
+                clear: both;
+            }
+        }
+        &:last-child {
+            @include span(6 last);
+            .link-item-box {
+                position: relative;
+                height: 210px;
+                @include layout(6);
+                @include span(3);
+                &:nth-of-type(2n) {
+                    @include last;
+                }
+                &:nth-of-type(1) {
+                    background: #e6f0c0 url($link-item-01) center 44px no-repeat;
+                    .btn-item-more {
+                        background: #d2e48e;
+                    }
+                }
+                &:nth-of-type(2) {
+                    background: #d6faff url($link-item-02) center 46px no-repeat;
+                    .btn-item-more {
+                        background: #b5f6ff;
+                    }
+                }
+                &:nth-of-type(3) {
+                    background: #ede1f5 url($link-item-03) center 49px no-repeat;
+                    .btn-item-more {
+                        background: #dfc9ed;
+                    }
+                }
+                &:nth-of-type(4) {
+                    background: #ffeb9a url($link-item-04) center 44px no-repeat;
+                    .btn-item-more {
+                        background: #ffdb49;
+                    }
+                }
+                &:nth-of-type(5) {
+                    background: url($link-item-05) 186px 135px no-repeat;
+                    .ui-carousel {
+                        height: 154px;
+                        .ui-carousel__tabpanel-wrapper {
+                            width: 222px;
+                            height: 154px;
+                            .ui-carousel__tabpanel {
+                                width: 222px;
+                                height: 154px;
+                                a {
+                                    text-align: left;
+                                    .notice-text {
+                                        @include ellipsis(3);
+                                        padding-top: 12px;
+                                        clear: both;
+                                    }
+                                    .notice-date {
+                                        display: block;
+                                        font-weight: bold;
+                                        color: #666;
+                                        margin-top: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(6) {
+                    background: url($link-item-06) 197px 121px no-repeat;
+                    .resource-text {
+                        position: relative;
+                        @include ellipsis(1);
+                        padding-top: 12px;
+                        padding-left: 10px;
+                        clear: both;
+                        &:before {
+                            position: absolute;
+                            top: 22px;
+                            left: 0;
+                            display: block;
+                            width: 3px;
+                            height: 3px;
+                            background: #4d4d4d;
+                            content: "";
+                        }
+                    }
+                    .resource-date {
+                        display: block;
+                        font-weight: bold;
+                        color: #666;
+                    }
+                }
+                &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+                    margin-bottom: 24px;
+                    h3 {
+                        font-size: 18px;
+                        font-weight: normal;
+                        color: #333;
+                        text-align: center;
+                        letter-spacing: -0.04em;
+                        margin-top: 147px;
+                    }
+                    .btn-item-more {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        width: 50px;
+                        height: 50px;
+                        text-indent: -9999px;
+                        &:before {
+                            position: absolute;
+                            top: 23px;
+                            left: 11px;
+                            width: 28px;
+                            height: 4px;
+                            background: #fff;
+                            content: "";
+                        }
+                        &:after {
+                            position: absolute;
+                            top: 11px;
+                            left: 23px;
+                            width: 4px;
+                            height: 28px;
+                            background: #fff;
+                            content: "";
+                        }
+                    }
+                }
+                &:nth-of-type(5), &:nth-of-type(6) {
+                    padding: 26px 30px;
+                    background-color: #f0f3f5;
+                    h3 {
+                        float: left;
+                        font-size: 20px;
+                        color: #003a66;
+                    }
+                    .btn-item-more {
+                        float: right;
+                        font-weight: bold;
+                        line-height: 1;
+                        border-bottom: 1px solid #4c4c4c;
+                        margin-top: 5px;
+                        &:after {
+                            display: inline-block;
+                            @include fa($fa-icon: "\f105", $fz: 18px);
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-link-banner {
+    background: #f5f8fa;
+    border-top: 1px solid #d9dee2;
+    padding: 24px 0;
+    .wrap {
+        @include layout(12);
+        @extend %clearfix;
+        h4 {
+            font-size: 14px;
+            color: #333;
+            line-height: 46px;
+            @include span(1);
+        }
+        .ui-carousel {
+            position: relative;
+            @include span(11 last);
+            padding: 0 23px;
+            height: 46px;
+            border: 1px solid #dbdbdb;
+            overflow: hidden;
+            .ui-carousel__tabpanel-wrapper {
+                width: 100%;
+                height: 46px;
+                background: #fff;
+            }
+            ul {
+                float: left;
+                width: 1054px;
+                overflow: hidden;
+                @extend %clearfix;
+                li {
+                    float: left;
+                    width: percent(5);
+                    height: 46px;
+                    line-height: 46px; 
+                    text-align: center;
+                    border-right: 1px solid #dbdbdb;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                    img {
+                        width: auto;
+                        height: auto;
+                        vertical-align: -9px;
+                        margin-right: 10px;
+                    }
+                    &:nth-child(4) {
+                        img {
+                            vertical-align: -11px;
+                        }
+                    }
+                }
+            }
+            .ui-carousel__button {
+                position: absolute;
+                top: 0;
+                width: 24px;
+                height: 46px;
+                line-height: 46px;
+                margin-top: 0;
+                background: #fff;
+                &.ui-carousel__button--prev {
+                    left: 0;
+                    border-right: 1px solid #ccc;
+                    &:before {
+                        @include fa($fa-icon: "\f053", $fz: 10px, $color: #676767);
+                        background: transparent;
+                    }
+                }
+                &.ui-carousel__button--next {
+                    right: 0;
+                    border-left: 1px solid #ccc;
+                    &:before {
+                        @include fa($fa-icon: "\f054", $fz: 10px, $color: #676767);
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

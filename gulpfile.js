@@ -55,6 +55,7 @@ var js_order = [
     dir.js + '/jquery.accordion.js',
     dir.js + '/jquery.tabs.js',
     dir.js + '/jquery.downloadWidget.js',
+    dir.js + '/jquery.carousel.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동
