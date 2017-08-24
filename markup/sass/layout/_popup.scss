@@ -73,9 +73,10 @@
     }
     /* 팝업 콘텐츠 */
     .popup-content {
-        padding: 20px 30px 30px 30px;
+        padding: 20px 30px 0 30px;
         max-height: calc(650px - 50px);
         overflow: auto;
+        @extend %clearfix;
         [class$="l-set"] {
             text-align: left;
         }
@@ -92,7 +93,7 @@
         .popup-btn-set {
             width: 100%;
             text-align: center;
-            margin-top: 30px;
+            padding: 30px;
             .popup-save {
                 @extend %btn-type-1-03;
             }

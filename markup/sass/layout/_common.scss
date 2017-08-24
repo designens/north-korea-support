@@ -1026,10 +1026,10 @@ hr.sub-title-bar {
 /* 텍스트박스 스타일
 /* =======================================*/
 .textarea {
+    display:block;
     width: 100%;
     padding: 6px 10px;
     border: 1px solid #dbdbdb;
-    margin-bottom: -5px;
     background: #fff;
     overflow-y: scroll;
     &:focus {

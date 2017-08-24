@@ -1219,6 +1219,21 @@
 /* 메인 > 외부 메인
 /* (html/main.html)
 /* =======================================*/
+.main-carousel-slider {
+    height: 400px;
+    article {
+        position: relative;
+        > img {
+            width: 100vw;
+            height: 400px;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+        .slider-menu-banner {
+            position: absolute;
+        }
+    }
+}
 .user-main {
     article {
         h2 {
@@ -1317,8 +1332,34 @@
                 }
                 &:nth-of-type(5) {
                     background: url($link-item-05) 186px 135px no-repeat;
-                    .ui-carousel {
+                    .notices-list {
                         height: 154px;
+                        .ui-carousel__tablist--wrapper {
+                            .ui-carousel__toggle--animate {
+                                background: #b3b3b3;
+                                color: #fff;
+                                &:hover, &:focus {
+                                    background: #777;
+                                }
+                            }
+                            .ui-carousel__indicators {
+                                .ui-carousel__tab {
+                                    background: #b3b3b3;
+                                    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+                                    transition: all 0.2s cubic-bezier(0.01, 0.35, 0, 1.01);
+                                    &:hover, &:focus {
+                                        background: #777;
+                                    }
+                                    &.active {
+                                        background: #0065b3;
+                                        width: 24px;
+                                        &:focus {
+                                            background: #0065b3;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         .ui-carousel__tabpanel-wrapper {
                             width: 222px;
                             height: 154px;
@@ -1443,7 +1484,7 @@
             line-height: 46px;
             @include span(1);
         }
-        .ui-carousel {
+        .link-banner-area {
             position: relative;
             @include span(11 last);
             padding: 0 23px;
@@ -1471,15 +1512,8 @@
                         border-right: 0;
                     }
                     img {
-                        width: auto;
-                        height: auto;
                         vertical-align: -9px;
                         margin-right: 10px;
-                    }
-                    &:nth-child(4) {
-                        img {
-                            vertical-align: -11px;
-                        }
                     }
                 }
             }
@@ -1487,8 +1521,8 @@
                 position: absolute;
                 top: 0;
                 width: 24px;
-                height: 46px;
-                line-height: 46px;
+                height: 44px;
+                line-height: 44px;
                 margin-top: 0;
                 background: #fff;
                 &.ui-carousel__button--prev {
