@@ -1240,13 +1240,13 @@ hr.sub-title-bar {
 /* 테이블 영역
 /* =======================================*/
 .web-table-area {
-    min-height: 170px;
+    min-height: 78px;
     margin-bottom: 30px;
-    background: #d5d5d5;
     overflow-x: auto;
-    p {
+    p, .test {
         text-align: center;
-        line-height: 170px;
+        line-height: 440px;
+        background: #d5d5d5;
     }
 }
 
@@ -1254,11 +1254,11 @@ hr.sub-title-bar {
 /* 웹그래프 영역
 /* =======================================*/
 .web-graph-area {
-    height: 440px;
+    min-height: 440px;
     padding: 30px;
     margin-bottom: 30px;
     border: 1px solid #c2c2c2;
-    p {
+    p, .test {
         font-size: 30px;
         text-align: center;
         line-height: 380px;
