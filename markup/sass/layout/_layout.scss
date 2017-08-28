@@ -1223,14 +1223,131 @@
     height: 400px;
     article {
         position: relative;
+        height: 400px;
         > img {
-            width: 100vw;
-            height: 400px;
-            vertical-align: middle;
-            object-fit: cover;
+            @include w-center ($position: absolute, $w-percent: 50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover
         }
-        .slider-menu-banner {
-            position: absolute;
+        .wrap {
+            position: relative;
+            @include w-center ($position: absolute, $w-percent: 50%);
+            .slider-slogan-banner {
+                position: absolute;
+                left: 50%;
+                top: 140px;
+                display: block;
+                width: 478px;
+                margin-left: -404px;
+                p {
+                    display: block;
+                    text-align: center;
+                    &:first-child {
+                        font-size: 50px;
+                        font-weight: bold;
+                        letter-spacing: -0.05em;
+                        line-height: 1.2;
+                        padding: 0 25px;
+                        margin-bottom: 25px;
+                        @include ellipsis(2);
+                    }
+                    &:last-child {
+                        font-size: 18px;
+                        color: #fff;
+                        letter-spacing: -0.05em;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 15px;
+                        background: #8ab1e6;
+                        border-top-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        @include ellipsis(1);
+                    }
+                }
+                text-align: left;
+            }
+            .slider-menu-banner {
+                position: absolute;
+                top: 53px;
+                left: 50%;
+                margin-left: 225px;
+                a {
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                    width: 142px;
+                    height: 142px;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+                    p {
+                        @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
+                        text-align: center;
+                        padding-top: 40px;
+                    }
+                    // &:nth-child(1) {
+                    //     position: relative;
+                    //     background: #c5daeb;
+                    //     overflow: hidden;
+                    //     &:before {
+                    //         position: absolute;
+                    //         top: -22px;
+                    //         left: -6px;
+                    //         font-size: 70px;
+                    //         font-weight: bold;
+                    //         line-height: 1;
+                    //         color: hsla(0, 0%, 0%, 0.08);
+                    //         content: "01";
+                    //     }
+                    // }
+                    &:nth-child(1) {
+                        background: #c5daeb url($link-box-01) -4px -12px no-repeat;
+                    }
+                    &:nth-child(2) {
+                        background: #c5daeb url($link-box-02) -4px -12px no-repeat;
+                    }
+                    &:nth-child(3) {
+                        background: #c5daeb url($link-box-03) -4px -12px no-repeat;
+                    }
+                    &:nth-child(4) {
+                        background: #c5daeb url($link-box-04) -4px -12px no-repeat;
+                    }
+                    &:nth-child(3n) {
+                        clear: both;
+                    }
+                    &:nth-child(even) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .ui-carousel__button {
+        &:before {
+            display: block;
+            content: "";
+            width: 24px;
+            height: 46px;
+        }
+        &:hover, &:focus {
+            -webkit-filter: drop-shadow(0 0 5px #fff);
+            filter: drop-shadow(0 0 5px #fff);
+        }
+        &.ui-carousel__button--prev {
+            left: 50%;
+            margin-left: -600px;
+            &:before {
+                background: url($btn-arrow-left) left center no-repeat;
+            }
+        }
+        &.ui-carousel__button--next {
+            right: 50%;
+            margin-right: -600px;
+            &:before {
+                background: url($btn-arrow-right) right center no-repeat;
+            }
         }
     }
 }

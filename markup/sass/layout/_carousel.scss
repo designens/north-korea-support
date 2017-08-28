@@ -39,13 +39,10 @@
     position: relative;
     float: left;
     width: 100vw;
-    height: 400px;
     overflow: hidden;
     > a {
         display: block;
         img {
-            width: 100vw;
-            height: 400px;
             vertical-align: middle;
             object-fit: cover;
         }
@@ -118,27 +115,18 @@
     transition: all 0.2s ease;
     cursor: pointer;
     &:hover, &:focus {
-        -webkit-filter: drop-shadow(0 0 5px #fff);
-        filter: drop-shadow(0 0 5px #fff);
+        text-shadow: 1px 1px 3px 0px rgba(255, 255, 255, 0.8);
     }
     &.ui-carousel__button--prev {
-        left: 24px;
+        left: 0;
         &:before {
-            display: block;
-            content: "";
-            width: 24px;
-            height: 46px;
-            background: url($btn-arrow-left) left center no-repeat;
+            @include fa($fa-icon: "\f104", $fz: 16px);
         }
     }
     &.ui-carousel__button--next {
-        right: 24px;
+        right: 0;
         &:before {
-            display: block;
-            content: "";
-            width: 24px;
-            height: 46px;
-            background: url($btn-arrow-right) right center no-repeat;
+            @include fa($fa-icon: "\f105", $fz: 16px);
         }
     }
 }

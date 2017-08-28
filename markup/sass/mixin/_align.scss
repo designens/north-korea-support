@@ -20,18 +20,3 @@
     -webkit-transform: translateY(-$h-percent);
     transform: translateY(-$h-percent);
 }
-@mixin translate($x, $y) {
-    -ms-transform: translate($x, $y);
-    -webkit-transform: translate($x, $y);
-    transform: translate($x, $y);
-}
-@mixin transition($transition) {
-    -ms-transition: $transition;
-    -webkit-transition: $transition;
-    transition: $transition;
-}
-@mixin transition-transform($transition) {
-    -webkit-transition: -webkit-transform unquote($transition);
-    -moz-transition: -moz-transform unquote($transition);
-    transition: transform unquote($transition);
-}
