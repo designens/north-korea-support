@@ -5,6 +5,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 9999;
     /* 팝업 딤 (Dim) */
     .popup-dim {
         height: 100%;
@@ -21,9 +22,6 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     outline: 0; 
     z-index: 10000;
-    @include susy-breakpoint(690px, 10) {
-
-    }
     &.is-center {
         @include wh-center($position: absolute);
     }
@@ -110,13 +108,32 @@
         }
     }
 }
-// 760px 이하 브라우저 적용
-@media only screen and (max-height: 699px) {
+// height 700px 이하 브라우저 적용
+@media only screen and (max-height: 700px) {
     .popup {
         min-height: 100vh;
         max-height: 100vh;
         .popup-content {
             max-height: calc(100vh - 50px);
+        }
+    }
+}
+// width 760px 이하 브라우저 적용
+@media only screen and (max-width: 760px) {
+    .popup {
+        &.mobile {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 100vh;
+            max-height: 100vh;
+            transform: inherit;
+            .popup-content {
+                max-height: calc(100vh - 50px);
+                padding: 20px 20px 0 20px;
+            }
         }
     }
 }

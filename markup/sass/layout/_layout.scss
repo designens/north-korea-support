@@ -952,6 +952,110 @@
 }
 
 /* =======================================*/
+/* 회원서비스 > 설문조사 조회
+/* (html/service-survey.html)
+/* =======================================*/
+.service-survey {
+    .service-survey-box {
+        display: inline-block;
+        width: 930px;
+        margin: 0 auto 30px auto;
+        > div {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 233px;
+            text-align: center;
+            vertical-align: top;
+            padding: 50px 27px 30px 30px;
+            border: 1px solid #c8cacc;
+            margin-right: 10px;
+            border-radius: 7px;
+            background: #e6e6e6;
+            box-shadow: 0 1px 0 #c8cacc;
+            z-index: 1;
+            &::after {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: block;
+                width: 280px;
+                height: 212px;
+                content: "";
+                background: #fff url($bg-service-survey) no-repeat;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+                z-index: -1;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .btn-type-1-04 {
+            width: 117px;
+            float: left;
+        }
+        .btn-type-1-02 {
+            width: 117px;
+            float: right;
+        }
+        h4 {
+            width: 240px;
+            height: 72px;
+            line-height: 68px;
+            font-size: 16px;
+            color: #003761;
+            text-align: center;
+            border: 2px solid #e1e4e6;
+        }
+        p {
+            width: 240px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #d6d6d6;
+            margin-bottom: 13px;
+        }
+    }
+    .content-box-area {
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+    .table-type-01 {
+        tr {
+            td {
+                &:nth-child(2) {
+                    text-align: left;
+                }
+            }
+        }
+        [class^="btn-"] {
+            width: 100px;
+        }
+    }
+}
+
+/* =======================================*/
+/* 회원서비스 > 설문조사 상세 내용 팝업 (pc, mobile)
+/* (html/popup-service-survey-list.html)
+/* =======================================*/
+.popup-service-survey-list {
+    text-align: center;
+    p {
+        display: inline-block;
+        min-width: 280px;
+        max-width: 760px;
+        height: 384px;
+        text-align: left;
+        padding: 30px;
+        border: 1px solid #d2d4d6;
+        border-radius: 10px;
+        box-shadow: 0 4   px 0 0 #d2d4d6;
+    }
+}
+
+/* =======================================*/
 /* 기금사업신청 > 사업신청 조회
 /* (html/business-application.html)
 /* =======================================*/
@@ -1657,6 +1761,22 @@
                         @include fa($fa-icon: "\f054", $fz: 10px, $color: #676767);
                         background: transparent;
                     }
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
+/* 통계 > 국내 > 총괄 조회 (재원/주체별, 지역별, 분야별, 정부별)
+/* (html/domestic-statistics-list.html)
+/* =======================================*/
+.domestic-statistics-list {
+    .panel-group {
+        [role="tabpanel"] {
+            .content-box-area {
+                &:first-child {
+                    padding-top: 15px;
                 }
             }
         }
