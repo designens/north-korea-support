@@ -1042,17 +1042,52 @@
 /* =======================================*/
 .popup-service-survey-list {
     text-align: center;
-    p {
+    &.popup-content {
+        padding: 50px 60px;
+    }
+    .title-area {
+        margin-bottom: 10px;
+        @extend %clearfix;
+        .table-dl {
+            float: left;
+            width: calc(100% - 164px);
+            dt {
+                min-width: 70px;
+            }
+            dd {
+                text-align: left;
+            }
+        }
+        .btn-type-2-03 {
+            float: right;
+            @include btn-size ($w: 154px, $h: 42px);
+        }
+    }
+    .text-area {
         display: inline-block;
         min-width: 280px;
         max-width: 760px;
-        height: 384px;
-        text-align: left;
-        padding: 30px;
+        min-height: 290px;
+        padding: 0 30px;
         border: 1px solid #d2d4d6;
         border-radius: 10px;
-        box-shadow: 0 4   px 0 0 #d2d4d6;
+        box-shadow: 0 4px 0 0 #d2d4d6;
+        p {
+            color: #333;
+            text-align: left;
+            line-height: 2;
+            padding: 30px 20px;
+            border-bottom: 1px dashed #e6e6e6;
+        }
     }
+}
+
+/* =======================================*/
+/* 회원서비스 > 설문조사 상세 입력 팝업 (pc, mobile)
+/* (html/popup-service-survey-write.html)
+/* =======================================*/
+.popup-service-survey-write {
+    @extend .popup-service-survey-list;
 }
 
 /* =======================================*/

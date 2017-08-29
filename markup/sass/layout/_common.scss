@@ -1228,6 +1228,37 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
+/* 질문 / 답 선택 영역
+/* =======================================*/
+.survey-question {
+    padding: 30px 20px;
+    text-align: left;
+    h5 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        span {
+            font-weight: normal;
+        }
+    }
+    &:nth-of-type(1) {
+        padding-top: 60px;
+    }
+    .survey-result {
+        li {
+            line-height: 30px;
+            div {
+                display: inline-block;
+                margin-right: 10px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* =======================================*/
 /* 웹에디터 영역
 /* =======================================*/
 .web-edit-area {

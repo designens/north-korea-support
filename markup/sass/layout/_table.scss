@@ -193,22 +193,22 @@
 .table-li {
     display: table;
     width: 100%;
-    border: 1px solid #d1d1d1;
     li {
         display: table-cell;
         vertical-align: middle;
         min-height: 42px;
         padding: 10px;
-        border-right: 1px solid #d1d1d1;
+        border: 1px solid #d1d1d1;
+        border-right: 0;
         &.title {
             font-weight: bold;
             color: #2e3a42;
             background: #f0f3f5;
             height: 42px;
-            padding: 0 20px;
+            padding: 10px 20px;
         }
         &:last-child {
-            border-right: 0;
+            border-right: 1px solid #d1d1d1;
         }
     }
 }
@@ -216,31 +216,30 @@
 .table-dl {
     width: 100%;
     display: table;
-    border: 1px solid #d1d1d1;
     dt, dd {
         display: table-cell;
         height: 42px;
-        line-height: 42px;
+        vertical-align: middle;
+        border: 1px solid #d1d1d1;
     }
     dt {
         font-weight: bold;
         color: #2e3a42;
-        padding: 0 20px;
-        vertical-align: middle;
+        padding: 10px 20px;
         background: #f0f3f5;
-        border-right: 1px solid #d1d1d1;
     }
     dd {
-        padding: 0 10px;
+        padding: 10px;
+        border-left: 0;
     }
 }
 .table-dt-dd {
     width: 100%;
-    border: 1px solid #d1d1d1;
     dt, dd {
-        border-bottom: 1px solid #d1d1d1;
+        border: 1px solid #d1d1d1;
+        border-bottom: 0;
         &:last-child {
-            border-bottom: 0;
+            border-bottom: 1px solid #d1d1d1;
         }
     }
     dt {
