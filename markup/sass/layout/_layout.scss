@@ -1817,3 +1817,146 @@
         }
     }
 }
+
+/* =======================================*/
+/* 북한현황지표 > SDGs > SDGs
+/* (html/sdgs.html)
+/* =======================================*/
+.sdgs-area {
+    padding: 0 !important;
+    @include layout(3 10px/310px);
+    article {
+        position: relative;
+        @extend %clearfix;
+        h3 {
+            position: absolute;
+            top: 42px;
+            left: 20px;
+            width: 60px;
+            height: 100px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            &:before {
+                display: block;
+                padding-bottom: 10px;
+                background-position: center 0 !important;
+                content: "";
+            }
+        }
+        ul {
+            display: inline-block;
+            margin: 35px 40px 35px 0;
+            vertical-align: top;
+            &:nth-of-type(1) {
+                margin-left: 100px;
+            }
+            li {
+                position: relative;
+                min-height: 30px;
+                padding: 4px 10px;
+                color: #fff;
+                &:before {
+                    position: absolute;
+                    top: 14px;
+                    left: 0;
+                    display: block;
+                    width: 3px;
+                    height: 3px;
+                    background: #fff;
+                    content: "";
+                }
+            }
+        }
+        &:nth-of-type(1) {
+            @include span(1);
+            height: 830px;
+            background: #051c32;
+            h3 {
+                &:before {
+                    height: 52px;
+                    background: url($icon-sdg) no-repeat;
+                }
+            }
+            p {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 45px;
+                font-family: Arial, sans-serif;
+                font-size: 37px;
+                text-align: center;
+                letter-spacing: 0.02em;
+                line-height: 1;
+                color: rgba(#fff, 0.3);
+                span {
+                    font-size: 35px;
+                    letter-spacing: -0.02em;
+                }
+                strong {
+                    font-size: 75px;
+                    line-height: 0.9;
+                    letter-spacing:0;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            @include span(2 at 2 last);
+            background: #1f54ad;
+            h3 {
+                &:before {
+                    height: 44px;
+                    background: url($icon-health) no-repeat;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            @include span(1 at 2);
+            background: #db8703;
+            h3 {
+                &:before {
+                    height: 68px;
+                    background: url($icon-agriculture) no-repeat;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            @include span(1 at 3 last);
+            height: 235px;
+            background: #c34c14;
+            h3 {
+                &:before {
+                    height: 60px;
+                    background: url($icon-energy) no-repeat;
+                }
+            }
+        }
+        &:nth-of-type(5) {
+            @include span(1 at 2);
+            background: #689a13;
+            h3 {
+                &:before {
+                    height: 50px;
+                    background: url($icon-forest) no-repeat;
+                }
+            }
+        }
+        &:nth-of-type(6) {
+            @include span(1 at 3 last);
+            height: 235px;
+            margin-top: -35px;
+            background: #0f7b1f;
+            h3 {
+                &:before {
+                    height: 66px;
+                    background: url($icon-environment) no-repeat;
+                }
+            }
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+            margin-top: 10px;
+        }
+    }
+}
