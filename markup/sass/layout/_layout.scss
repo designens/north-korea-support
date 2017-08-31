@@ -897,9 +897,6 @@
 .popup-policy-proposal-list {
     .table-dt-dd {
         margin-top: 10px;
-        dd {
-            min-height: 350px;
-        }
     }
 }
 
@@ -1812,6 +1809,19 @@
             .content-box-area {
                 &:first-child {
                     padding-top: 15px;
+                }
+                .align-area {
+                    position: relative;
+                    .left-area {
+                        width: calc((100% - 90px)/2);
+                        text-align: center;
+                        @include h-center ($position: absolute, $h-percent: 50%);
+                        padding-right: 30px;
+                        margin-right: 0;
+                    }
+                    .right-area {
+                        width: calc((100% + 30px)/2);
+                    }
                 }
             }
         }

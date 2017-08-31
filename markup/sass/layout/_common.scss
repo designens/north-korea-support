@@ -507,12 +507,13 @@ hr.sub-title-bar {
         position: relative;
         display: inline-block;
         font-size: 16px;
+        height: 24px;
         padding-left: 10px;
         margin-top: 30px;
         margin-bottom: 13px;
         &:before {
             position: absolute;
-            top: 1px;
+            top: 4px;
             left: 0;
             display: inline-block;
             width: 3px;
@@ -533,6 +534,24 @@ hr.sub-title-bar {
         h3 {
             margin-top: 0;
         }
+    }
+    .align-area {
+        min-height: 440px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid #c2c2c2;
+        @extend %clearfix;
+    }
+    .left-area {
+        float: left;
+        margin-right: 30px;
+    }
+    .right-area {
+        float: right;
+    }
+    .left-area,
+    .right-area {
+        width: calc((100% - 30px)/2);
     }
 }
 
@@ -1353,7 +1372,8 @@ hr.sub-title-bar {
 /* =======================================*/
 /* 테이블 영역
 /* =======================================*/
-.web-table-area {
+.web-table-area,
+.web-map-area {
     min-height: 78px;
     margin-bottom: 30px;
     overflow-x: auto;

@@ -123,6 +123,7 @@
         th {
             border-right: 1px solid #d1d1d1;
             border-bottom: 1px solid #c2c2c2;
+            background: #f0f3f5;
         }
     }
     tbody {
@@ -133,7 +134,6 @@
     }
     tr {
         th {
-            background: #f0f3f5;
             color: #2e3a42;
             &.sub-title {
                 font-weight: normal;
