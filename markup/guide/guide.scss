@@ -1,15 +1,18 @@
 /*! guide.css © inyoung, 2017.07.20 */
 
-// =======================================
-// UI Kit 플러그인
-// =======================================
 @charset "utf-8";
-@import "../sass/jiy-style";
 
 // =======================================
 // Typography
 // =======================================
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+// 폰트 위치 설정
+$fa-font-path: "../assets/fonts";
+
+// =======================================
+// UI Kit 플러그인
+// =======================================
+@import "../sass/jiy-style";
 
 // =======================================
 // Guide Style
@@ -48,7 +51,7 @@ body {
             letter-spacing: -0.03em;
             &:before {
                 content: "\f013";
-                font-family: FontAwesome;
+                font-family: "FontAwesome";
                 font-size: rem(20px);
                 color: #1566c1;
                 padding-right: rem(10px);
@@ -75,7 +78,7 @@ body {
                 }
                 &:before {
                     content: "\f0c1";
-                    font-family: FontAwesome;
+                    font-family: "FontAwesome";
                     font-size: rem(10px);
                     color: #ccc;
                     padding-right: rem(5px);

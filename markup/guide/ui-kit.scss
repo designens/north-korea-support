@@ -72,6 +72,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 // Framework import
 // =======================================
 @import "../sass/lib/susy/susy";
+@import "../sass/lib/font-awesome/font-awesome";
 @import "../sass/lib/animate.min";
 
 // =======================================
@@ -109,6 +110,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 @import "../sass/mixin/select-box";
 @import "../sass/mixin/arrow";
 @import "../sass/mixin/gallery";
+@import "../sass/mixin/hexagon";
 
 // =======================================
 // Placeholder
@@ -397,7 +399,7 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 }
 
 // =======================================
-// 테이블 스타일
+// 탭 스타일
 // =======================================
 .tablist {
     width: 100%;
@@ -468,4 +470,26 @@ $news-letters-title-bg: "../assets/images/sub/news-letters-title-bg.png";
 }
 .content-form-area {
     margin-top: 30px;
+}
+
+/* =======================================*/
+/* 육각형 스타일
+/* =======================================*/
+.hexagon-wrap {
+    margin: 20px;
+    &:nth-of-type(1) {
+        @include hexagon;
+    }
+    &:nth-of-type(2) {
+        @include hexagon($bg: #f36f57);
+    }
+    &:nth-of-type(3) {
+        @include hexagon($bg: #e7b91c);
+    }
+    &:nth-of-type(4) {
+        @include hexagon($bg: #b8d841);
+    }
+    .text-area {
+        @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
+    }
 }

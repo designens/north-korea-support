@@ -1833,140 +1833,390 @@
 /* (html/sdgs.html)
 /* =======================================*/
 .sdgs-area {
-    padding: 0 !important;
-    @include layout(3 10px/310px);
-    article {
-        position: relative;
-        @extend %clearfix;
-        h3 {
-            position: absolute;
-            top: 42px;
-            left: 20px;
-            width: 60px;
-            height: 100px;
-            font-size: 20px;
-            color: #fff;
-            text-align: center;
-            &:before {
-                display: block;
-                padding-bottom: 10px;
-                background-position: center 0 !important;
-                content: "";
-            }
-        }
+    .content-box-area {
         ul {
-            display: inline-block;
-            margin: 35px 40px 35px 0;
-            vertical-align: top;
-            &:nth-of-type(1) {
-                margin-left: 100px;
-            }
+            padding: 30px;
+            background: #eaeaea;
+            @extend %clearfix;
             li {
-                position: relative;
-                min-height: 30px;
-                padding: 4px 10px;
-                color: #fff;
-                &:before {
-                    position: absolute;
-                    top: 14px;
-                    left: 0;
-                    display: block;
-                    width: 3px;
-                    height: 3px;
+                float: left;
+                width: calc(100%/2 - 17px);
+                margin-right: 27px;
+                &:nth-child(odd) {
+                    margin-left: 7px;
+                }
+                &:nth-child(even) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+                .hexagon-wrap {
+                    position: relative;
+                    float: left;
+                    z-index: 2;
+                    img {
+                        @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
+                    }
+                }
+                .text-area {
+                    float: left;
+                    position: relative;
+                    width: calc(100% - 70px);
+                    height: 100px;
+                    padding-left: 98px;
+                    margin-left: -30px;
                     background: #fff;
-                    content: "";
+                    border-radius: 0 10px 10px 0;
+                    z-index: 1;
+                    .number {
+                        @include h-center ($position: absolute, $h-percent: 50%);
+                        left: 49px;
+                        font-family: Arial, sans-serif;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    .text {
+                        @include h-center ($position: absolute, $h-percent: 50%);
+                        h4 {
+                            font-size: 15px;
+                        }
+                        p {
+                            font-size: 13px;
+                            letter-spacing: -0.05em;
+                            padding-right: 15px;
+                        }
+                    }
+                }
+                &:nth-of-type(1) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #76aca5);
+                    }
+                    .text-area {
+                        border: 1px solid #76aca5;
+                        .number, h4 {
+                            color: #76aca5;
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #b8d841);
+                    }
+                    .text-area {
+                        border: 1px solid #b8d841;
+                        .number, h4 {
+                            color: #b8d841;
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #f36f57);
+                    }
+                    .text-area {
+                        border: 1px solid #f36f57;
+                        .number, h4 {
+                            color: #f36f57;
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #e7b91c);
+                    }
+                    .text-area {
+                        border: 1px solid #e7b91c;
+                        .number, h4 {
+                            color: #e7b91c;
+                        }
+                    }
+                }
+                &:nth-of-type(5) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #ef4340);
+                    }
+                    .text-area {
+                        border: 1px solid #ef4340;
+                        .number, h4 {
+                            color: #ef4340;
+                        }
+                    }
+                }
+                &:nth-of-type(6) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #245e82);
+                    }
+                    .text-area {
+                        border: 1px solid #245e82;
+                        .number, h4 {
+                            color: #245e82;
+                        }
+                    }
+                }
+                &:nth-of-type(7) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #fe9544);
+                    }
+                    .text-area {
+                        border: 1px solid #fe9544;
+                        .number, h4 {
+                            color: #fe9544;
+                        }
+                    }
+                }
+                &:nth-of-type(8) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #a56b67);
+                    }
+                    .text-area {
+                        border: 1px solid #a56b67;
+                        .number, h4 {
+                            color: #a56b67;
+                        }
+                    }
+                }
+                &:nth-of-type(9) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #9b92c8);
+                    }
+                    .text-area {
+                        border: 1px solid #9b92c8;
+                        .number, h4 {
+                            color: #9b92c8;
+                        }
+                    }
+                }
+                &:nth-of-type(10) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #e06284);
+                    }
+                    .text-area {
+                        border: 1px solid #e06284;
+                        .number, h4 {
+                            color: #e06284;
+                        }
+                    }
+                }
+                &:nth-of-type(11) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #5cb3b7);
+                    }
+                    .text-area {
+                        border: 1px solid #5cb3b7;
+                        .number, h4 {
+                            color: #5cb3b7;
+                        }
+                    }
+                }
+                &:nth-of-type(12) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #fad22d);
+                    }
+                    .text-area {
+                        border: 1px solid #fad22d;
+                        .number, h4 {
+                            color: #fad22d;
+                        }
+                    }
+                }
+                &:nth-of-type(13) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #b4c260);
+                    }
+                    .text-area {
+                        border: 1px solid #b4c260;
+                        .number, h4 {
+                            color: #b4c260;
+                        }
+                    }
+                }
+                &:nth-of-type(14) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #4685ce);
+                    }
+                    .text-area {
+                        border: 1px solid #4685ce;
+                        .number, h4 {
+                            color: #4685ce;
+                        }
+                    }
+                }
+                &:nth-of-type(15) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #669d65);
+                    }
+                    .text-area {
+                        border: 1px solid #669d65;
+                        .number, h4 {
+                            color: #669d65;
+                        }
+                    }
+                }
+                &:nth-of-type(16) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #c792c8);
+                    }
+                    .text-area {
+                        border: 1px solid #c792c8;
+                        .number, h4 {
+                            color: #c792c8;
+                        }
+                    }
+                }
+                &:nth-of-type(17) {
+                    .hexagon-wrap {
+                        @include hexagon($bg: #c3926e);
+                    }
+                    .text-area {
+                        border: 1px solid #c3926e;
+                        .number, h4 {
+                            color: #c3926e;
+                        }
+                    }
                 }
             }
-        }
-        &:nth-of-type(1) {
-            @include span(1);
-            height: 830px;
-            background: #051c32;
-            h3 {
-                &:before {
-                    height: 52px;
-                    background: url($icon-sdg) no-repeat;
-                }
-            }
-            p {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 45px;
-                font-family: Arial, sans-serif;
-                font-size: 37px;
-                text-align: center;
-                letter-spacing: 0.02em;
-                line-height: 1;
-                color: rgba(#fff, 0.3);
-                span {
-                    font-size: 35px;
-                    letter-spacing: -0.02em;
-                }
-                strong {
-                    font-size: 75px;
-                    line-height: 0.9;
-                    letter-spacing:0;
-                }
-            }
-        }
-        &:nth-of-type(2) {
-            @include span(2 at 2 last);
-            background: #1f54ad;
-            h3 {
-                &:before {
-                    height: 44px;
-                    background: url($icon-health) no-repeat;
-                }
-            }
-        }
-        &:nth-of-type(3) {
-            @include span(1 at 2);
-            background: #db8703;
-            h3 {
-                &:before {
-                    height: 68px;
-                    background: url($icon-agriculture) no-repeat;
-                }
-            }
-        }
-        &:nth-of-type(4) {
-            @include span(1 at 3 last);
-            height: 235px;
-            background: #c34c14;
-            h3 {
-                &:before {
-                    height: 60px;
-                    background: url($icon-energy) no-repeat;
-                }
-            }
-        }
-        &:nth-of-type(5) {
-            @include span(1 at 2);
-            background: #689a13;
-            h3 {
-                &:before {
-                    height: 50px;
-                    background: url($icon-forest) no-repeat;
-                }
-            }
-        }
-        &:nth-of-type(6) {
-            @include span(1 at 3 last);
-            height: 235px;
-            margin-top: -35px;
-            background: #0f7b1f;
-            h3 {
-                &:before {
-                    height: 66px;
-                    background: url($icon-environment) no-repeat;
-                }
-            }
-        }
-        &:nth-of-type(3),
-        &:nth-of-type(4),
-        &:nth-of-type(5) {
-            margin-top: 10px;
         }
     }
+    .logo-goals {
+        text-align: center;
+        padding-top: 30px;
+    }
 }
+// sdgs.backup.html 파일 CSS 백업
+// .sdgs-area {
+//     padding: 0 !important;
+//     @include layout(3 10px/310px);
+//     article {
+//         position: relative;
+//         @extend %clearfix;
+//         h3 {
+//             position: absolute;
+//             top: 42px;
+//             left: 20px;
+//             width: 60px;
+//             height: 100px;
+//             font-size: 20px;
+//             color: #fff;
+//             text-align: center;
+//             &:before {
+//                 display: block;
+//                 padding-bottom: 10px;
+//                 background-position: center 0 !important;
+//                 content: "";
+//             }
+//         }
+//         ul {
+//             display: inline-block;
+//             margin: 35px 40px 35px 0;
+//             vertical-align: top;
+//             &:nth-of-type(1) {
+//                 margin-left: 100px;
+//             }
+//             li {
+//                 position: relative;
+//                 min-height: 30px;
+//                 padding: 4px 10px;
+//                 color: #fff;
+//                 &:before {
+//                     position: absolute;
+//                     top: 14px;
+//                     left: 0;
+//                     display: block;
+//                     width: 3px;
+//                     height: 3px;
+//                     background: #fff;
+//                     content: "";
+//                 }
+//             }
+//         }
+//         &:nth-of-type(1) {
+//             @include span(1);
+//             height: 830px;
+//             background: #051c32;
+//             h3 {
+//                 &:before {
+//                     height: 52px;
+//                     background: url($icon-sdg) no-repeat;
+//                 }
+//             }
+//             p {
+//                 position: absolute;
+//                 left: 0;
+//                 right: 0;
+//                 bottom: 45px;
+//                 font-family: Arial, sans-serif;
+//                 font-size: 37px;
+//                 text-align: center;
+//                 letter-spacing: 0.02em;
+//                 line-height: 1;
+//                 color: rgba(#fff, 0.3);
+//                 span {
+//                     font-size: 35px;
+//                     letter-spacing: -0.02em;
+//                 }
+//                 strong {
+//                     font-size: 75px;
+//                     line-height: 0.9;
+//                     letter-spacing:0;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(2) {
+//             @include span(2 at 2 last);
+//             background: #1f54ad;
+//             h3 {
+//                 &:before {
+//                     height: 44px;
+//                     background: url($icon-health) no-repeat;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(3) {
+//             @include span(1 at 2);
+//             background: #db8703;
+//             h3 {
+//                 &:before {
+//                     height: 68px;
+//                     background: url($icon-agriculture) no-repeat;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(4) {
+//             @include span(1 at 3 last);
+//             height: 235px;
+//             background: #c34c14;
+//             h3 {
+//                 &:before {
+//                     height: 60px;
+//                     background: url($icon-energy) no-repeat;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(5) {
+//             @include span(1 at 2);
+//             background: #689a13;
+//             h3 {
+//                 &:before {
+//                     height: 50px;
+//                     background: url($icon-forest) no-repeat;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(6) {
+//             @include span(1 at 3 last);
+//             height: 235px;
+//             margin-top: -35px;
+//             background: #0f7b1f;
+//             h3 {
+//                 &:before {
+//                     height: 66px;
+//                     background: url($icon-environment) no-repeat;
+//                 }
+//             }
+//         }
+//         &:nth-of-type(3),
+//         &:nth-of-type(4),
+//         &:nth-of-type(5) {
+//             margin-top: 10px;
+//         }
+//     }
+// }
