@@ -1,9 +1,11 @@
 @charset "UTF-8";
+/*! guide.css © inyoung, 2017.07.20 */
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 /*! style.css v1.0.0 © inyoung524@naver.com */
 /*! Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) */
 /* FONT PATH -------------------------- */
 @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
-@font-face { font-family: 'FontAwesome'; src: url("../fonts/fontawesome-webfont.eot?v=4.7.0"); src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'FontAwesome'; src: url("../assets/fonts/fontawesome-webfont.eot?v=4.7.0"); src: url("../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../assets/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../assets/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../assets/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
 
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -5514,4 +5516,40 @@ hr.sub-title-bar { display: block; width: 100%; height: 6px; margin-top: 0; marg
   .test.w99 { width: 99%; }
   .test.w100 { width: 100%; } }
 
-/*# sourceMappingURL=map/jiy-style.css.map */
+html { font-size: 10px; }
+
+body { font-family: 'Noto Sans Korean', sans-serif, serif !important; font-size: 1.4rem; line-height: 1.5; height: 100vh; background: #ededed; }
+
+body * { box-sizing: border-box; word-wrap: break-word; }
+
+.guide { margin-bottom: 0; }
+
+.guide h1, .guide h2, .guide h3, .guide h4, .guide h5, .guide h6 { margin-bottom: 2rem; }
+
+.wrap { min-width: 480px; max-width: 1000px; padding: 20px; margin: 0 auto; padding: 2.4rem; }
+
+.wrap article .title { font-size: 2.8rem; font-weight: bold; color: #1566c1; letter-spacing: -0.03em; }
+
+.wrap article .title:before { content: "\f013"; font-family: "FontAwesome"; font-size: 2rem; color: #1566c1; padding-right: 1rem; vertical-align: text-bottom; }
+
+.wrap .all-link { width: 100%; float: left; margin-left: 0; margin-right: 0; margin-top: 2rem; }
+
+.wrap .all-link .location { padding: 2rem 2rem 1.4rem 2rem; border: 1px solid #ddd; margin-bottom: 2rem; background: #fff; }
+
+.wrap .all-link .location .link { line-height: 2.4rem; letter-spacing: -0.03em; }
+
+.wrap .all-link .location .link.check:before { content: "\f00c"; color: #e51d68; }
+
+.wrap .all-link .location .link:before { content: "\f0c1"; font-family: "FontAwesome"; font-size: 1rem; color: #ccc; padding-right: 0.5rem; vertical-align: top; }
+
+.wrap .all-link .location .link a { color: #333; display: inline-block; }
+
+.wrap .all-link .location .link a > span { display: inline-block; color: #e51d68; margin-left: 4px; margin-bottom: 0; }
+
+.wrap .all-link .location .link span { font-size: 1.2rem; color: #aaa; letter-spacing: 0.05em; display: block; margin-left: 20px; margin-bottom: 6px; }
+
+.wrap .all-link .location .link span:before { content: "("; }
+
+.wrap .all-link .location .link span:after { content: ")"; }
+
+/*# sourceMappingURL=map/jiy-guide.css.map */

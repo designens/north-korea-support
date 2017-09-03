@@ -556,6 +556,35 @@ hr.sub-title-bar {
 }
 
 /* =======================================*/
+/* Sub Page : 별첨, 윗첨자 스타일
+/* =======================================*/
+.enclosure {
+    p {
+        position: relative;
+        padding-left: 14px;
+            &:before {
+            position: absolute;
+            top: 9px;
+            left: 0;
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: #003761;
+            content: "";
+        }
+    }
+    .superscript {
+        padding-top: 7px;
+        border-top: 1px solid #ededed;
+        margin-top: 7px;
+        sup {
+            font-weight: bold;
+            vertical-align: text-top;
+        }
+    }
+}
+
+/* =======================================*/
 /* Sub Page : Content Box 스타일
 /* =======================================*/
 @mixin content-box($h) {
@@ -1363,7 +1392,7 @@ hr.sub-title-bar {
     height: 300px;
     background: #d5d5d5;
     margin-top: 10px;
-    p, .test {
+    .test {
         text-align: center;
         line-height: 300px;
     }
@@ -1377,7 +1406,7 @@ hr.sub-title-bar {
     min-height: 78px;
     margin-bottom: 30px;
     overflow-x: auto;
-    p, .test {
+    .test {
         text-align: center;
         line-height: 440px;
         background: #d5d5d5;
@@ -1392,7 +1421,7 @@ hr.sub-title-bar {
     padding: 30px;
     margin-bottom: 30px;
     border: 1px solid #c2c2c2;
-    p, .test {
+    .test {
         font-size: 30px;
         text-align: center;
         line-height: 380px;
