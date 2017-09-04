@@ -12,9 +12,6 @@
                 &:nth-of-type(#{ $i + n }) {
                     margin-right: 0;
                 }
-                &:nth-of-type(#{ $i + 1n }) {
-                    clear: both;
-                }
             }
         }
     }
