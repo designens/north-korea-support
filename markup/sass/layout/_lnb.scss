@@ -112,10 +112,19 @@
                     position: absolute;
                     left: 0;
                 }
-                &:hover, &:focus, &.ative {
+                &:hover, &:focus {
                     font-weight: bold;
                     color: #003761;
                     text-decoration: underline;
+                }
+                &.ative {
+                    font-weight: bold;
+                    color: #003761;
+                    padding-left: 12px;
+                    &:before {
+                        @include fa($fa-icon: "\f054", $fz: 10px, $color: #003761);
+                        top: 5px;
+                    }
                 }
             }
             > a {
@@ -127,7 +136,12 @@
                     background: #757575;
                     content: "";
                 }
-                &:hover, &:focus, &.ative {
+                &:hover, &:focus {
+                    &:before {
+                        background: #003761;
+                    }
+                }
+                &.ative {
                     &:before {
                         background: #003761;
                     }
