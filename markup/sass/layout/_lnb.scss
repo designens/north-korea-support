@@ -74,6 +74,28 @@
                 }
             }
         }
+        &.selected {
+            background: #003761;
+            [class*="link"] {
+                position: relative;
+                color: #f0f8ff;
+                padding-left: 33px;
+                &:before {
+                    position: absolute;
+                    left: 20px;
+                    bottom: 16px;
+                    width: 6px;
+                    height: 2px;
+                    background: #f0f8ff;
+                    content: "";
+                }
+                .fa-angle-down {
+                    color: #f0f8ff;
+                    transform: rotate(180deg);
+                    transition: transform 0.25s ease;
+                }
+            }
+        }
     }
     [class*="sub"] {
         background: #f0f8ff;
