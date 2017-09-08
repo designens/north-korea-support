@@ -505,7 +505,8 @@ th, td {
         li {
             padding: 4px 0;
             input[type="text"] {
-                width: 580px;
+                min-width: 50%;
+                max-width: 580px;
                 margin-left: 4px;
             }
         }
