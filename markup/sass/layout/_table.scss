@@ -191,6 +191,13 @@
             &.sub-title {
                 font-weight: normal;
             }
+            &.necessary {
+                &:after {
+                    @include fa($fa-icon: "\f005", $fz: 10px, $color: #ec4040);
+                    margin-left: 6px;
+                    vertical-align: text-bottom;
+                }
+            }
         }
         td {
             padding: 6px 10px;

@@ -1,24 +1,211 @@
+// =======================================
+// Function
+// =======================================
+@import "function/de-unit";
+@import "function/retina";
+@import "function/px-rem";
+@import "function/percent";
+
+// =======================================
+// Mixin
+// =======================================
+@import "mixin/align";
+@import "mixin/ellipsis";
+@import "mixin/placehoder";
+@import "mixin/fa-icon";
+@import "mixin/psd-fz";
+@import "mixin/psd-lh";
+@import "mixin/psd-mb";
+@import "mixin/heading";
+@import "mixin/retina-img";
+@import "mixin/tabs";
+@import "mixin/progress";
+@import "mixin/input-type";
+@import "mixin/select-box";
+@import "mixin/arrow";
+@import "mixin/gallery";
+@import "mixin/hexagon";
+
+// =======================================
+// Placeholder
+// =======================================
+@import "placeholder/clearfix";
+@import "placeholder/row";
+@import "placeholder/box-hidden";
+@import "placeholder/text-hidden";
+
 /* =======================================*/
-/* css reset
+/* CSS reset
 /* =======================================*/
 caption {
 	visibility: hidden;
 	position: absolute;
 	top: -9999px;
 }
-
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
+textarea {
+    resize: none;
 }
-.clearfix:after {
-    clear: both;
+label {
+    cursor: pointer;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th, td {
+    border-collapse: collapse;
+}
+
+/* =======================================*/
+/* Common Style
+/* =======================================*/
+.clearfix {
+    @extend %clearfix;
 }
 .cy-content-box {
 	height: calc(100% - 80px);
 	min-height: 500px;
 }
+.cy-paging {
+    margin-top: 10px;
+    text-align: center;
+    * {
+        vertical-align:text-bottom;
+    }
+    button {
+        cursor: pointer;
+        margin: 0 2px;
+    }
+}
+/* Input Style */
+.cy-w100p {
+    width: 100%;
+}
+/* Button Type */
+.cy-btn-gray {
+    min-width: 52px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    padding: 0 10px;
+    border-radius: 3px;
+    background: #394a57;
+}
+.cy-btn-lightgrey {
+    min-width: 52px;
+    height: 25px;
+    line-height: 25px;
+    color: #394a57;
+    padding: 0 10px;
+    border-radius: 3px;
+    background: #c5d2db;
+}
+
+/* =======================================*/
+/* Popup Style
+/* =======================================*/
+/* 팝업 컨테이너 */
+.popup-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    /* 팝업 영역 */
+    .popup {
+        width: 900px;
+        min-height: 460px;
+        max-height: 700px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        outline: 0; 
+        z-index: 10000;
+        @include wh-center($position: absolute);
+        @extend %clearfix;
+        /* 팝업 헤드라인 */
+        .popup-headline {
+            height: 54px;
+            line-height: 54px;
+            padding: 0 30px;
+            background: #1f303d;
+            @extend %clearfix;
+            h4 {
+                float: left;
+                font-size: 22px;
+                font-weight: bold;
+                color: #fff;
+                letter-spacing: -0.04em;
+            }
+            .popup-close {
+                position: relative;
+                float: right;
+                width: 21px;
+                height: 21px;
+                margin-top: 17px;
+                text-indent: -9999px;
+                &:before {
+                    position: absolute;
+                    top: 10px;
+                    left: -4px;
+                    display: block;
+                    width: 135%;
+                    height: 1px;
+                    background: #fff;
+                    transform: rotate(45deg);
+                    content: "";
+                }
+                &:after {
+                    position: absolute;
+                    top: 10px;
+                    left: -4px;
+                    display: block;
+                    width: 135%;
+                    height: 1px;
+                    background: #fff;
+                    transform: rotate(-45deg);
+                    content: "";
+                }
+            }
+        }
+        /* 팝업 콘텐츠 */
+        .popup-content {
+            padding: 30px;
+            max-height: calc(700px - 54px);
+            overflow-y: auto;
+            background: #e1effa;
+        }
+    }
+}
+// width 760px 이하 브라우저 적용
+@media only screen and (max-width: 900px) {
+    .popup-container {
+        .popup {
+            top: 0 !important;
+            left: 0 !important;
+            right: 0;
+            bottom: 0;
+            width: 100% !important;
+            max-height: 100vh !important;
+            transform: inherit !important;
+            .popup-content {
+                max-height: calc(100% - 54px) !important;
+                padding: 20px !important;
+            }
+            
+        }
+    }
+}
+// height 700px 이하 브라우저 적용
+@media only screen and (max-height: 700px) {
+    .popup {
+        max-height: 100vh !important;
+        .popup-content {
+            max-height: calc(100% - 54px) !important;
+        }
+    }
+}
+
 /* =======================================*/
 /* 설문조사
 /* =======================================*/
@@ -98,7 +285,6 @@ caption {
 }
 
 /* 조회결과 */
-
 .cy-srcBtn {
 	line-height: 28px;
 	margin-bottom: 5px;
@@ -164,16 +350,164 @@ caption {
 	height: 30px;
 }
 
-/* 페이징 [시트정보] */
-
-.cy-paging {
-	margin-top: 10px;
-	text-align: center;
+/* =======================================*/
+/* 설문조사 팝업
+/* =======================================*/
+.cy-section-table {
+    margin-top: 10px;
+    border:1px solid #8ec5f4;
+    background: #fff;
+    &:first-child {
+        margin-top: 0;
+    }
+    table {
+        tr {
+            &:first-child {
+                th, td {
+                    border-top: 0;
+                }
+            }
+        }
+        th {
+            text-align: left;
+            letter-spacing: -0.04em;
+            &:first-child {
+                border-left: 0;
+            }
+        }
+        td {
+            height: 36px;
+            textarea {
+                border: 1px solid #b4bfc8;
+                overflow-y: scroll;
+            }
+        }
+        th, td {
+            padding: 6px 20px;
+            border-top:1px solid #c5e2f3;
+            border-left:1px solid #c5e2f3;
+            box-sizing: border-box;
+        }
+    }
 }
-.cy-paging * {
-	vertical-align:text-bottom;
+.cy-section-box {
+    border:1px solid #8ec5f4;
+    background: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    &.cy-view {
+        border: 1px solid #b4bfc8;
+        padding-top: 20px;
+    }
+    textarea {
+        border: 1px solid #b4bfc8;
+        overflow-y: scroll;
+    }
 }
-.cy-paging button {
-	cursor: pointer;
-	margin: 0 2px;
+.cy-section-box {
+    .cy-title {
+        position: relative;
+        width: 100%;
+        @extend %clearfix;
+        h5 {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            span {
+                font-weight: normal;
+            }
+        }
+        .cy-btn-set {
+            position: absolute;
+            top: -4px;
+            right: 0;
+            display: inline-block;
+            input[type="number"] {
+                width: 60px;
+                [pseudo="-webkit-inner-spin-button"] {
+                    display: block;
+                }
+            }
+            select {
+                width: 140px;
+            }
+        }
+    }
+}
+.cy-section-box {
+    .cy-item-add {
+        margin-top: 6px;
+        @extend %clearfix;
+        .cy-ex-txt {
+            float: left;
+            width: calc(100% - 113px);
+        }
+        .cy-ex-btn {
+            float: right;
+            .cy-btn-lightgrey {
+                min-width: 25px;
+                height: 25px;
+                padding: 0;
+                text-indent: -9999px;
+                &:first-child {
+                    text-indent: inherit;
+                    padding: 0 10px;
+                }
+                &.add {
+                    position: relative;
+                    &:before, &:after {
+                        position: absolute;
+                        background: #394a57;
+                        content: "";
+                    }
+                    &:before {
+                        top: 11px;
+                        right: 5px;
+                        width: 14px;
+                        height: 2px;
+                    }
+                    &:after {
+                        top: 5px;
+                        right: 11px;
+                        width: 2px;
+                        height: 14px;
+                    }
+                }
+                &.remove {
+                    position: relative;
+                    &:before, &:after {
+                        position: absolute;
+                        content: "";
+                        border-radius: 2px;
+                        background: #394a57;
+                        transform: rotate(45deg);
+                    }
+                    &:before {
+                        top: 11px;
+                        right: 5px;
+                        width: 14px;
+                        height: 2px;
+                    }
+                    &:after {
+                        top: 5px;
+                        right: 11px;
+                        width: 2px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+.cy-section-box {
+    .cy-check-list {
+        li {
+            padding: 4px 0;
+            input[type="text"] {
+                width: 580px;
+                margin-left: 4px;
+            }
+        }
+    }
 }

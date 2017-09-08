@@ -111,10 +111,9 @@
 // height 700px 이하 브라우저 적용
 @media only screen and (max-height: 700px) {
     .popup {
-        min-height: 100vh;
         max-height: 100vh;
         .popup-content {
-            max-height: calc(100vh - 50px);
+            max-height: calc(100% - 50px);
         }
     }
 }
@@ -127,11 +126,10 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            min-height: 100vh;
             max-height: 100vh;
             transform: inherit;
             .popup-content {
-                max-height: calc(100vh - 50px);
+                max-height: calc(100% - 50px);
                 padding: 20px;
             }
         }
