@@ -193,7 +193,7 @@
             }
             .necessary {
                 display: inline-block;
-                margin-left: 2px;
+                margin-left: 6px;
                 span {
                     position: absolute;
                     top: -9999px;
@@ -207,6 +207,22 @@
         }
         td {
             padding: 6px 10px;
+            .photo-add {
+                float: left;
+            }
+            .photo-view {
+                float: right;
+                bottom: 6px;
+                width: 100px;
+                height: 107px;
+                vertical-align: top;
+                border: 1px solid #d1d1d1;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
     }
 }
