@@ -191,10 +191,16 @@
             &.sub-title {
                 font-weight: normal;
             }
-            &.necessary {
+            .necessary {
+                display: inline-block;
+                margin-left: 2px;
+                span {
+                    position: absolute;
+                    top: -9999px;
+                    visibility: hidden;
+                }
                 &:after {
-                    @include fa($fa-icon: "\f005", $fz: 10px, $color: #ec4040);
-                    margin-left: 6px;
+                    @include fa($fa-icon: "\f005", $fz: 10px, $color: #b80000);
                     vertical-align: text-bottom;
                 }
             }
