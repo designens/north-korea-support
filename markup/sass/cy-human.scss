@@ -56,6 +56,33 @@ table {
 th, td {
     border-collapse: collapse;
 }
+label[for="cy-number"] {
+    position: relative;
+    span {
+        line-height: 25px;
+    }
+     &:before, &:after {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        line-height: 10px;
+        background-color: #fff;
+        right: 1px;
+        z-index: 2;
+        font-size: 50%;
+        text-align: center;
+        pointer-events: none;
+    }
+    &:before {
+        content: "▲";
+        top: 2px;
+    }
+    &:after {
+        content: "▼";
+        top: 12px;
+    }
+}
 
 /* =======================================*/
 /* Common Style
@@ -353,7 +380,28 @@ th, td {
 /* =======================================*/
 /* 설문조사 팝업
 /* =======================================*/
+.cy-section-area {
+    position: relative;
+    padding-right: 145px !important;
+    .cy-section-btn-add {
+        position: absolute;
+        top: 152px;
+        right: 30px;
+        button[type="button"] {
+            display: block;
+            width: 100px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            color: #fff;
+            background: #0875c8;
+            border-radius: 4px;
+            margin-bottom: 2px;
+        }
+    }
+}
 .cy-section-table {
+    letter-spacing: -0.04em;
     margin-top: 10px;
     border:1px solid #8ec5f4;
     background: #fff;
@@ -370,7 +418,6 @@ th, td {
         }
         th {
             text-align: left;
-            letter-spacing: -0.04em;
             &:first-child {
                 border-left: 0;
             }
@@ -391,6 +438,7 @@ th, td {
     }
 }
 .cy-section-box {
+    letter-spacing: -0.04em;
     border:1px solid #8ec5f4;
     background: #fff;
     padding: 10px 20px;
@@ -501,6 +549,35 @@ th, td {
     }
 }
 .cy-section-box {
+    .cy-item-add {
+        .cy-keyword-txt {
+            position: relative;
+            float: left;
+            width: calc(100% - 162px);
+            input {
+                width: calc(50% - 10px);
+                margin-right: 20px;
+                &:last-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                    margin-right: 0;
+                }
+            }
+            &:before {
+                @include w-center ($position: absolute, $w-percent: 50%);
+                top: 2px;
+                display: inline-block;
+                content: "~";
+            }
+        }
+        .cy-keyword-num {
+            float: right;
+        }
+    }
+}
+.cy-section-box {
     .cy-check-list {
         li {
             padding: 4px 0;
@@ -509,6 +586,43 @@ th, td {
                 max-width: 580px;
                 margin-left: 4px;
             }
+        }
+    }
+}
+.cy-increase-box {
+    display: inline-block;
+    margin: 10px 0;
+    [class$="-keyword"] {
+        margin-top: 20px;
+    }
+    .cy-check-list {
+        display: inline-block;
+        li {
+            display: inline-block;
+            width: 70px;
+            text-align: center;
+            label {
+                display: block;
+            }
+            &:first-child {
+                margin-left: 25px;
+            }
+            &:last-child {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+.cy-check-grid {
+    margin: 10px 0;
+    width: auto;
+    tr, td {
+        text-align: center;
+        line-height: 28px;
+    }
+    tbody {
+        th {
+            text-align: left;
         }
     }
 }
