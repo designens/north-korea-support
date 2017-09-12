@@ -128,6 +128,23 @@ label[for="cy-number"] {
     border-radius: 3px;
     background: #c5d2db;
 }
+.cy-base-table {
+    @extend .cy-section-table;
+    th {
+        background: #f5f8fa;
+        border-right: 1px solid #d3dbe0;
+    }
+    td {
+        line-height: 1.6;
+        label {
+            margin-left: 4px;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
 
 /* =======================================*/
 /* Popup Style
@@ -340,41 +357,53 @@ label[for="cy-number"] {
 
 /* 조회결과 [시트정보] */
 .cy-table {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.cy-table table {
-	border: 1px solid #999fa3;
-}
-.cy-table table td{
-	height: 22px;
-}
-.cy-table table tbody td{
-	text-align: center;
-}
-.cy-table table thead tr th {
-	border-right: 1px solid #d3dbe0;
-	font-weight: bold;
-	padding-bottom: 1px;
-}
-.cy-table table tbody tr:last-child td{
-	border-bottom: 0;
-}
-.cy-table table thead tr th:last-child{
-	border-right: 0;
-}
-.cy-table table tbody tr td {
-	border-right: 1px solid #d3dbe0;
-	border-bottom: 1px solid #d3dbe0;
-	line-height: 0;
-	padding: 2px 0 1px;
-}
-.cy-table table tbody tr td:last-child {
-	border-right: 0;
-}
-.cy-table thead th {
-	background-color: #b8c3cc;
-	height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    table {
+        border: 1px solid #999fa3;
+        td {
+            height: 22px;
+        }
+        tbody {
+            td {
+                text-align: center;
+            }
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: 0;
+                    }
+                }
+                td {
+                    border-right: 1px solid #d3dbe0;
+                    border-bottom: 1px solid #d3dbe0;
+                    line-height: 0;
+                    padding: 2px 0 1px;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+        thead {
+            tr {
+                th {
+                    border-right: 1px solid #d3dbe0;
+                    font-weight: bold;
+                    padding-bottom: 1px;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    thead {
+        th {
+            background-color: #b8c3cc;
+            height: 30px;
+        }
+    }
 }
 
 /* =======================================*/
