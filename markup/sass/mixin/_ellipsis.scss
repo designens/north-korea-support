@@ -1,10 +1,14 @@
 // 말줄임 (라인 수)
-@mixin ellipsis($line-num) {
+@mixin ellipsis($line-number) {
+  @if ($line-number == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  } @else {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: $line-num;
+    -webkit-line-clamp: $line-number;
     -webkit-box-orient: vertical;
-    word-wrap: break-word;
+  }
 }
-
